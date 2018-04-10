@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_sheng"
+    android:orientation="vertical">
+        <LinearLayout android:paddingRight="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" android:gravity="center_vertical">
+            <TextView android:id="@+id/tv_zoushi_issue" style="@style/tv_zoushi_item" android:text="876905" android:layout_weight="1.5" android:textColor="@color/tv_h1" />
+            <View style="@style/line_v" android:background="@color/white" android:layout_marginTop="5dp" android:layout_marginBottom="5dp"></View>
+            <TextView android:id="@+id/tv_zoushi_num" style="@style/tv_zoushi_item" android:text="9"  android:textColor="@color/tv_lanse_name" />
+            <View style="@style/line_v" android:background="@color/white" android:layout_marginTop="5dp" android:layout_marginBottom="5dp"></View>
+            <TextView  android:id="@+id/tv_zoushi_da" style="@style/tv_zoushi_item" android:text="大"  android:background="@color/bg_lanse"/>
+            <View style="@style/line_v" android:background="@color/white" android:layout_marginTop="5dp" android:layout_marginBottom="5dp"></View>
+            <TextView android:id="@+id/tv_zoushi_xiao" style="@style/tv_zoushi_item" android:text="小"  android:background="@color/bg_lanse"/>
+            <View style="@style/line_v" android:background="@color/white" android:layout_marginTop="5dp" android:layout_marginBottom="5dp"></View>
+            <TextView  android:id="@+id/tv_zoushi_dan" style="@style/tv_zoushi_item" android:text="单"  android:background="@color/bg_lanse_qian"/>
+            <View style="@style/line_v" android:background="@color/white" android:layout_marginTop="5dp" android:layout_marginBottom="5dp"></View>
+            <TextView  android:id="@+id/tv_zoushi_shuang" style="@style/tv_zoushi_item" android:text="双"  android:background="@color/bg_lanse_qian"/>
+            <View style="@style/line_v" android:background="@color/white" android:layout_marginTop="5dp" android:layout_marginBottom="5dp"></View>
+
+            <TextView  android:id="@+id/tv_zoushi_dadan" style="@style/tv_zoushi_item" android:text="大单"  android:background="@color/bg_zise"/>
+            <View style="@style/line_v" android:background="@color/white" android:layout_marginTop="5dp" android:layout_marginBottom="5dp"></View>
+            <TextView android:id="@+id/tv_zoushi_xiaodan" style="@style/tv_zoushi_item" android:text="小单"  android:background="@color/bg_zise"/>
+            <View style="@style/line_v" android:background="@color/white" android:layout_marginTop="5dp" android:layout_marginBottom="5dp"></View>
+            <TextView  android:id="@+id/tv_zoushi_dashuang" style="@style/tv_zoushi_item" android:text="大双"  android:background="@color/bg_zise"/>
+            <View style="@style/line_v" android:background="@color/white" android:layout_marginTop="5dp" android:layout_marginBottom="5dp"></View>
+            <TextView  android:id="@+id/tv_zoushi_xiaoshuang" style="@style/tv_zoushi_item" android:text="小双"  android:background="@color/bg_zise"/>
+
+
+        </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="#fff"
+    tools:context="com.cp.MainActivity2">
+
+
+    <LinearLayout android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp" android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_my_id" android:text="thao333"
+                android:hint="我的id"
+                android:layout_width="130dp"
+                android:layout_height="50dp" android:layout_marginRight="20dp"/>
+
+            <Button android:gravity="center"
+                android:id="@+id/btn_login"
+                android:text="登录"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp" android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_im_id"
+                android:hint="用户id"
+                android:layout_width="130dp"
+                android:layout_height="50dp" android:layout_marginRight="20dp"/>
+            <EditText
+                android:id="@+id/et_neirong"
+                android:hint="发送内容"
+                android:layout_width="130dp"
+                android:layout_height="50dp" />
+            <Button android:gravity="center"
+                android:id="@+id/btn_send"
+                android:text="发送消息"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <utils.wzutils.ui.WzSimpleRecycleView
+            android:id="@+id/recycleView" android:background="#eee"
+            android:layout_above="@+id/vg_fangjian_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </utils.wzutils.ui.WzSimpleRecycleView>
+
+
+
+        <LinearLayout android:layout_alignParentBottom="true"
+            android:id="@+id/vg_fangjian_bottom"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <Button
+                android:id="@+id/btn_touzhu"
+                android:gravity="center"
+                android:text="投注"
+                android:layout_width="100dp"
+                android:layout_height="50dp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+</LinearLayout>

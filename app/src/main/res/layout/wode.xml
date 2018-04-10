@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@color/bg" >
+
+
+    <utils.wzutils.ui.WzScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bg_mine_top"
+                    android:scaleType="centerCrop"
+                    />
+                <utils.wzutils.ui.clicp.RoundImageView
+                    android:id="@+id/img_wode_touxiang"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    tools:src="@drawable/drawable_yuan"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="60dp"
+                    />
+            </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/btn_shezhi_nicheng"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_wode_nicheng"
+                    style="@style/textview" android:textSize="20dp"
+                    android:layout_marginTop="7dp"
+                    tools:text="我是一只小丑鱼" android:layout_gravity="center_horizontal" />
+
+                <LinearLayout android:layout_gravity="center_horizontal" android:layout_marginTop="5dp" android:layout_marginBottom="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView style="@style/textview_small" android:text="等级:" android:textColor="@color/tv_h3" android:layout_marginRight="5dp" android:gravity="center"/>
+                    <TextView android:id="@+id/tv_wode_dengji" style="@style/textview_small" android:text="公爵" android:textColor="#ff555555"  android:drawableLeft="@drawable/icon_bet_member_01"  android:gravity="center" android:drawablePadding="2dp"/>
+                    <TextView android:visibility="gone" android:id="@+id/tv_wode_dengji_daili" style="@style/textview_small" android:text="钻石" android:textColor="#ff555555"  android:drawableLeft="@drawable/icon_agency_golden"  android:gravity="center"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_wode_qianming"
+                    style="@style/textview" android:textSize="13dp" android:textColor="@color/tv_h3"
+                    android:layout_height="20dp" android:gravity="center" android:drawableLeft="@drawable/icon_mine_sign" android:drawablePadding="2dp"
+                    tools:text="祝我中500万吧" android:layout_gravity="center_horizontal" />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:id="@+id/btn_wode_qianbao"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <TextView style="@style/tv_wode_item" android:text="我的钱包" />
+
+                    <TextView
+                        android:id="@+id/tv_wode_yue"
+                        style="@style/textview" android:textSize="13dp"
+                        android:layout_alignParentRight="true"
+                        tools:text="500元宝"
+                        android:layout_marginRight="50dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/tv_hongse"/>
+                </RelativeLayout>
+                <TextView android:id="@+id/btn_wode_huishui" android:visibility="gone" style="@style/tv_wode_item" android:text="我的回水" android:drawableLeft="@drawable/icon_mine_huishui"/>
+                <TextView android:id="@+id/btn_wode_fenxiang" style="@style/tv_wode_item" android:text="代理中心"  android:drawableLeft="@drawable/icon_mine_share"/>
+                <TextView android:id="@+id/btn_wode_touzhu_jilu" style="@style/tv_wode_item" android:text="投注记录" android:drawableLeft="@drawable/icon_mine_game" />
+                <TextView  android:id="@+id/btn_wode_zhangbian_jilu" style="@style/tv_wode_item" android:text="帐变纪录"  android:drawableLeft="@drawable/icon_mine_record" />
+                <TextView  android:id="@+id/btn_wode_shouyi" android:visibility="gone" style="@style/tv_wode_item" android:text="我的收益"  android:drawableLeft="@drawable/icon_mine_shouyi" />
+                <TextView android:id="@+id/btn_wode_shezhi" style="@style/tv_wode_item" android:text="设置"  android:drawableLeft="@drawable/icon_mine_set" />
+                <TextView  android:id="@+id/btn_wode_guanyu" style="@style/tv_wode_item" android:text="关于"  android:drawableLeft="@drawable/icon_mine_about" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </utils.wzutils.ui.WzScrollView>
+
+
+
+
+</LinearLayout>

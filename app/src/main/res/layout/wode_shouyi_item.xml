@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_sheng"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:background="@drawable/rectangle_shouyi"
+        android:layout_width="match_parent"
+        android:paddingLeft="15dp"
+
+        android:layout_height="60dp" android:orientation="horizontal">
+
+
+        <LinearLayout android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:orientation="vertical">
+            <utils.wzutils.ui.textview.BoldTextView android:id="@+id/tv_shouyi_item_name" style="@style/textview_large"  android:text="萧源zhdjkhf" android:textColor="#ff222222" android:textSize="15dp"   android:drawablePadding="3dp" />
+
+            <TextView android:id="@+id/tv_shouyi_item_time" style="@style/textview_small" android:text="2017-08-22 07:04:52" android:textColor="@color/tv_h3" android:layout_marginTop="10dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_shouyi_item_amount"
+            style="@style/textview"
+            android:textSize="17dp"
+            android:text="+582"
+            android:gravity="right|center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingRight="20dp"
+            android:textColor="@color/tv_hongse"
+            />
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

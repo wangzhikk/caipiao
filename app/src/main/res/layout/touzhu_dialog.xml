@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    >
+
+
+
+    <utils.wzutils.ui.WzScrollView
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/vg_parent_dialog_touzhu"
+            android:background="@color/bg_lanse"
+            android:layout_alignParentBottom="true"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <ImageView
+                    android:id="@+id/btn_touzhu_pre"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/triangle_bet_pre"/>
+                <TextView style="@style/textview"
+                    android:id="@+id/tv_touzhu_title"
+                    android:layout_centerInParent="true"
+                    android:textSize="@dimen/tv_larage17"
+                    android:drawablePadding="3dp"
+                    android:text="大小单双"
+                    android:textColor="@color/white"
+                    android:drawableLeft="@drawable/icon_bet_daixao" />
+
+                <ImageView
+                    android:id="@+id/btn_touzhu_next"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/triangle_bet_next"/>
+            </RelativeLayout>
+
+
+            <utils.wzutils.ui.WzViewPager
+                android:id="@+id/viewPagerTouZhu"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_height="200dp">
+
+
+            </utils.wzutils.ui.WzViewPager>
+
+
+
+
+
+
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="32dp">
+
+
+                <TextView
+                    android:id="@+id/btn_touzhu_peilv"
+                    style="@style/textview_small" android:text="赔率说明"
+                    android:background="@drawable/kk_bet_peilv"
+                    android:textColor="@color/white"
+                    android:layout_width="72dp" android:layout_height="match_parent" android:gravity="center" />
+
+
+                <LinearLayout
+                    android:layout_alignParentRight="true"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_touzhu_zuixiao"
+                        style="@style/textview_small" android:text="最小投注"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/drawable_yuanjiao_bantouming_baise" android:layout_width="72dp"  android:layout_height="match_parent" android:gravity="center" />
+                    <TextView
+                        android:id="@+id/tv_touzhu_shuangbei"
+                        style="@style/textview_small" android:text="双倍投注"
+                        android:background="@drawable/drawable_yuanjiao_bantouming_baise" android:layout_width="72dp"  android:layout_height="match_parent" android:gravity="center" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <TextView android:id="@+id/touzhu_kuaisu_1" style="@style/tv_touzhu_money" android:text="10" />
+                <TextView  android:id="@+id/touzhu_kuaisu_2" style="@style/tv_touzhu_money" android:text="10" />
+                <TextView  android:id="@+id/touzhu_kuaisu_3" style="@style/tv_touzhu_money" android:text="10" />
+                <TextView  android:id="@+id/touzhu_kuaisu_4" style="@style/tv_touzhu_money" android:text="5000" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:layout_height="36dp">
+                <TextView style="@style/textview_small" android:text="投注金额：" android:layout_height="match_parent" android:gravity="center" android:textColor="@color/white" />
+
+                <EditText
+                    android:id="@+id/et_touzhu"
+                    style="@style/textview_small" android:background="@drawable/btn_bet_input" android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    android:inputType="number"
+                    />
+                <TextView
+                    android:id="@+id/btn_touzhu"
+                    style="@style/textview_large" android:text="投注"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/drawable_yuanjiao_hongse"
+                    android:textColor="@color/white"
+                    android:layout_width="75dp" android:layout_height="match_parent" android:gravity="center" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </utils.wzutils.ui.WzScrollView>
+
+
+
+
+
+
+
+</RelativeLayout>

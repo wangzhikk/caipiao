@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/vg_nodata"
+    >
+
+
+
+
+    <LinearLayout
+        android:background="@color/bg"
+        android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" >
+
+        <View android:layout_width="1dp" android:layout_height="0dp" android:layout_weight="1"></View>
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" android:orientation="vertical" android:layout_weight="5">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_nodata"
+                android:layout_marginBottom="15dp"
+                />
+            <TextView style="@style/textview"
+                android:text="暂无数据"
+                android:textColor="@color/tv_h4"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

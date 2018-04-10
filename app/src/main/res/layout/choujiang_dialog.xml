@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imgv_zhuanpan_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/zhuanpan_result_01"
+
+            />
+        <LinearLayout
+            android:paddingTop="30dp"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:orientation="horizontal">
+
+            <utils.wzutils.ui.textview.BoldTextView android:id="@+id/tv_choujiang_dialog_amount" style="@style/textview" android:text="10" android:textSize="50dp" android:textColor="@color/white" />
+            <utils.wzutils.ui.textview.BoldTextView style="@style/textview" android:text="元宝" android:textSize="20dp" android:textColor="@color/white" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

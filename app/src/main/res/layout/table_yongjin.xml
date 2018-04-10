@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_sheng"
+    android:orientation="vertical">
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow>
+            <TextView style="@style/table_item"  android:background="@color/tv_lanse_name"  android:text="代理级别" android:textColor="@color/white" />
+            <TextView style="@style/table_item" android:background="@color/tv_lanse_name" android:text="团队投注流水" android:layout_weight="1.5" android:textColor="@color/white" />
+            <TextView style="@style/table_item" android:background="@color/tv_lanse_name" android:text="佣金比例" android:textColor="@color/white" />
+        </TableRow>
+
+        <TableRow>
+            <TextView style="@style/table_item" android:text="普通会员" android:textColor="@color/tv_h3" />
+            <TextView style="@style/table_item" android:text="0-10000" android:textColor="@color/tv_h3"  android:layout_weight="1.5" />
+            <TextView style="@style/table_item" android:text="1%" android:textColor="@color/tv_h3" />
+        </TableRow>
+
+        <TableRow>
+            <TextView style="@style/table_item" android:text="银牌代理" android:textColor="@color/tv_h3" />
+            <TextView style="@style/table_item" android:text="10001-200000" android:textColor="@color/tv_h3"  android:layout_weight="1.5" />
+            <TextView style="@style/table_item" android:text="3%" android:textColor="@color/tv_h3" />
+        </TableRow>
+
+        <TableRow>
+            <TextView style="@style/table_item" android:text="金牌代理" android:textColor="@color/tv_h3" />
+            <TextView style="@style/table_item" android:text="200001-1000000" android:textColor="@color/tv_h3"  android:layout_weight="1.5" />
+            <TextView style="@style/table_item" android:text="5%" android:textColor="@color/tv_h3" />
+        </TableRow>
+
+        <TableRow>
+            <TextView style="@style/table_item" android:text="钻石代理" android:textColor="@color/tv_h3" />
+            <TextView style="@style/table_item" android:text="1000000以上" android:textColor="@color/tv_h3"  android:layout_weight="1.5" />
+            <TextView style="@style/table_item" android:text="7%" android:textColor="@color/tv_h3" />
+        </TableRow>
+
+
+
+    </TableLayout>
+
+
+</RelativeLayout>

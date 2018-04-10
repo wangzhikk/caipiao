@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/title"></include>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:padding="15dp"
+            android:id="@+id/shuoming_tv"
+            android:lineSpacingExtra="10dp"
+            style="@style/textview"
+            android:text="了分开打了分开打随机弗兰克打了分开打随机弗兰克打了分开打随机弗兰克打了分开打随机弗兰克打了分开打随机弗兰克打了分开打随机弗兰克打了分开打随机弗兰克打随机弗兰克打扫房间；"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </ScrollView>
+
+
+
+</LinearLayout>

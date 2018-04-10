@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_login" />
+
+
+
+    <utils.wzutils.ui.WzScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="110dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="40dp"
+                android:src="@drawable/logo_wenzi" />
+
+            <EditText
+                android:id="@+id/et_zhuce_account"
+                style="@style/tv_denglu_input"
+                android:hint="@string/account_hit" />
+
+            <EditText
+                android:id="@+id/et_zhuce_pwd"
+                style="@style/tv_denglu_input"
+                android:drawableLeft="@drawable/icon_login_username"
+                android:hint="密码为6-16位字母或数字"
+                android:inputType="textPassword" />
+            <EditText
+                android:id="@+id/et_zhuce_pwd2"
+                style="@style/tv_denglu_input"
+                android:drawableLeft="@drawable/icon_login_username"
+                android:hint="确认密码6-16位字母或数字"
+                android:inputType="textPassword" />
+
+            <EditText
+                android:id="@+id/et_zhuce_id"
+                style="@style/tv_denglu_input"
+                android:drawableLeft="@drawable/icon_id"
+                android:hint="请输入介绍人ID(没有可不填)"
+                android:layout_marginBottom="0dp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp" android:orientation="horizontal">
+                
+                <CheckBox
+                    android:id="@+id/cb_zhuce_tongyi"
+                    android:layout_height="match_parent"
+                    style="@style/textview_small"
+                    android:text="同意"
+                    android:drawableLeft="@drawable/selector_login_check"
+                    android:textColor="@color/white"
+                    android:button="@null"
+                    android:gravity="center_vertical"
+                    />
+                <TextView
+                    android:id="@+id/btn_go_zhuce_xieyi"
+                    style="@style/textview_small" android:text="《注册协议》" android:textColor="@color/tv_lanse_name"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    />
+                
+            </LinearLayout>
+            <TextView
+                android:id="@+id/btn_zhuce"
+                style="@style/textview"
+                android:layout_width="match_parent"
+                android:background="@drawable/input_login"
+                android:gravity="center"
+                android:text="立即注册"
+                android:textColor="@color/white"
+                android:textSize="@dimen/tv_larage17" />
+
+
+
+        </LinearLayout>
+
+
+    </utils.wzutils.ui.WzScrollView>
+
+    <ImageView
+        android:id="@+id/btn_login_close"
+        android:layout_width="50dp"
+        android:layout_height="100dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/icon_login_close" />
+</RelativeLayout>

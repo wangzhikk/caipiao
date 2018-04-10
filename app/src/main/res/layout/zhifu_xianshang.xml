@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@color/bg_sheng" >
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:orientation="vertical">
+        <include layout="@layout/title"></include>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:orientation="vertical">
+
+
+                <LinearLayout android:background="@color/white"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="67dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/iocn_weixin_yue"
+                        android:layout_marginRight="15dp"
+                        />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:orientation="vertical">
+
+                        <TextView style="@style/textview" android:text="账户余额" android:textColor="@color/tv_h3" android:layout_marginBottom="1dp"/>
+                        <TextView style="@style/textview" android:text="54877.28元宝" android:layout_alignParentRight="true" android:textSize="@dimen/tv_larage17"/>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:background="@color/white"
+
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="10dp"
+
+                    android:layout_marginBottom="10dp"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView style="@style/textview" android:text="充值金额(元)"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp" android:gravity="center_vertical"
+                        android:orientation="horizontal">
+                        <TextView
+                            style="@style/textview"
+                            android:text="@string/rmb" android:layout_marginRight="10dp"
+                            android:textSize="32dp" />
+                        <EditText style="@style/textview" android:gravity="center_vertical" android:background="@color/touming"
+                            android:layout_height="40dp" android:layout_marginTop="5dp" android:inputType="numberDecimal"
+                            android:hint="请输入充值金额" android:layout_width="match_parent"/>
+                    </LinearLayout>
+                    <View style="@style/line_h" android:layout_marginTop="15dp" android:layout_marginBottom="10dp"></View>
+
+                    <TextView android:id="@+id/tv_tixian_tishi" style="@style/textview" android:text="微信支付金额范围：10-12222元,推荐使用,支付后立即到账" android:lineSpacingExtra="5dp" android:textColor="@color/tv_h2"/>
+                </LinearLayout>
+
+
+
+                <TextView style="@style/btn_queding_chang" android:text="下一步"  />
+                <TextView style="@style/textview_small"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="20dp"
+                    android:lineSpacingExtra="5dp"
+                    android:text="温馨提示：微信支付方便快捷，支付完成立即到账。"
+                    android:textColor="@color/tv_h2"
+                    />
+
+
+            </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

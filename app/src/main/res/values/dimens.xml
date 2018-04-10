@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="statusbar_height">22dp</dimen>
+    <dimen name="title_height">44dp</dimen>
+
+    <dimen name="tv_titlebar">17dp</dimen>
+    <dimen name="tv_normal_height">45dp</dimen>
+
+    <dimen name="tv_larage17">17dp</dimen>
+    <dimen name="tv_larage">15dp</dimen>
+    <dimen name="tv_normal">14dp</dimen>
+    <dimen name="tv_small">12dp</dimen>
+    <dimen name="tv_small_small">10dp</dimen>
+
+    <dimen name="tv_line_space">5dp</dimen>
+    <integer name="max_nick_name">8</integer>
+</resources>

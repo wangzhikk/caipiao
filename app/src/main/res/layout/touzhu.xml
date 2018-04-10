@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@color/bg_sheng">
+
+    <include layout="@layout/title"></include>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="62dp" android:orientation="horizontal">
+        <LinearLayout android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" android:orientation="vertical">
+            <LinearLayout android:layout_marginBottom="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:orientation="horizontal">
+                <TextView style="@style/textview"  android:text="距离" />
+                <TextView android:id="@+id/tv_touzhu_dangqian_qi" style="@style/textview"  tools:text="874423" android:textColor="@color/tv_lanse_name" android:layout_marginLeft="5dp" android:layout_marginRight="5dp"/>
+                <TextView style="@style/textview"  android:text="开奖时间" />
+            </LinearLayout>
+            <TextView android:id="@+id/tv_touzhu_daojishi" style="@style/textview"  tools:text="1分 25秒" android:textSize="@dimen/tv_larage17" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/line_bet" android:layout_gravity="center_vertical"
+            />
+        <LinearLayout
+            android:id="@+id/vg_touzhu_yue"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_yue_lb"
+                style="@style/textview"
+                android:layout_height="wrap_content"
+                android:text="余额"
+                android:textColor="@color/tv_lanse_name" />
+            <TextView android:id="@+id/tv_touzhu_yue" style="@style/textview"  android:text="9.25元宝" android:textSize="@dimen/tv_larage17" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/btn_touzhu_lishi"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+
+
+        <TextView android:id="@+id/tv_touzhu_lishi_item" style="@style/tv_touzhu_lishi_item" tools:text="第 874564 期   9 + 1 + 0 = 10 (小 , 双)"
+            android:background="@drawable/drawable_yuanjiao_baise"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:paddingLeft="22dp"
+            android:paddingRight="20dp"
+            />
+        <ImageView
+            android:id="@+id/img_touzhu_lishi_xiala"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content" android:src="@drawable/icon_bet_xiala"/>
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <utils.wzutils.ui.WzSimpleRecycleView
+            android:id="@+id/recycleView"
+            android:layout_above="@+id/vg_fangjian_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </utils.wzutils.ui.WzSimpleRecycleView>
+
+        <LinearLayout android:layout_alignParentBottom="true"
+            android:id="@+id/vg_fangjian_bottom"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+            <Button
+                android:id="@+id/btn_touzhu"
+                style="@style/btn_normal_hong"
+                android:gravity="center"
+                android:text="投注"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    >
+
+
+    <LinearLayout
+        android:background="@drawable/drawable_yuanjiao_baise"
+        android:layout_width="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content" android:orientation="vertical">
+        <TextView style="@style/textview_large" android:text="确定跟投吗？" android:layout_height="40dp" android:gravity="center" android:layout_gravity="center_horizontal"/>
+        <View style="@style/line_h"></View>
+
+
+
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="40dp" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginLeft="20dp">
+                <TextView style="@style/textview" android:text="玩家: " android:textColor="@color/tv_h3" />
+                <TextView android:id="@+id/tv_gentou_name" style="@style/textview" android:text="深刻的飞机离" android:textColor="@color/tv_lanse_name"/>
+            </LinearLayout>
+
+            <View style="@style/line_h"></View>
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="40dp" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginLeft="20dp">
+                <TextView style="@style/textview" android:text="期数: " android:textColor="@color/tv_h3" />
+                <TextView android:id="@+id/tv_gentou_qishu" style="@style/textview" android:text="2018030722" android:textColor="@color/tv_lanse_name"/>
+            </LinearLayout>
+
+            <View style="@style/line_h"></View>
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="40dp" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginLeft="20dp">
+                <TextView style="@style/textview" android:text="类别: " android:textColor="@color/tv_h3" />
+                <TextView android:id="@+id/tv_gentou_type" style="@style/textview" android:text="小" android:textColor="@color/tv_lanse_name"/>
+            </LinearLayout>
+            <View style="@style/line_h"></View>
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="40dp" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginLeft="20dp">
+                <TextView style="@style/textview" android:text="金额: " android:textColor="@color/tv_h3" />
+                <TextView android:id="@+id/tv_gentou_num" style="@style/textview" android:text="1000元宝" android:textColor="@color/tv_lanse_name"/>
+            </LinearLayout>
+
+
+        <View style="@style/line_h"></View>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="40dp" android:orientation="horizontal" android:gravity="center">
+            <TextView android:id="@+id/tv_gentou_queding" style="@style/textview" android:text="确定"  android:layout_height="match_parent" android:layout_width="0dp" android:layout_weight="1" android:gravity="center"/>
+            <View style="@style/line_v"></View>
+            <TextView style="@style/textview" android:text="取消"   android:layout_height="match_parent" android:layout_width="0dp" android:layout_weight="1"  android:gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

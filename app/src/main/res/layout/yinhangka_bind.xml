@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@color/bg_sheng"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:orientation="vertical">
+
+        <include layout="@layout/title"></include>
+
+
+        <LinearLayout
+            android:background="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/vg_yinhangka_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="vertical">
+
+                <LinearLayout style="@style/input_parent">
+                    <TextView style="@style/input_left_tv" android:text="开户姓名"  />
+                    <EditText android:id="@+id/tv_yinhangka_bind_username"  style="@style/input_right_tv"  android:hint="请输入您的真实姓名"  />
+                </LinearLayout>
+                <View style="@style/line_h" android:layout_marginLeft="15dp"></View>
+            </LinearLayout>
+
+
+            <LinearLayout style="@style/input_parent">
+                <TextView style="@style/input_left_tv" android:text="银行名称"  />
+                <TextView  android:id="@+id/tv_yinhangka_bind_yinhang_name" style="@style/input_right_tv"  android:hint="请选择您的银行卡类型"  android:drawableRight="@drawable/icon_right" android:paddingRight="10dp"/>
+            </LinearLayout>
+            <View style="@style/line_h" android:layout_marginLeft="15dp"></View>
+
+            <LinearLayout style="@style/input_parent">
+                <TextView style="@style/input_left_tv" android:text="银行卡号"  />
+                <EditText   android:id="@+id/tv_yinhangka_bind_yinhang_number"  style="@style/input_right_tv"  android:hint="请输入您的银行卡帐号"  />
+            </LinearLayout>
+            <View style="@style/line_h" android:layout_marginLeft="15dp"></View>
+
+
+            <LinearLayout style="@style/input_parent">
+                <TextView style="@style/input_left_tv" android:text="开户城市"  />
+                <TextView  android:id="@+id/tv_yinhangka_bind_city" style="@style/input_right_tv"  android:hint="请选择您的开户城市"  android:drawableRight="@drawable/icon_right" android:paddingRight="10dp"/>
+            </LinearLayout>
+            <View style="@style/line_h" android:layout_marginLeft="15dp"></View>
+
+
+            <LinearLayout style="@style/input_parent">
+                <TextView style="@style/input_left_tv" android:text="开户行名称"  />
+                <EditText   android:id="@+id/tv_yinhangka_bind_subbranch"   style="@style/input_right_tv"  android:hint="请输入您的银行卡开户行名称"  />
+            </LinearLayout>
+            <View style="@style/line_h" android:layout_marginLeft="15dp"></View>
+
+
+
+            <LinearLayout style="@style/input_parent">
+                <TextView style="@style/input_left_tv" android:text="提现密码"  />
+                <EditText  android:id="@+id/tv_yinhangka_bind_mima" style="@style/input_right_tv"  android:hint="请输入您的提现密码"  android:inputType="textPassword" />
+            </LinearLayout>
+        </LinearLayout>
+        <View style="@style/line_h" ></View>
+
+
+        <TextView android:id="@+id/btn_yinhangka_bind" style="@style/btn_queding_chang" />
+
+    </LinearLayout>
+
+</RelativeLayout>

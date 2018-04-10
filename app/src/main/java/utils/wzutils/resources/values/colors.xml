@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#262930</color>
+    <color name="colorPrimaryDark">#262930</color>
+    <color name="colorAccent">#ff4c59</color>
+
+
+    <color name="white">#ffffff</color>
+    <color name="touming">#00000000</color>
+
+    <color name="line_color">#dedede</color>
+    <color name="line_color_sheng">#b2b2b2</color>
+    <color name="tv_h1">#292929</color>
+    <color name="tv_h2">#a3a3a3</color>
+    <color name="tv_h3">#cdc7c7</color>
+
+    <color name="tv_titlebar">@color/colorAccent</color>
+    <color name="bg">#ffffff</color>
+    <color name="bg_sheng">#f5f5f5</color>
+
+</resources>

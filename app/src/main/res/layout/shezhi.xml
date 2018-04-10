@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+
+    <LinearLayout
+        android:background="@color/bg_sheng"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:orientation="vertical">
+        <include layout="@layout/title"></include>
+
+        <TextView  android:id="@+id/btn_shezhi_yinhangka_bind" style="@style/btn_shezhi_item"  android:text="绑定银行卡"  />
+        <View style="@style/line_h"></View>
+
+        <TextView android:id="@+id/btn_shezhi_xiugai_denglu_mima" style="@style/btn_shezhi_item"  android:text="修改密码"  />
+        <View style="@style/line_h"></View>
+
+        <TextView  android:id="@+id/btn_shezhi_xiugai_zijin_mima"  style="@style/btn_shezhi_item"  android:text="提现密码"  />
+        <View style="@style/line_h"></View>
+
+        <TextView  android:id="@+id/btn_shezhi_bind_phone" style="@style/btn_shezhi_item"  android:text="手机绑定"  />
+        <View style="@style/line_h"></View>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView  style="@style/btn_shezhi_item"  android:text="清除缓存" android:drawableRight="@null" />
+            <TextView
+                android:id="@+id/btn_qingchu_huancun"
+                style="@style/textview"  android:text="7.7M"
+                android:layout_alignParentRight="true"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center|right"
+                android:paddingRight="20dp"
+                android:textColor="@color/tv_h3"
+                />
+
+
+        </RelativeLayout>
+        <View style="@style/line_h"></View>
+
+
+        <TextView
+            android:id="@+id/btn_login_out"
+            style="@style/textview"  android:text="退出登录"
+            android:textColor="@color/tv_hongse"
+            android:textSize="@dimen/tv_larage17"
+            android:gravity="center"
+            android:layout_height="50dp"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_marginTop="20dp"  />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

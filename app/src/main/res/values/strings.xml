@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">爱乐18</string>
+    <string name="account_hit">账号为字母开头的6-16位字母或数字</string>
+    <string name="rmb">¥</string>
+    <string name="tixian_tixing"><![CDATA[<b><font color="#222222">提醒：</font></b>每日有
+        <font color="#F03744">%1$s</font>
+        次免费提现机会，当前还剩
+        <font color="#F03744">%2$s</font>
+        次，超过则每次收取
+        <font color="#F03744">%3$s</font>的手续费]]></string>
+
+</resources>

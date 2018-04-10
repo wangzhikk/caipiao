@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@color/bg_sheng"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:orientation="vertical">
+
+        <include layout="@layout/title"></include>
+
+
+        <LinearLayout
+            android:background="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical">
+
+
+
+
+            <!--<LinearLayout style="@style/input_parent">-->
+                <!--<TextView style="@style/input_left_tv" android:text="原密码"  />-->
+                <!--<EditText  android:id="@+id/et_mima_yuanmima" style="@style/input_right_tv"  android:hint="请输入原密码(6-16位字符)"  android:inputType="textPassword" />-->
+            <!--</LinearLayout>-->
+            <!--<View style="@style/line_h" android:layout_marginLeft="15dp"></View>-->
+
+            <LinearLayout
+                android:id="@+id/vg_zijin_mima" android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <include layout="@layout/include_phone_yanzhengma"></include>
+                <View style="@style/line_h" android:layout_marginLeft="15dp"></View>
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/input_parent">
+                <TextView style="@style/input_left_tv" android:text="新密码"  />
+                <EditText  android:id="@+id/et_mima_xinmima" style="@style/input_right_tv"  android:hint="请输入新密码(6-16位字符)"  android:inputType="textPassword" />
+            </LinearLayout>
+            <View style="@style/line_h" android:layout_marginLeft="15dp"></View>
+
+
+            <LinearLayout style="@style/input_parent">
+                <TextView style="@style/input_left_tv" android:text="确认新密码"  />
+                <EditText  android:id="@+id/et_mima_queren" style="@style/input_right_tv"  android:hint="请再次确认密码"  android:inputType="textPassword" />
+            </LinearLayout>
+        </LinearLayout>
+        <View style="@style/line_h"  ></View>
+
+
+        <TextView android:id="@+id/btn_mima_queding" style="@style/btn_queding_chang" />
+
+    </LinearLayout>
+
+</RelativeLayout>

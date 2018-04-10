@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
+    android:layout_width="match_parent" android:background="@color/bg_sheng"
+    android:layout_height="match_parent" >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:orientation="vertical">
+        <include layout="@layout/title"></include>
+
+        <LinearLayout android:background="@drawable/drawable_yuanjiao_baise"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical">
+
+
+            <LinearLayout   android:layout_width="match_parent" android:layout_height="50dp" android:orientation="horizontal">
+                <TextView style="@style/textview" android:text="昵称"  android:layout_width="70dp" android:layout_height="match_parent" android:gravity="center_vertical"/>
+                <EditText android:id="@+id/tv_shezhi_nickname"
+                    android:layout_width="match_parent"
+                    style="@style/textview"   android:hint="请填写您的昵称"  android:layout_height="match_parent" android:layout_gravity="center_vertical" android:background="@null" android:singleLine="true"/>
+            </LinearLayout>
+
+            <View style="@style/line_h"></View>
+            <LinearLayout   android:layout_width="match_parent" android:layout_height="50dp" android:orientation="horizontal">
+                <TextView style="@style/textview" android:text="签名"  android:layout_width="70dp" android:layout_height="match_parent" android:gravity="center_vertical"/>
+                <EditText  android:id="@+id/tv_shezhi_autograph"
+                    android:layout_width="match_parent"
+                    style="@style/textview" android:hint="请填写您的个性签名"  android:layout_height="match_parent" android:layout_gravity="center_vertical" android:background="@null"/>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <TextView android:id="@+id/btn_tijiao_nicheng" style="@style/btn_queding_chang" android:text="提交"/>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

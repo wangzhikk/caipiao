@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@color/bg" >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:orientation="vertical">
+
+        <include layout="@layout/title"></include>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:orientation="vertical" android:layout_margin="10dp">
+            <TextView
+                android:id="@+id/btn_go_huishui_bj28"
+                style="@style/textview" android:textSize="18dp" android:text="北京28"
+                android:layout_height="70dp" android:layout_width="match_parent"
+                android:layout_marginBottom="10dp" android:gravity="center"
+                android:background="@drawable/drawable_yuanjiao_lanse"
+                android:textColor="#E6EF1E"
+                />
+            <LinearLayout
+                style="@style/textview" android:textSize="18dp" android:text="北京28"
+                android:layout_height="70dp" android:layout_width="match_parent"
+                android:layout_marginBottom="10dp" android:gravity="center"
+                android:background="@drawable/drawable_yuanjiao_huise"
+                android:textColor="#E6EF1E"
+                android:orientation="vertical"
+                >
+                <TextView
+                    style="@style/textview" android:textSize="18dp" android:text="重庆时时彩"
+                    android:layout_height="wrap_content" android:layout_width="match_parent" android:gravity="center"
+                    android:textColor="@color/tv_h3"
+                    />
+                <TextView
+                    style="@style/textview_small"
+                    android:layout_marginTop="3dp"
+                    android:text="回水功能暂未开放"
+                    android:layout_height="wrap_content" android:layout_width="match_parent" android:gravity="center"
+                    android:textColor="@color/tv_h3"
+                    />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

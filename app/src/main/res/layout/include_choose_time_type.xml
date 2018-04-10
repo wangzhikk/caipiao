@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/vg_touzhu_jilu_shaixuan"
+        android:background="@color/white"
+        android:paddingRight="10dp"
+        android:layout_width="match_parent" android:gravity="center_vertical"
+        android:layout_height="50dp" android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/vg_touzhu_jilu_choose_type"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" android:orientation="horizontal">
+            <TextView android:id="@+id/tv_touzhu_jilu_choose_type" style="@style/textview" android:text="全部"
+                android:paddingLeft="10dp" android:layout_height="match_parent" android:gravity="center" />
+            <ImageView
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:src="@drawable/icon_tzjl_more"/>
+
+        </LinearLayout>
+
+        <View android:layout_width="0dp" android:layout_weight="1" android:layout_height="1dp"></View>
+        <TextView android:id="@+id/tv_touzhu_jilu_choose_time_start" style="@style/textview_small" tools:text="2018-11-07" android:background="@drawable/rectangle_tzjl_time" android:gravity="center"/>
+        <TextView style="@style/textview_small" android:text="到"  android:layout_marginLeft="7dp" android:layout_marginRight="7dp"/>
+        <TextView  android:id="@+id/tv_touzhu_jilu_choose_time_end" style="@style/textview_small" tools:text="2018-11-07" android:background="@drawable/rectangle_tzjl_time" android:gravity="center"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

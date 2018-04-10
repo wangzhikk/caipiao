@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+
+
+        <TextView android:layout_marginTop="5dp"
+            style="@style/textview_small"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/im_time_tv"
+            android:textColor="@color/white"
+            android:background="@drawable/kk_bet_time"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="2018-12-05 16:42" android:gravity="center" />
+        <LinearLayout
+            android:id="@+id/im_vg_left"
+            android:contentDescription="左边消息"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="horizontal">
+            <utils.wzutils.ui.clicp.RoundImageView
+                android:id="@+id/im_left_touxiang"
+                android:src="@drawable/touxiang" android:layout_marginRight="6dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp" />
+            <LinearLayout
+                android:layout_width="match_parent" android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/im_left_name_tv"
+                    style="@style/textview_small"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="@color/tv_h3"
+                    android:text="姓名"
+                    android:gravity="center"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/icon_bet_member_05"
+                    />
+                <LinearLayout
+                    android:background="@drawable/kk_bet_bubble_white" android:orientation="horizontal"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp">
+                    <TextView
+                        style="@style/textview"
+                        android:minWidth="50dp"
+                        android:maxWidth="220dp"
+                        android:gravity="center_vertical" android:textColor="@color/white"
+                        android:id="@+id/im_left_content_tv"
+                        android:text="874423期 投注类型：大双 \n金额：3500元宝"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/im_vg_right"
+            android:contentDescription="右边消息"
+            android:gravity="right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="horizontal">
+            <LinearLayout
+                android:gravity="right"
+                android:layout_width="220dp" android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/im_right_name_tv"
+                    style="@style/textview_small"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="@color/tv_h3"
+                    android:text="姓名"
+                    android:gravity="center"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/icon_bet_member_05"
+                    />
+                <LinearLayout
+                    android:background="@drawable/kk_bet_bubble_red" android:orientation="horizontal"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    >
+                    <TextView
+                        style="@style/textview"
+                        android:id="@+id/im_right_content_tv"
+                        android:minWidth="50dp"
+                        android:maxWidth="220dp"
+                        android:textColor="@color/white"
+                        android:text="8"
+
+                        android:gravity="center_vertical"
+
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <utils.wzutils.ui.clicp.RoundImageView
+                android:id="@+id/im_right_touxiang"
+                android:src="@drawable/touxiang" android:layout_marginLeft="10dp"  android:layout_width="45dp" android:layout_height="45dp" />
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/im_vg_center"
+            android:maxWidth="250dp"
+            style="@style/textview"
+            android:text="欢迎张三进入房间" android:background="@drawable/drawable_yuanjiao_huise"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+
+            />
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

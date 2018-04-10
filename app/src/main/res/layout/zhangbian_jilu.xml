@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_sheng"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:orientation="vertical">
+
+        <include layout="@layout/title"></include>
+        <include layout="@layout/include_choose_time_type"></include>
+        <utils.wzutils.ui.pullrefresh.WzRefreshLayout
+            android:id="@+id/wzRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <utils.wzutils.ui.WzSimpleRecycleView
+                android:id="@+id/recycleView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></utils.wzutils.ui.WzSimpleRecycleView>
+        </utils.wzutils.ui.pullrefresh.WzRefreshLayout>
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

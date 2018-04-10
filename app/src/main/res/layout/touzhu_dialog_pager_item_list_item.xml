@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    tools:background="@color/bg_lanse"
+    >
+
+
+
+    <RadioButton
+        android:id="@+id/cb_touzhu_item"
+
+        android:layout_width="match_parent"
+        style="@style/textview_large"
+        android:textColor="@color/white"
+        android:text="18\n18.88.0"
+        android:gravity="center"
+        android:background="@drawable/selector_touzhu_item"
+        android:padding="5dp"
+        android:button="@null"
+        />
+
+</RelativeLayout>

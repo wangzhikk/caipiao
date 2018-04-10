@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#F03744</color>
+    <color name="colorPrimaryDark">#F03744</color>
+    <color name="colorAccent">#F03744</color>
+
+
+    <color name="white">#ffffff</color>
+    <color name="touming">#00000000</color>
+    <color name="bantouming">#33000000</color>
+
+    <color name="line_color">#dedede</color>
+    <color name="line_color_sheng">#b2b2b2</color>
+    <color name="tv_h0">#000000</color>
+    <color name="tv_h1">#222222</color>
+    <color name="tv_h1_jian">#4b4b4b</color>
+    <color name="tv_h2">#737373</color>
+    <color name="tv_h3">#999999</color>
+    <color name="tv_h4">#bdbebe</color>
+    <color name="tv_h5">#d8d8d8</color>
+
+    <color name="tv_titlebar">@color/colorAccent</color>
+    <color name="bg">#ffffff</color>
+    <color name="bg_sheng">#F7F5F6</color>
+    <color name="bg_sheng_hei">#ffeeeeee</color>
+
+    <color name="tv_lanse_name">#4491FE</color>
+
+    <color name="bg_lanse">#1C99E9</color>
+    <color name="bg_lanse_qian">#64c8fd</color>
+    <color name="bg_huangse">#FFAD63</color>
+    <color name="bg_zise">#8F7AFD</color>
+
+    <color name="huanghei">#d9a700</color>
+    <color name="huangliang">#FFC800</color>
+    <color name="huangliang2">#FFF3D4</color>
+
+    <color name="bantouminghei">#33000000</color>
+
+    <color name="tv_hongse">#F03744</color>
+    <color name="tv_lvse">#02ae01</color>
+    <color name="tv_lvse_qian">#68d5bf</color>
+    <color name="tv_lvse_sheng">#068306</color>
+    <color name="tv_baozhang_title">#a07f53</color>
+    <color name="tv_baozhang_bg">#fffaf4</color>
+
+
+    <color name="caizi">#ffbe2d</color>
+    <color name="shangpin">#ff5f57</color>
+    <color name="youxiu">#29c940</color>
+
+</resources>

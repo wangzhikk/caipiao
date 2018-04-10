@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/bg_sheng">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include layout="@layout/title"></include>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+
+            <LinearLayout
+
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/kk_bankcard_add"
+                android:orientation="horizontal"
+                >
+
+                <LinearLayout   android:id="@+id/vg_yinghangka_parent"
+                    android:contentDescription="有银行卡的时候显示"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imgv_yinghangka_logo"
+                        android:layout_width="41dp"
+                        android:layout_height="41dp"
+                        tools:src="@drawable/logo_icbc"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="15dp"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:orientation="vertical">
+                        <TextView android:id="@+id/tv_yinghangka" style="@style/textview" android:textSize="18dp" tools:text="中国工商银行"
+                            android:layout_marginTop="30dp" android:textColor="@color/white"
+                            />
+                        <LinearLayout
+                            android:layout_marginTop="40dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textView3"
+                                style="@style/textview"
+                                android:text="****  ****  ****  "
+                                android:textColor="@color/white"
+                                android:textSize="18dp" />
+
+                            <TextView android:id="@+id/tv_yinghangka_last" style="@style/textview" android:textSize="28dp" tools:text="1122" android:textColor="@color/white" />
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout                     android:visibility="gone"
+
+                    android:contentDescription="没绑定银行卡的时候显示"
+                    android:id="@+id/vg_no_yinghangka_parent"
+                    android:gravity="center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_bankcard_add"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="10dp" />
+                    <TextView style="@style/textview_large"  android:text="请绑定银行储蓄卡" android:textColor="@color/white" />
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/yinying_bankcard"
+                android:layout_alignParentBottom="true"
+                />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:paddingLeft="15dp"
+            android:paddingTop="45dp"
+            android:paddingBottom="45dp"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical">
+
+
+            <TextView style="@style/textview_large" android:text="●  兑换只能绑定一张银行卡" android:textColor="@color/tv_h2" android:layout_marginBottom="15dp"/>
+            <TextView style="@style/textview_large" android:text="●  如果需要换银行卡请重新绑定" android:textColor="@color/tv_h2"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

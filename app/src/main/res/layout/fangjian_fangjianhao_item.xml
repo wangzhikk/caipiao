@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:gravity="center"
+        android:paddingRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="241dp">
+            <ImageView
+                android:id="@+id/room_imgv"
+                android:src="@drawable/img_room_01"
+                android:scaleType="fitXY"
+                android:layout_width="173dp"
+                android:layout_height="241dp" />
+
+            <LinearLayout
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:orientation="vertical">
+                <TextView style="@style/textview" android:id="@+id/fangjian_name" android:textSize="@dimen/tv_larage17" android:text="VIP房间1" android:textColor="@color/white" android:layout_marginBottom="2dp"/>
+                <TextView style="@style/textview" android:id="@+id/fangjian_num" android:textSize="13dp" android:text="在线347人" android:textColor="@color/white"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+</LinearLayout>

@@ -1,0 +1,92 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowSoftInputMode">adjustNothing|stateAlwaysHidden</item>
+    </style>
+
+    <style name="TouMingStatus" parent="AppTheme">
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <!--<style name="start" parent="TouMingStatus">-->
+        <!--<item name="android:windowBackground">@drawable/initial_page</item>-->
+    <!--</style>-->
+    <!--<style name="start_act" parent="TouMingStatus">-->
+    <!--<item name="android:windowBackground">@drawable/initial_page</item>-->
+    <!--</style>-->
+    <style name="translucent" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="textview">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/tv_normal</item>
+        <item name="android:textColor">@color/tv_h1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+    </style>
+
+    <style name="textview_small" parent="textview">
+        <item name="android:textSize">@dimen/tv_small</item>
+    </style>
+
+    <style name="textview_large" parent="textview">
+        <item name="android:textSize">@dimen/tv_larage</item>
+    </style>
+
+    <style name="textview_small_small" parent="textview">
+        <item name="android:textSize">@dimen/tv_small_small</item>
+    </style>
+
+    <style name="line_h">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/line_color</item>
+    </style>
+
+    <style name="line_v">
+        <item name="android:layout_width">1px</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/line_color</item>
+    </style>
+
+    <style name="line_h_sheng" parent="line_h">
+        <item name="android:background">@color/line_color_sheng</item>
+    </style>
+
+    <style name="line_h_jiange" parent="line_h">
+        <item name="android:background">@color/bg_sheng</item>
+        <item name="android:layout_height">10dp</item>
+    </style>
+
+
+    <style name="title_status">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">22dp</item>
+    </style>
+
+    <style name="title_parent">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+
+    <style name="title_content_parent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">44dp</item>
+    </style>
+
+
+
+
+
+</resources>

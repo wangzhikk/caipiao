@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@color/bg_sheng" >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:orientation="vertical">
+
+        <include layout="@layout/title"></include>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp" android:orientation="horizontal">
+
+            <RadioButton android:id="@+id/rb_huishui_chu" style="@style/rb_title" android:text="初级房" android:background="@drawable/selector_cb_title" tools:checked="true"/>
+            <View style="@style/line_v"></View>
+            <RadioButton android:id="@+id/rb_huishui_zhong" style="@style/rb_title" android:text="中级房"  android:background="@drawable/selector_cb_title"  />
+            <View style="@style/line_v"></View>
+            <RadioButton android:id="@+id/rb_huishui_gao" style="@style/rb_title" android:text="高级房"  android:background="@drawable/selector_cb_title"  />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="35dp" style="@style/textview"
+            android:text="自动回水，客服审核(满足条件)" android:gravity="center"
+            android:textColor="@color/tv_h3"
+            />
+        <utils.wzutils.ui.pullrefresh.WzRefreshLayout
+            android:id="@+id/wzRefresh_huishui"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <utils.wzutils.ui.WzSimpleRecycleView
+                android:id="@+id/recycleView_huishui"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></utils.wzutils.ui.WzSimpleRecycleView>
+        </utils.wzutils.ui.pullrefresh.WzRefreshLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

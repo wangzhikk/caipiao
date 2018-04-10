@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout android:id="@+id/vg_yanzhengma"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="vertical">
+        <LinearLayout style="@style/input_parent">
+            <TextView android:id="@+id/lb_mima_phone" style="@style/input_left_tv" android:text="手机号"  />
+            <EditText  android:id="@+id/et_mima_phone" style="@style/input_right_tv"  android:hint="请输入您的手机号"  />
+        </LinearLayout>
+        <View style="@style/line_h" android:layout_marginLeft="15dp"></View>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout style="@style/input_parent">
+                <TextView style="@style/input_left_tv" android:text="验证码"  />
+                <EditText  android:id="@+id/et_mima_yanzhengma" style="@style/input_right_tv"  android:hint="请输入验证码"  />
+            </LinearLayout>
+            <TextView android:id="@+id/tv_mima_huoqu_yanzhengma" style="@style/input_yanzheng_ma"  />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

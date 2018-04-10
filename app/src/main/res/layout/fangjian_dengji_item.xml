@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+
+
+
+        <LinearLayout
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical">
+
+
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/vg_fangjian_1"
+                android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="161dp">
+                    <ImageView android:id="@+id/fangjian_dengji_img"  android:src="@drawable/img_class_10yuan" android:layout_width="match_parent" android:layout_height="match_parent"  android:scaleType="centerCrop" />
+                    <ImageView android:id="@+id/fangjian_peilv" android:layout_width="80dp" android:layout_height="40dp" android:layout_alignParentTop="true" android:layout_alignParentEnd="true" android:scaleType="centerInside" android:src="@drawable/kk_class_shuoming" />
+                </RelativeLayout>
+                <LinearLayout  android:layout_marginLeft="15dp" android:layout_marginRight="15dp" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:orientation="horizontal"
+                    android:background="@drawable/kk_class"
+                    android:layout_marginTop="113dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp" >
+                    <utils.wzutils.ui.textview.BoldTextView android:id="@+id/fangjian_dengji_name" tools:text="初级房间" style="@style/textview" android:textSize="@dimen/tv_larage17" android:layout_marginRight="5dp" />
+                    <TextView style="@style/textview_large"  android:id="@+id/fangjian_dengji_desc"  tools:text="(10元宝-3000元宝)"/>
+                    <View android:layout_weight="1" style="@style/textview" android:layout_height="1dp"></View>
+                    <TextView style="@style/textview" android:id="@+id/fangjian_dengji_num" tools:text="1000人"  android:drawablePadding="5dp" android:textColor="@color/tv_h3" android:drawableLeft="@drawable/icon_class_pople"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+</LinearLayout>

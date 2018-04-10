@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"  >
+
+
+
+    <LinearLayout
+
+        tools:layout_margin="10dp"
+        android:background="@drawable/drawable_yuanjiao_baise"
+        android:layout_width="match_parent"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="8dp"
+        android:layout_height="185dp" android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            >
+            <utils.wzutils.ui.textview.BoldTextView android:id="@+id/tv_touzhu_jilu_item_title" style="@style/textview_large" android:text="重庆时时彩－20180228068期"/>
+            <utils.wzutils.ui.textview.BoldTextView style="@style/textview"
+                android:id="@+id/tv_touzhu_jilu_item_jine"
+                android:layout_alignParentRight="true"
+                android:text="+10.00元宝"
+                android:textColor="@color/tv_hongse"
+                />
+        </RelativeLayout>
+        <TextView android:id="@+id/tv_touzhu_jilu_item_result" style="@style/textview_small" tools:text="开奖号码：5 1 1 6 5 (和:11)"  android:layout_marginBottom="2dp"/>
+        <TextView android:id="@+id/tv_touzhu_jilu_item_type" style="@style/textview_small" tools:text="开奖类型：5 1 1 6 5 (和:11)"    android:layout_marginBottom="2dp"/>
+        <TextView android:id="@+id/tv_touzhu_jilu_item_touzhu_type" style="@style/textview_small" tools:text="投注类型：5 1 1 6 5 (和:11)"    android:layout_marginBottom="2dp"/>
+        <TextView android:id="@+id/tv_touzhu_jilu_item_touzhu_jine" style="@style/textview_small" tools:text="投注金额：5 1 1 6 5 (和:11)"    android:layout_marginBottom="2dp"/>
+        <TextView android:id="@+id/tv_touzhu_jilu_item_zhongjiang_jine" style="@style/textview_small" tools:text="中奖金额：5 1 1 6 5 (和:11)"    android:layout_marginBottom="2dp"/>
+        <TextView android:id="@+id/tv_touzhu_jilu_item_dingdanhao" style="@style/textview_small" tools:text="订单编号： "    android:layout_marginBottom="2dp"/>
+        <TextView
+            android:id="@+id/tv_touzhu_jilu_time"
+            style="@style/textview_small" android:text="2018-07-24 09:37:43"
+            android:gravity="right"
+            android:textColor="@color/tv_h2"
+            android:layout_width="match_parent"
+            />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imgv_touzhu_jilu_item_zhongjiang"
+        android:src="@drawable/img_tzjl_prize"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
