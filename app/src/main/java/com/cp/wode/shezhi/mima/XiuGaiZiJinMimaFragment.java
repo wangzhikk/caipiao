@@ -40,10 +40,10 @@ public class XiuGaiZiJinMimaFragment extends ParentFragment {
         UiTool.setSoftInputModeSpan(getActivity());
 
         if(Data_login_validate.getData_login_validate().getUserInfo().base_auth_thirdpwd==0){
-            titleTool.setTitle("设置提现密码");
+            titleTool.setTitle("设置支付密码");
             vg_zijin_mima.setVisibility(View.GONE);
         }else {
-            titleTool.setTitle("修改提现密码");
+            titleTool.setTitle("修改支付密码");
             vg_zijin_mima.setVisibility(View.VISIBLE);
         }
 

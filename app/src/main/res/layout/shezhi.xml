@@ -18,7 +18,7 @@
         <TextView android:id="@+id/btn_shezhi_xiugai_denglu_mima" style="@style/btn_shezhi_item"  android:text="修改密码"  />
         <View style="@style/line_h"></View>
 
-        <TextView  android:id="@+id/btn_shezhi_xiugai_zijin_mima"  style="@style/btn_shezhi_item"  android:text="提现密码"  />
+        <TextView  android:id="@+id/btn_shezhi_xiugai_zijin_mima"  style="@style/btn_shezhi_item"  android:text="支付密码"  />
         <View style="@style/line_h"></View>
 
         <TextView  android:id="@+id/btn_shezhi_bind_phone" style="@style/btn_shezhi_item"  android:text="手机绑定"  />

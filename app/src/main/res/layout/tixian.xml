@@ -74,7 +74,7 @@
 
                 <EditText
                     android:id="@+id/et_tixian_mima"
-                    style="@style/textview" android:hint="请输入提现密码"
+                    style="@style/textview" android:hint="请输入支付密码"
                     android:background="@color/white" android:layout_height="48dp"
                     android:paddingLeft="15dp"
                     android:inputType="textPassword" android:gravity="center_vertical" android:layout_width="match_parent"

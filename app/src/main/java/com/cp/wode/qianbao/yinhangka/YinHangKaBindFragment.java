@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import com.cp.R;
 import com.cp.cp.Data_login_validate;
+import com.cp.wode.Data_personinfo_query;
+import com.cp.wode.shezhi.mima.XiuGaiZiJinMimaFragment;
 import com.yanzhenjie.album.Album;
 import com.yanzhenjie.durban.Durban;
 
@@ -164,4 +166,13 @@ public class YinHangKaBindFragment extends ParentFragment {
     }
 
 
+    @Override
+    public void go() {
+        if(Data_login_validate.getData_login_validate().getUserInfo().base_auth_thirdpwd==0){//没有设置支付密码， 不让进
+            CommonTool.showToast("请先设置支付密码!");
+            //new XiuGaiZiJinMimaFragment().go();
+            return;
+        }
+        super.go();
+    }
 }
