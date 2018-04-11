@@ -61,8 +61,8 @@
 
 
             <LinearLayout style="@style/input_parent">
-                <TextView style="@style/input_left_tv" android:text="支付密码"  />
-                <EditText  android:id="@+id/tv_yinhangka_bind_mima" style="@style/input_right_tv"  android:hint="请输入您的支付密码"  android:inputType="textPassword" />
+                <TextView style="@style/input_left_tv" android:text="资金密码"  />
+                <EditText  android:id="@+id/tv_yinhangka_bind_mima" style="@style/input_right_tv"  android:hint="请输入您的资金密码"  android:inputType="textPassword" />
             </LinearLayout>
         </LinearLayout>
         <View style="@style/line_h" ></View>

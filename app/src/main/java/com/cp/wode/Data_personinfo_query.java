@@ -104,7 +104,7 @@ public class Data_personinfo_query extends ParentServerData {
     public int base_auth_phone;
     public String base_phone;
     public String base_headImage;
-    public int base_auth_thirdpwd;//是否已经设置支付密码，0－未设置，1－已设置
+    public int base_auth_thirdpwd;//是否已经设置资金密码，0－未设置，1－已设置
 
     public int base_grade;
     public int base_type;
