@@ -63,7 +63,7 @@ public class MsgData {
 
         public String msg;//错误消息
         public String uuid;//用户id
-        public String headImage;//用户头像图片
+        public Object headImage;//用户头像图片
         public int grade;//用户会员级别
         public String nickname;//用户昵称
 

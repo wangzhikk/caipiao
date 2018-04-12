@@ -38,6 +38,7 @@
             android:layout_height="50dp" android:orientation="horizontal">
             <EditText
                 android:id="@+id/et_send_msg"
+                android:hint="请输入内容"
                 style="@style/textview"
                 android:layout_width="0dp" android:layout_weight="1"
                 android:layout_height="match_parent"

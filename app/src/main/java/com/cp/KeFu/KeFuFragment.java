@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.app.hubert.guide.NewbieGuide;
@@ -73,7 +74,7 @@ public class KeFuFragment extends ParentFragment {
 
     @Override
     public void initData() {
-        titleTool.setTitle("客服");
+        titleTool.setTitle("与客服聊天中");
         //UiTool.setSoftInputModeSpan(getActivity());
         getActivityWz().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
         msgHandlerListener=new IMTool.MsgHandlerListener() {
@@ -122,7 +123,7 @@ public class KeFuFragment extends ParentFragment {
     public void initListView(final List<MsgData> msgDataList) {
         recycleView.setDividerNormal(10);
         MsgData.initShowTimeStamp(msgDataList);
-        recycleView.setData(msgDataList, R.layout.im_item, new WzSimpleRecycleView.WzRecycleAdapter() {
+        recycleView.setData(msgDataList, R.layout.im_item_kefu, new WzSimpleRecycleView.WzRecycleAdapter() {
             @Override
             public void initData(int position, int type, View itemView) {
                 super.initData(position, type, itemView);
@@ -150,23 +151,22 @@ public class KeFuFragment extends ParentFragment {
 
 
                     int idTouXiang = 0;
-                    int idName = 0;
                     int idContent = 0;
                     if (Data_login_validate.getData_login_validate().uuid.equals(msgData.msgDetailData.uuid)) {//是我自己投注的
                         im_vg_right.setVisibility(View.VISIBLE);
                         idTouXiang = R.id.im_right_touxiang;
-                        idName = R.id.im_right_name_tv;
                         idContent = R.id.im_right_content_tv;
                     } else {//别人投注的
                         im_vg_left.setVisibility(View.VISIBLE);
                         idTouXiang = R.id.im_left_touxiang;
-                        idName = R.id.im_left_name_tv;
                         idContent = R.id.im_left_content_tv;
 
                     }
-                    TextView nick = itemView.findViewById(idName);
-                    setTextView(nick, msgData.msgDetailData.nickname);
-                    UiTool.setCompoundDrawables(getActivity(), nick, 0, 0, 0, 0);
+
+                    if(StringTool.isEmpty(""+msgData.msgDetailData.headImage)&&"service".equals(msgData.msgDetailData.uuid)){
+                        msgData.msgDetailData.headImage=R.drawable.img_servicer;
+                    }
+                    loadImage(msgData.msgDetailData.headImage,itemView,idTouXiang);
                     TextView im_left_content_tv = itemView.findViewById(idContent);
                     if(msgData.msgDetailData.isChatMsg()&&msgData.msgDetailData.state==10){
                         HtmlTool.setHtmlText(im_left_content_tv, msgData.msgDetailData.msgContent);
