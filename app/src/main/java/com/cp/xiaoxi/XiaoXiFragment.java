@@ -71,13 +71,13 @@ public class XiaoXiFragment extends ParentFragment implements WzRefreshLayout.Lo
                 final Data_message_detail.MessageDetailBean messageListBean=list.get(position);
                 setTextView(itemView,R.id.tv_xiaoxi_title,messageListBean.message_title);
                 setTextView(itemView,R.id.tv_xiaoxi_time, messageListBean.message_time);
-                final View imgv_xiaoxi_unread=itemView.findViewById(R.id.imgv_xiaoxi_unread);
-                imgv_xiaoxi_unread.setVisibility(messageListBean.read_state==0?View.VISIBLE:View.INVISIBLE);
+//                final View imgv_xiaoxi_unread=itemView.findViewById(R.id.imgv_xiaoxi_unread);
+//                imgv_xiaoxi_unread.setVisibility(messageListBean.read_state==0?View.VISIBLE:View.INVISIBLE);
                 itemView.setOnClickListener(new WzViewOnclickListener() {
                     @Override
                     public void onClickWz(View v) {
                         XiaoXiDetailFragment.byData(messageListBean.id).go();
-                        imgv_xiaoxi_unread.setVisibility(View.INVISIBLE);
+                        //imgv_xiaoxi_unread.setVisibility(View.INVISIBLE);
                     }
                 });
             }
