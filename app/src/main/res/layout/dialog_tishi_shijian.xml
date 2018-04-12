@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/vg_tixian_tishi"
+        android:background="@color/white"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_tishi_content"
+            style="@style/textview" android:textColor="@color/tv_h2"
+            android:layout_marginTop="25dp"
+            android:lineSpacingExtra="5dp"
+            tools:text="您好，该时间段暂未提供相关服务，请在10:00:00-凌晨2:00:00尝试操作，感谢您的支持！"
+            android:layout_marginBottom="30dp"
+            />
+        <TextView style="@style/textview" android:textColor="@color/tv_h2"
+            android:layout_width="match_parent"
+            android:gravity="right"
+            android:text="爱乐客服"
+            android:layout_marginBottom="30dp"
+            />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

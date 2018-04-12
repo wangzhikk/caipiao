@@ -6,130 +6,136 @@
     android:layout_height="match_parent" android:background="@color/bg" >
 
 
-    <utils.wzutils.ui.WzScrollView
+    <include layout="@layout/title"></include>
+
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
+        <utils.wzutils.ui.WzScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent" android:orientation="vertical">
+            android:layout_height="match_parent">
 
-            <include layout="@layout/title"></include>
-            <TextView style="@style/textview_large" android:text="线上充值" android:paddingLeft="15dp" android:background="@color/bg_sheng" android:textColor="@color/tv_h1_jian"
-                android:layout_width="match_parent" android:layout_height="40dp" android:gravity="center_vertical" />
-
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="58dp">
-                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="horizontal">
-                    <ImageView android:layout_width="44dp" android:layout_height="44dp" android:layout_gravity="center_vertical" android:scaleType="centerInside"
-                        android:src="@drawable/icon_recharge_weixin"  android:layout_marginLeft="18dp" android:layout_marginRight="8dp" />
-                    <LinearLayout android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
-                        <TextView style="@style/textview_large" android:text="微信支付 " android:layout_marginBottom="2dp"/>
-                        <TextView style="@style/textview_small" android:text="跳转支付,无法支付请更新版本"  android:textColor="@color/tv_h3"  />
+                android:layout_height="match_parent" android:orientation="vertical">
+
+                <TextView style="@style/textview_large" android:text="线上充值" android:paddingLeft="15dp" android:background="@color/bg_sheng" android:textColor="@color/tv_h1_jian"
+                    android:layout_width="match_parent" android:layout_height="40dp" android:gravity="center_vertical" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="horizontal">
+                        <ImageView android:layout_width="44dp" android:layout_height="44dp" android:layout_gravity="center_vertical" android:scaleType="centerInside"
+                            android:src="@drawable/icon_recharge_weixin"  android:layout_marginLeft="18dp" android:layout_marginRight="8dp" />
+                        <LinearLayout android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
+                            <TextView style="@style/textview_large" android:text="微信支付 " android:layout_marginBottom="2dp"/>
+                            <TextView style="@style/textview_small" android:text="跳转支付,无法支付请更新版本"  android:textColor="@color/tv_h3"  />
+                        </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-                <RadioButton android:checked="true" android:button="@null" android:paddingRight="15dp" android:drawableRight="@drawable/selector_chongzhi_check" android:layout_width="match_parent" android:layout_height="match_parent" />
-            </RelativeLayout>
-            <View style="@style/line_h"></View>
+                    <RadioButton android:checked="true" android:button="@null" android:paddingRight="15dp" android:drawableRight="@drawable/selector_chongzhi_check" android:layout_width="match_parent" android:layout_height="match_parent" />
+                </RelativeLayout>
+                <View style="@style/line_h"></View>
 
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="58dp">
-                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="horizontal">
-                    <ImageView android:layout_width="44dp" android:layout_height="44dp" android:layout_gravity="center_vertical" android:scaleType="centerInside"
-                        android:src="@drawable/icon_recharge_qq"  android:layout_marginLeft="18dp" android:layout_marginRight="8dp" />
-                    <LinearLayout android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
-                        <TextView style="@style/textview_large" android:text="QQ支付40 " android:layout_marginBottom="2dp"/>
-                        <TextView style="@style/textview_small" android:text="打开手机浏览器输入xypc.com下载"  android:textColor="@color/tv_h3"  />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="horizontal">
+                        <ImageView android:layout_width="44dp" android:layout_height="44dp" android:layout_gravity="center_vertical" android:scaleType="centerInside"
+                            android:src="@drawable/icon_recharge_qq"  android:layout_marginLeft="18dp" android:layout_marginRight="8dp" />
+                        <LinearLayout android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
+                            <TextView style="@style/textview_large" android:text="QQ支付40 " android:layout_marginBottom="2dp"/>
+                            <TextView style="@style/textview_small" android:text="打开手机浏览器输入xypc.com下载"  android:textColor="@color/tv_h3"  />
+                        </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-                <RadioButton android:button="@null" android:paddingRight="15dp" android:drawableRight="@drawable/selector_chongzhi_check" android:layout_width="match_parent" android:layout_height="match_parent" />
-            </RelativeLayout>
-            <View style="@style/line_h"></View>
+                    <RadioButton android:button="@null" android:paddingRight="15dp" android:drawableRight="@drawable/selector_chongzhi_check" android:layout_width="match_parent" android:layout_height="match_parent" />
+                </RelativeLayout>
+                <View style="@style/line_h"></View>
 
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="58dp">
-                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="horizontal">
-                    <ImageView android:layout_width="44dp" android:layout_height="44dp" android:layout_gravity="center_vertical" android:scaleType="centerInside"
-                        android:src="@drawable/icon_recharge_qq"  android:layout_marginLeft="18dp" android:layout_marginRight="8dp" />
-                    <LinearLayout android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
-                        <TextView style="@style/textview_large" android:text="QQ支付 " android:layout_marginBottom="2dp"/>
-                        <TextView style="@style/textview_small" android:text="客服QQ:77758893"  android:textColor="@color/tv_h3"  />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="horizontal">
+                        <ImageView android:layout_width="44dp" android:layout_height="44dp" android:layout_gravity="center_vertical" android:scaleType="centerInside"
+                            android:src="@drawable/icon_recharge_qq"  android:layout_marginLeft="18dp" android:layout_marginRight="8dp" />
+                        <LinearLayout android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
+                            <TextView style="@style/textview_large" android:text="QQ支付 " android:layout_marginBottom="2dp"/>
+                            <TextView style="@style/textview_small" android:text="客服QQ:77758893"  android:textColor="@color/tv_h3"  />
+                        </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-                <RadioButton android:button="@null" android:paddingRight="15dp" android:drawableRight="@drawable/selector_chongzhi_check" android:layout_width="match_parent" android:layout_height="match_parent" />
-            </RelativeLayout>
-            <View style="@style/line_h"></View>
+                    <RadioButton android:button="@null" android:paddingRight="15dp" android:drawableRight="@drawable/selector_chongzhi_check" android:layout_width="match_parent" android:layout_height="match_parent" />
+                </RelativeLayout>
+                <View style="@style/line_h"></View>
 
 
-            <TextView android:id="@+id/tv_go_xianshang_zhifu" style="@style/btn_queding_chang" android:text="去支付" />
+                <TextView android:id="@+id/tv_go_xianshang_zhifu" style="@style/btn_queding_chang" android:text="去支付" />
 
 
-            <TextView style="@style/textview_large" android:text="线下充值" android:paddingLeft="15dp" android:background="@color/bg_sheng" android:textColor="@color/tv_h1_jian"
-                android:layout_width="match_parent" android:layout_height="40dp" android:gravity="center_vertical" />
+                <TextView style="@style/textview_large" android:text="线下充值" android:paddingLeft="15dp" android:background="@color/bg_sheng" android:textColor="@color/tv_h1_jian"
+                    android:layout_width="match_parent" android:layout_height="40dp" android:gravity="center_vertical" />
 
 
 
 
-            <RelativeLayout android:id="@+id/btn_zhifu_xianxia_zhifubao"
-                android:layout_width="match_parent"
-                android:layout_height="58dp">
-                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="horizontal">
-                    <ImageView android:layout_width="44dp" android:layout_height="44dp" android:layout_gravity="center_vertical" android:scaleType="centerInside"
-                        android:src="@drawable/icon_recharge_alipay"  android:layout_marginLeft="18dp" android:layout_marginRight="8dp" />
-                    <LinearLayout android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
-                        <TextView style="@style/textview_large" android:text="支付宝转账" android:layout_marginBottom="2dp"/>
-                        <TextView style="@style/textview_small" android:text="最低100元起充值,支持大额转账"  android:textColor="@color/tv_h3"  />
+                <RelativeLayout android:id="@+id/btn_zhifu_xianxia_zhifubao"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="horizontal">
+                        <ImageView android:layout_width="44dp" android:layout_height="44dp" android:layout_gravity="center_vertical" android:scaleType="centerInside"
+                            android:src="@drawable/icon_recharge_alipay"  android:layout_marginLeft="18dp" android:layout_marginRight="8dp" />
+                        <LinearLayout android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
+                            <TextView style="@style/textview_large" android:text="支付宝转账" android:layout_marginBottom="2dp"/>
+                            <TextView style="@style/textview_small" android:text="最低100元起充值,支持大额转账"  android:textColor="@color/tv_h3"  />
+                        </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-                <ImageView  style="@style/img_right" android:layout_marginRight="10dp"/>
-            </RelativeLayout>
-            <View style="@style/line_h"></View>
+                    <ImageView  style="@style/img_right" android:layout_marginRight="10dp"/>
+                </RelativeLayout>
+                <View style="@style/line_h"></View>
 
 
-            <RelativeLayout  android:id="@+id/btn_zhifu_xianxia_weixin"
-                android:layout_width="match_parent"
-                android:layout_height="58dp">
-                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="horizontal">
-                    <ImageView android:layout_width="44dp" android:layout_height="44dp" android:layout_gravity="center_vertical" android:scaleType="centerInside"
-                        android:src="@drawable/icon_recharge_weixin"  android:layout_marginLeft="18dp" android:layout_marginRight="8dp" />
-                    <LinearLayout android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
-                        <TextView style="@style/textview_large" android:text="微信扫码支付" android:layout_marginBottom="2dp"/>
-                        <TextView style="@style/textview_small" android:text="金额须带小数点，请备注会员帐号"  android:textColor="@color/tv_h3"  />
+                <RelativeLayout  android:id="@+id/btn_zhifu_xianxia_weixin"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="horizontal">
+                        <ImageView android:layout_width="44dp" android:layout_height="44dp" android:layout_gravity="center_vertical" android:scaleType="centerInside"
+                            android:src="@drawable/icon_recharge_weixin"  android:layout_marginLeft="18dp" android:layout_marginRight="8dp" />
+                        <LinearLayout android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
+                            <TextView style="@style/textview_large" android:text="微信扫码支付" android:layout_marginBottom="2dp"/>
+                            <TextView style="@style/textview_small" android:text="金额须带小数点，请备注会员帐号"  android:textColor="@color/tv_h3"  />
+                        </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-                <ImageView  style="@style/img_right" android:layout_marginRight="10dp"/>
-            </RelativeLayout>
-            <View style="@style/line_h"></View>
+                    <ImageView  style="@style/img_right" android:layout_marginRight="10dp"/>
+                </RelativeLayout>
+                <View style="@style/line_h"></View>
 
 
-            <RelativeLayout  android:id="@+id/btn_zhifu_xianxia_yinhangka"
-                android:layout_width="match_parent"
-                android:layout_height="58dp">
-                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="horizontal">
-                    <ImageView android:layout_width="44dp" android:layout_height="44dp" android:layout_gravity="center_vertical" android:scaleType="centerInside"
-                        android:src="@drawable/icon_recharge_card"  android:layout_marginLeft="18dp" android:layout_marginRight="8dp" />
-                    <LinearLayout android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
-                        <TextView style="@style/textview_large" android:text="银行卡转账" android:layout_marginBottom="2dp"/>
-                        <TextView style="@style/textview_small" android:text="最低100元起充值,支持大额转账"  android:textColor="@color/tv_h3"  />
+                <RelativeLayout  android:id="@+id/btn_zhifu_xianxia_yinhangka"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="horizontal">
+                        <ImageView android:layout_width="44dp" android:layout_height="44dp" android:layout_gravity="center_vertical" android:scaleType="centerInside"
+                            android:src="@drawable/icon_recharge_card"  android:layout_marginLeft="18dp" android:layout_marginRight="8dp" />
+                        <LinearLayout android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
+                            <TextView style="@style/textview_large" android:text="银行卡转账" android:layout_marginBottom="2dp"/>
+                            <TextView style="@style/textview_small" android:text="最低100元起充值,支持大额转账"  android:textColor="@color/tv_h3"  />
+                        </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-                <ImageView  style="@style/img_right" android:layout_marginRight="10dp"/>
-            </RelativeLayout>
-            <View style="@style/line_h"></View>
+                    <ImageView  style="@style/img_right" android:layout_marginRight="10dp"/>
+                </RelativeLayout>
+                <View style="@style/line_h"></View>
 
 
 
 
-        </LinearLayout>
+            </LinearLayout>
 
-    </utils.wzutils.ui.WzScrollView>
+        </utils.wzutils.ui.WzScrollView>
 
-
+        <include layout="@layout/dialog_tishi_shijian"></include>
+    </FrameLayout>
 
 
 </LinearLayout>

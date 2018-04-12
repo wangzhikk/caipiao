@@ -12,89 +12,96 @@
         android:layout_height="match_parent" android:orientation="vertical">
         <include layout="@layout/title"></include>
 
-        <utils.wzutils.ui.WzScrollView
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <LinearLayout
+            <utils.wzutils.ui.WzScrollView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" android:orientation="vertical">
-                <RelativeLayout android:background="@color/white"
-                    android:paddingLeft="15dp"
-                    android:paddingRight="15dp"
-                    android:layout_marginBottom="10dp"
-                    android:gravity="center_vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp">
-                    <TextView android:id="@+id/tv_tixian_kahao" style="@style/textview" tools:text="张三 (6213463257853222568)"/>
-                    <TextView  android:id="@+id/tv_tixian_yinhang" style="@style/textview" tools:text="中国工商银行" android:layout_alignParentRight="true"/>
-                </RelativeLayout>
+                android:layout_height="match_parent">
+
                 <LinearLayout
-                    android:orientation="vertical"
-                    android:background="@color/white"
-
-                    android:paddingLeft="15dp"
-                    android:paddingRight="15dp"
-                    android:paddingTop="15dp"
-                    android:paddingBottom="10dp"
-
-                    android:layout_marginBottom="10dp"
-
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <LinearLayout
+                    android:layout_height="match_parent" android:orientation="vertical">
+                    <RelativeLayout android:background="@color/white"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center_vertical"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:orientation="horizontal">
-                        <TextView style="@style/textview" android:text="提现金额（可提现金额"/>
-                        <TextView android:id="@+id/tv_tixian_yue" style="@style/textview" android:text="8895.67" android:textColor="@color/tv_hongse"/>
-                        <TextView style="@style/textview" android:text="元）"/>
+                        android:layout_height="50dp">
+                        <TextView android:id="@+id/tv_tixian_kahao" style="@style/textview" tools:text="张三 (6213463257853222568)"/>
+                        <TextView  android:id="@+id/tv_tixian_yinhang" style="@style/textview" tools:text="中国工商银行" android:layout_alignParentRight="true"/>
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:background="@color/white"
+
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="10dp"
+
+                        android:layout_marginBottom="10dp"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:orientation="horizontal">
+                            <TextView style="@style/textview" android:text="提现金额（可提现金额"/>
+                            <TextView android:id="@+id/tv_tixian_yue" style="@style/textview" android:text="8895.67" android:textColor="@color/tv_hongse"/>
+                            <TextView style="@style/textview" android:text="元）"/>
 
 
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp" android:gravity="center_vertical"
+                            android:orientation="horizontal">
+                            <TextView
+                                style="@style/textview"
+                                android:text="@string/rmb" android:layout_marginRight="10dp"
+                                android:textSize="32dp" />
+                            <EditText
+                                android:id="@+id/et_tixian_keyong_yue"
+                                style="@style/textview" android:gravity="center_vertical" android:background="@color/touming"
+                                android:layout_height="40dp" android:layout_marginTop="5dp" android:inputType="numberDecimal"
+                                tools:hint="最低提现200元宝,最高提现10000000元宝" android:layout_width="match_parent"/>
+                        </LinearLayout>
+                        <View style="@style/line_h" android:layout_marginTop="15dp" android:layout_marginBottom="10dp"></View>
+
+                        <TextView android:id="@+id/tv_tixian_tishi" style="@style/textview" tools:text="@string/tixian_tixing" android:lineSpacingExtra="5dp" android:textColor="@color/tv_h2"/>
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp" android:gravity="center_vertical"
-                        android:orientation="horizontal">
-                        <TextView
-                            style="@style/textview"
-                            android:text="@string/rmb" android:layout_marginRight="10dp"
-                            android:textSize="32dp" />
-                        <EditText
-                            android:id="@+id/et_tixian_keyong_yue"
-                            style="@style/textview" android:gravity="center_vertical" android:background="@color/touming"
-                            android:layout_height="40dp" android:layout_marginTop="5dp" android:inputType="numberDecimal"
-                            tools:hint="最低提现200元宝,最高提现10000000元宝" android:layout_width="match_parent"/>
-                    </LinearLayout>
-                    <View style="@style/line_h" android:layout_marginTop="15dp" android:layout_marginBottom="10dp"></View>
+                    <EditText
+                        android:id="@+id/et_tixian_mima"
+                        style="@style/textview" android:hint="请输入资金密码"
+                        android:background="@color/white" android:layout_height="48dp"
+                        android:paddingLeft="15dp"
+                        android:inputType="textPassword" android:gravity="center_vertical" android:layout_width="match_parent"
+                        />
 
-                    <TextView android:id="@+id/tv_tixian_tishi" style="@style/textview" tools:text="@string/tixian_tixing" android:lineSpacingExtra="5dp" android:textColor="@color/tv_h2"/>
+                    <TextView android:id="@+id/btn_tixian" style="@style/btn_queding_chang" android:text="确认提现"  />
+                    <TextView
+                        android:id="@+id/tv_tixian_tishi_bottom"
+                        style="@style/textview_small"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="20dp"
+                        android:lineSpacingExtra="5dp"
+                        tools:text="提现须知:\n1.最低提现金额200元宝,最高提现金额10000000元宝 \n2.提现10分钟内到账，如高峰期30分钟内到账 \n3.提现处理成功请查看你的银行帐号,未到账请联系平台客服"
+                        android:textColor="@color/tv_h2"
+                        />
+
+
                 </LinearLayout>
 
-                <EditText
-                    android:id="@+id/et_tixian_mima"
-                    style="@style/textview" android:hint="请输入资金密码"
-                    android:background="@color/white" android:layout_height="48dp"
-                    android:paddingLeft="15dp"
-                    android:inputType="textPassword" android:gravity="center_vertical" android:layout_width="match_parent"
-                    />
+            </utils.wzutils.ui.WzScrollView>
 
-                <TextView android:id="@+id/btn_tixian" style="@style/btn_queding_chang" android:text="确认提现"  />
-                <TextView
-                    android:id="@+id/tv_tixian_tishi_bottom"
-                    style="@style/textview_small"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="20dp"
-                    android:lineSpacingExtra="5dp"
-                    tools:text="提现须知:\n1.最低提现金额200元宝,最高提现金额10000000元宝 \n2.提现10分钟内到账，如高峰期30分钟内到账 \n3.提现处理成功请查看你的银行帐号,未到账请联系平台客服"
-                    android:textColor="@color/tv_h2"
-                    />
-
-
-            </LinearLayout>
-
-        </utils.wzutils.ui.WzScrollView>
+            <include layout="@layout/dialog_tishi_shijian"></include>
+        </FrameLayout>
 
     </LinearLayout>
 

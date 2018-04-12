@@ -3,6 +3,7 @@ package com.cp.wode.qianbao.chongzhi;
 import android.view.View;
 
 import com.cp.R;
+import com.cp.wode.qianbao.tixian.TiXianFragment;
 
 import utils.tjyutils.parent.ParentFragment;
 import utils.wzutils.common.TestData;
@@ -37,15 +38,15 @@ public class ChongZhiFragment extends ParentFragment {
 
 
     public void loadData(){
-        showWaitingDialog("");
         Data_recharge_query.load(new HttpUiCallBack<Data_recharge_query>() {
             @Override
             public void onSuccess(Data_recharge_query data) {
-                hideWaitingDialog();
                 if(data.isDataOkAndToast()){
                     bindFragmentBtn(btn_zhifu_xianxia_zhifubao, XianXiaZhiFuDetailFragment.byData(data.getOfflineBeanAlipay()));
                     bindFragmentBtn(btn_zhifu_xianxia_weixin, XianXiaZhiFuDetailFragment.byData(data.getOfflineBeanWeixin()));
                     bindFragmentBtn(btn_zhifu_xianxia_yinhangka, XianXiaZhiFuDetailFragment.byData(data.getOfflineBeanBank()));
+                }else if(data.code==185){
+                    TiXianFragment.showTiShi(parent,data.time);
                 }
             }
         });

@@ -26,6 +26,8 @@ public class Data_extract_query extends ParentServerData {
     public double feeRate;
     public double remain;
     public String timesRemain;
+    public  double needBetting;
+    public String time;
     public static void load(final HttpUiCallBack<Data_extract_query> httpUiCallBack){
         HttpToolAx.urlBase("extract/query")
                 .send(Data_extract_query.class, httpUiCallBack);

@@ -10,11 +10,14 @@ import com.cp.wode.qianbao.yinhangka.Data_bank_query;
 import utils.tjyutils.common.Common;
 import utils.tjyutils.parent.ParentFragment;
 import utils.wzutils.common.CommonTool;
+import utils.wzutils.common.LogTool;
 import utils.wzutils.common.StringTool;
 import utils.wzutils.common.TestData;
+import utils.wzutils.common.UiTool;
 import utils.wzutils.http.HttpUiCallBack;
 import utils.wzutils.parent.WzViewOnclickListener;
 import utils.wzutils.ui.WzSimpleRecycleView;
+import utils.wzutils.ui.dialog.DialogTool;
 import utils.wzutils.ui.pullrefresh.WzRefreshLayout;
 import utils.wzutils.ui.textview.HtmlTool;
 
@@ -62,19 +65,30 @@ public class TiXianFragment extends ParentFragment {
 
                     setTextView(tv_tixian_yue,data.remain);
 
-
                     String tixianTiShi="最低提现"+ Common.getPriceYB(data.min)+",最高提现"+Common.getPriceYB(data.max);
                     et_tixian_keyong_yue.setHint(tixianTiShi);
 
-
-
                     String tishiStr="提现须知:\n1."+tixianTiShi+" \n2.提现10分钟内到账，如高峰期30分钟内到账 \n3.提现处理成功请查看你的银行帐号,未到账请联系平台客服";
+                    tishiStr+="\n4.投注金额必须达到充值金额的"+((int)(data.needBetting*100))+"%才能提现\n";
                     setTextView(tv_tixian_tishi_bottom,tishiStr);
+                }else if(data.code==185){//不在时间段内
+                    showTiShi(parent,data.time);
                 }
             }
         });
+    }
+
+    public static void showTiShi(View parent,String time){
+        try {
+            parent.findViewById(R.id.vg_tixian_tishi).setVisibility(View.VISIBLE);
+            UiTool.setTextView(parent,R.id.tv_tishi_content,"您好，该时间段暂未提供相关服务，请在"+time+"尝试操作，感谢您的支持！");
+        }catch (Exception e){
+            LogTool.ex(e);
+        }
 
     }
+
+
     @Override
     public void initListener() {
 

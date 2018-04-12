@@ -15,7 +15,7 @@ import utils.wzutils.http.HttpUiCallBack;
 public class Data_recharge_query extends ParentServerData {
 
     public List<OfflineBean> offline;
-
+    public String time;
     public static void load( final HttpUiCallBack<Data_recharge_query> httpUiCallBack){
         HttpToolAx.urlBase("recharge/query")
                 .send(Data_recharge_query.class, httpUiCallBack);
