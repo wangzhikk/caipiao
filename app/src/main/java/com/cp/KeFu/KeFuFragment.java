@@ -163,7 +163,7 @@ public class KeFuFragment extends ParentFragment {
 
                     }
 
-                    if(StringTool.isEmpty(""+msgData.msgDetailData.headImage)&&"service".equals(msgData.msgDetailData.uuid)){
+                    if("service".equals(msgData.msgDetailData.uuid)){
                         msgData.msgDetailData.headImage=R.drawable.img_servicer;
                     }
                     loadImage(msgData.msgDetailData.headImage,itemView,idTouXiang);

@@ -45,7 +45,7 @@ public class ChongZhiFragment extends ParentFragment {
                     bindFragmentBtn(btn_zhifu_xianxia_zhifubao, XianXiaZhiFuDetailFragment.byData(data.getOfflineBeanAlipay()));
                     bindFragmentBtn(btn_zhifu_xianxia_weixin, XianXiaZhiFuDetailFragment.byData(data.getOfflineBeanWeixin()));
                     bindFragmentBtn(btn_zhifu_xianxia_yinhangka, XianXiaZhiFuDetailFragment.byData(data.getOfflineBeanBank()));
-                }else if(data.code==185){
+                }else if(data.code==186){
                     TiXianFragment.showTiShi(parent,data.time);
                 }
             }
