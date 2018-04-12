@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg"
+    android:background="@color/bg_sheng"
     >
 
     <LinearLayout
@@ -24,10 +24,11 @@
 
                 <TextView
                     android:id="@+id/tv_xiaoxi_xiangqing_title"
-
+                    android:gravity="center"
+                    android:layout_width="match_parent"
                     style="@style/textview" android:textSize="@dimen/tv_larage17"
-                    android:layout_marginTop="25dp"
-                    android:layout_marginBottom="25dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="20dp"
                     tools:text="阿斯兰的咖啡机拉斯达克警"
                     />
 
@@ -35,7 +36,19 @@
                     android:id="@+id/tv_xiaoxi_xiangqing_neirong"
                     style="@style/textview"
                     android:lineSpacingExtra="8dp"
+                    android:textColor="#555555"
                     tools:text="阿斯兰的咖啡阿斯兰的咖啡机拉斯达克警阿斯兰的咖啡机拉斯达克警阿斯兰的咖啡机拉斯达克警阿斯兰的咖啡机拉斯达克警阿斯兰的咖啡机拉斯达克警阿斯兰的咖啡机拉斯达克警阿斯兰的咖啡机拉斯达克警阿斯兰的咖啡机拉斯达克警阿斯兰的咖啡机拉斯达克警阿斯兰的咖啡机拉斯达克警阿斯兰的咖啡机拉斯达克警阿斯兰的咖啡机拉斯达克警阿斯兰的咖啡机拉斯达克警阿斯兰的咖啡机拉斯达克警阿斯兰的咖啡机拉斯达克警机拉斯达克警"
+                    />
+                <TextView
+                    android:id="@+id/tv_xiaoxi_detail_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/textview_small"
+                    android:textColor="@color/tv_h3"
+                    tools:text="2134123"
+                    android:gravity="right"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="25dp"
                     />
             </LinearLayout>
 

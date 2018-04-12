@@ -20,7 +20,7 @@ public class Data_message_detail extends ParentServerData {
                 .send(Data_message_detail.class, httpUiCallBack);
     }
 
-    public static class MessageDetailBean {
+    public static class MessageDetailBean extends ParentServerData{
 
         public String id;
         public int message_category;

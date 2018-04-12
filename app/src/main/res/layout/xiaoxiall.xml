@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@color/bg" >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:orientation="vertical">
+
+        <include layout="@layout/title"></include>
+
+
+        <utils.wzutils.ui.pullrefresh.WzRefreshLayout
+            android:id="@+id/wzRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/vg_xiaoxi_xitong"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_height="88dp" android:orientation="horizontal">
+                    <RelativeLayout
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp">
+                        <ImageView android:layout_centerInParent="true" android:layout_width="63dp" android:layout_height="63dp" android:src="@drawable/icon_new_agency" />
+                        <TextView android:id="@+id/tv_xiaoxi_xitong_count" style="@style/textview_small_small" android:layout_alignParentRight="true" android:textColor="@color/white" android:text="1" android:gravity="center" android:background="@drawable/kk_tips_two"/>
+
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_height="50dp" android:orientation="vertical">
+                        <TextView style="@style/textview_large" android:text="系统消息" />
+                        <TextView android:id="@+id/tv_xiaoxi_xitong_last" style="@style/textview" tools:text="系统消息" android:textColor="@color/tv_h3" android:layout_marginTop="5dp" />
+                    </LinearLayout>
+                    <ImageView android:layout_marginRight="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:src="@drawable/icon_right"/>
+                </LinearLayout>
+                <View style="@style/line_h" android:layout_marginLeft="15dp"></View>
+
+
+
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/vg_xiaoxi_daili"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_height="88dp" android:orientation="horizontal">
+                    <RelativeLayout
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp">
+
+                        <ImageView android:layout_centerInParent="true" android:layout_width="63dp" android:layout_height="63dp" android:src="@drawable/icon_new_system" />
+                        <TextView android:id="@+id/tv_xiaoxi_daili_count" style="@style/textview_small_small" android:layout_alignParentRight="true" android:textColor="@color/white" android:text="1" android:gravity="center" android:background="@drawable/kk_tips_two"/>
+
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_height="50dp" android:orientation="vertical">
+                        <TextView style="@style/textview_large" android:text="代理消息" />
+                        <TextView  android:id="@+id/tv_xiaoxi_daili_last"  style="@style/textview" tools:text="系统消息" android:textColor="@color/tv_h3" android:layout_marginTop="5dp" />
+                    </LinearLayout>
+                    <ImageView android:layout_marginRight="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:src="@drawable/icon_right"/>
+                </LinearLayout>
+                <View android:id="@+id/line_xiaoxi_daili" style="@style/line_h" android:layout_marginLeft="15dp"></View>
+
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/vg_xiaoxi_wode"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_height="88dp" android:orientation="horizontal">
+                    <RelativeLayout
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp">
+                        <ImageView android:layout_centerInParent="true" android:layout_width="63dp" android:layout_height="63dp" android:src="@drawable/icon_new_mine" />
+                        <TextView android:id="@+id/tv_xiaoxi_wode_count" style="@style/textview_small_small" android:layout_alignParentRight="true" android:textColor="@color/white" android:text="1" android:gravity="center" android:background="@drawable/kk_tips_two"/>
+
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_height="50dp" android:orientation="vertical">
+                        <TextView style="@style/textview_large" android:text="我的消息" />
+                        <TextView   android:id="@+id/tv_xiaoxi_wode_last"  style="@style/textview" tools:text="系统消息" android:textColor="@color/tv_h3" android:layout_marginTop="5dp" />
+                    </LinearLayout>
+                    <ImageView android:layout_marginRight="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:src="@drawable/icon_right"/>
+                </LinearLayout>
+                <View style="@style/line_h" android:layout_marginLeft="15dp"></View>
+            </LinearLayout>
+
+        </utils.wzutils.ui.pullrefresh.WzRefreshLayout>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

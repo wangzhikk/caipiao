@@ -35,25 +35,35 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView                  android:id="@+id/tv_xiaoxi_title"
+            <TextView   android:id="@+id/tv_xiaoxi_title"
+
+                android:singleLine="true"
+
                  style="@style/textview_large" android:text="关于系统升级的公告" android:layout_height="40dp" android:gravity="center_vertical"/>
 
             <TextView
+                android:id="@+id/tv_xiaoxi_content"
                 style="@style/textview"
                 android:textColor="@color/tv_h3"
                 android:layout_marginBottom="10dp"
+                android:maxLines="3"
                 tools:text="为用户提供所有彩票开奖结果信息，全国彩开奖（其中包括超级大乐透开奖，双色球开奖，福彩3D开奖，七星彩开奖，七乐彩开奖，排列三开奖。" android:layout_weight="1"
                 />
             <View style="@style/line_h"  ></View>
 
             <TextView style="@style/textview" android:text="查看详情" android:textColor="@color/tv_h3"
+                android:id="@+id/tv_xiaoxi_chakan"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:gravity="center_vertical"
                 android:drawableRight="@drawable/icon_right"
                 />
         </LinearLayout>
-        
+
+        <View android:id="@+id/v_last_jiange" android:background="@color/tv_hongse" android:layout_width="0dp" android:layout_height="15dp"
+            tools:visibility="visible"
+            tools:layout_width="10dp"
+            android:visibility="gone"></View>
 
 
     </LinearLayout>

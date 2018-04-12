@@ -12,7 +12,8 @@ import com.cp.cp.Data_version;
 import com.cp.shouye.ShouYeFragment;
 import com.cp.wode.Data_personinfo_query;
 import com.cp.wode.WoDeFragment;
-import com.cp.xiaoxi.XiaoXiFragment;
+import com.cp.xiaoxi.XiaoXiAllFragment;
+import com.cp.xiaoxi.XiaoXiListFragment;
 
 import utils.tjyutils.parent.ParentActivity;
 import utils.tjyutils.parent.ParentFragment;
@@ -74,7 +75,7 @@ public class MainActivity extends ParentActivity {
 
     CommonButtonTool commonButtonTool = new CommonButtonTool();
     ParentFragment shouYeFragment = new ShouYeFragment();
-    ParentFragment xiaoXiFragment = new XiaoXiFragment();
+    ParentFragment xiaoXiFragment = new XiaoXiAllFragment();
     ParentFragment woDeFragment=new WoDeFragment();
 
     void initBottomBtns() {

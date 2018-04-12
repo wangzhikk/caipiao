@@ -2,25 +2,9 @@ package com.cp;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.CompoundButton;
-import android.widget.TextView;
-
-import com.cp.cp.Data_login_validate;
-import com.cp.shouye.ShouYeFragment;
-import com.cp.wode.WoDeFragment;
-import com.cp.xiaoxi.XiaoXiFragment;
 
 import utils.tjyutils.common.PreLoad;
 import utils.tjyutils.parent.ParentActivity;
-import utils.tjyutils.parent.ParentFragment;
-import utils.wzutils.AppTool;
-import utils.wzutils.common.LogTool;
-import utils.wzutils.common.StringTool;
-import utils.wzutils.common.UiTool;
-import utils.wzutils.common.ViewTool;
-import utils.wzutils.parent.WzViewOnclickListener;
-import utils.wzutils.ui.CommonButtonTool;
 
 public class StartActivity extends ParentActivity {
 

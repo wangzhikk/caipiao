@@ -12,24 +12,6 @@
 
         <include layout="@layout/title"></include>
 
-        <LinearLayout android:background="@color/white"
-            android:layout_width="match_parent"
-            android:layout_height="45dp" android:orientation="horizontal">
-            <RadioButton android:id="@+id/rb_xiaoxi_xitong" style="@style/rb_title" android:text="系统" android:background="@drawable/selector_cb_title" tools:checked="true"/>
-
-            <View style="@style/line_v"></View>
-
-            <LinearLayout
-                android:id="@+id/vg_xiaoxi_daili"
-                style="@style/rb_title"  android:layout_weight="1"   android:orientation="horizontal">
-                <RadioButton android:id="@+id/rb_xiaoxi_daili" style="@style/rb_title" android:text="代理"  android:background="@drawable/selector_cb_title"  />
-                <View style="@style/line_v"></View>
-            </LinearLayout>
-
-
-            <RadioButton android:id="@+id/rb_xiaoxi_wode" style="@style/rb_title" android:text="我的"  android:background="@drawable/selector_cb_title"  />
-        </LinearLayout>
-
         <utils.wzutils.ui.pullrefresh.WzRefreshLayout
             android:id="@+id/wzRefresh"
             android:layout_width="match_parent"
