@@ -10,7 +10,6 @@
         android:id="@+id/vg_tixian_tishi"
         android:background="@color/white"
         android:visibility="gone"
-        tools:visibility="visible"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:layout_width="match_parent"

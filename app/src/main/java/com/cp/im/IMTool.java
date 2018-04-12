@@ -134,8 +134,8 @@ public class IMTool {
                     log("登陆成功"+ClientCoreSDK.getInstance().getInstance().getCurrentLoginUserId());
                     boolean connectedToServer = ClientCoreSDK.getInstance().isConnectedToServer();
                 }else {
-                    CommonTool.showToast("登录消息服务器失败");
-                    log("登陆失败");
+                   // CommonTool.showToast("登录消息服务器失败");
+                    log("登录消息服务器失败");
                 }
             }
 
