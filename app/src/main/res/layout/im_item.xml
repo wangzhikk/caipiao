@@ -19,7 +19,7 @@
             android:layout_gravity="center_horizontal"
             android:id="@+id/im_time_tv"
             android:textColor="@color/white"
-            android:background="@drawable/kk_bet_time"
+            android:background="@drawable/drawable_yuanjiao_huise_sheng_time"
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
             android:text="2018-12-05 16:42" android:gravity="center" />

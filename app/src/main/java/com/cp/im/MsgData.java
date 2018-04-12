@@ -7,6 +7,9 @@ import com.cp.shouye.Data_room_queryGame;
 import com.cp.touzhu.Data_cqssc_top10;
 import com.cp.wode.Data_personinfo_query;
 
+import java.util.Calendar;
+import java.util.List;
+
 import utils.tjyutils.common.Common;
 import utils.tjyutils.common.TitleTool;
 import utils.wzutils.JsonTool;
@@ -33,11 +36,32 @@ public class MsgData {
 
     public MsgDetailData msgDetailData;
 
+    /***
+     * 如果是当天以前的消息则显示年/月/日 时:分:秒
+     如果是当天的消息则只显示时:分:秒
+     * @param msgDataList
+     */
+    public static void initShowTimeStamp(final List<MsgData> msgDataList){
+        long preTimeStamp=0;
+        for(MsgData msgData:msgDataList){
+            msgData.msgDetailData.showTimeStamp="";
+            if(Math.abs(msgData.msgDetailData.timestamp-preTimeStamp)>10*1000){//大于一分钟就显示
+                if(msgData.msgDetailData.isTouZhuMsg()||msgData.msgDetailData.isChatMsg()||msgData.msgDetailData.isServiceError()){//这些才显示
+                    msgData.msgDetailData.showTimeStamp=TimeTool.getTimeStrLongAndShort(msgData.msgDetailData.timestamp);
+                    preTimeStamp=msgData.msgDetailData.timestamp;
+                }
+            }
+        }
+    }
     public static class MsgDetailData {
+
         public String msgType;//消息类型
         public long timestamp;//消息时间
-        public String msg;//错误消息
 
+        public String showTimeStamp;//是否显示消息时间， 非服务端数据
+
+
+        public String msg;//错误消息
         public String uuid;//用户id
         public String headImage;//用户头像图片
         public int grade;//用户会员级别

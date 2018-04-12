@@ -410,4 +410,23 @@ public class TimeTool {
         }
     }
 
+    /***
+     *  如果是当天以前的消息则显示年/月/日 时:分:秒
+     如果是当天的消息则只显示时:分:秒
+     * @param timestamp
+     * @return
+     */
+    public static String getTimeStrLongAndShort(long timestamp){
+        String result="";
+        Calendar calendar=Calendar.getInstance();
+        int day=calendar.get(Calendar.DAY_OF_MONTH);
+        calendar.setTimeInMillis(timestamp);
+        if(calendar.get(Calendar.DAY_OF_MONTH)==day){//是今天的
+            result=new SimpleDateFormat("HH:mm:ss").format(calendar.getTime());
+        }else {
+            result=new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(calendar.getTime());
+        }
+        return result;
+    }
+
 }

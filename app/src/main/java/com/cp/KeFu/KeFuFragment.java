@@ -121,6 +121,7 @@ public class KeFuFragment extends ParentFragment {
 
     public void initListView(final List<MsgData> msgDataList) {
         recycleView.setDividerNormal(10);
+        MsgData.initShowTimeStamp(msgDataList);
         recycleView.setData(msgDataList, R.layout.im_item, new WzSimpleRecycleView.WzRecycleAdapter() {
             @Override
             public void initData(int position, int type, View itemView) {
@@ -128,7 +129,6 @@ public class KeFuFragment extends ParentFragment {
                 final MsgData msgData = msgDataList.get(position);
 
                     TextView im_time_tv = itemView.findViewById(R.id.im_time_tv);
-                    UiTool.setTextView(im_time_tv, TimeTool.getLongTimeStr(msgData.msgDetailData.timestamp));
 
 
                     View im_vg_left = itemView.findViewById(R.id.im_vg_left);
@@ -141,7 +141,13 @@ public class KeFuFragment extends ParentFragment {
                     im_vg_center.setVisibility(View.GONE);
 
                 if(msgData.msgDetailData.isChatMsg()){
-                    im_time_tv.setVisibility(View.VISIBLE);
+                    if(StringTool.notEmpty(msgData.msgDetailData.showTimeStamp)){
+                        im_time_tv.setVisibility(View.VISIBLE);
+                        UiTool.setTextView(im_time_tv, msgData.msgDetailData.showTimeStamp);
+                    }else {
+                        im_time_tv.setVisibility(View.GONE);
+                    }
+
 
                     int idTouXiang = 0;
                     int idName = 0;

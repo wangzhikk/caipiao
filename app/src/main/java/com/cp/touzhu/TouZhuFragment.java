@@ -294,6 +294,7 @@ public class TouZhuFragment extends ParentFragment {
 
     public void initListView() {
         recycleView.setDividerNormal(10);
+        MsgData.initShowTimeStamp(msgDataList);
         recycleView.setData(msgDataList, R.layout.im_item, new WzSimpleRecycleView.WzRecycleAdapter() {
             @Override
             public void initData(int position, int type, View itemView) {
@@ -301,7 +302,6 @@ public class TouZhuFragment extends ParentFragment {
                 final MsgData msgData = msgDataList.get(position);
 
                 TextView im_time_tv = itemView.findViewById(R.id.im_time_tv);
-                UiTool.setTextView(im_time_tv, TimeTool.getLongTimeStr(msgData.msgDetailData.timestamp));
 
 
                 View im_vg_left = itemView.findViewById(R.id.im_vg_left);
@@ -319,7 +319,14 @@ public class TouZhuFragment extends ParentFragment {
                     HtmlTool.setHtmlText(im_vg_center_tv, msgData.msgDetailData.getZhuangTaiMsg(roomsBean));
                     im_vg_center.setVisibility(View.VISIBLE);
                 } else if (msgData.msgDetailData.isTouZhuMsg()) {
-                    im_time_tv.setVisibility(View.VISIBLE);
+
+                    if(StringTool.notEmpty(msgData.msgDetailData.showTimeStamp)){
+                        im_time_tv.setVisibility(View.VISIBLE);
+                        UiTool.setTextView(im_time_tv, msgData.msgDetailData.showTimeStamp);
+                    }else {
+                        im_time_tv.setVisibility(View.GONE);
+                    }
+
 
                     int idTouXiang = 0;
                     int idName = 0;
