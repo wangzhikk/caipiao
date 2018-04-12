@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <LinearLayout
-                android:paddingLeft="15dp"
+                android:paddingLeft="25dp"
                 android:paddingRight="25dp"
                 android:paddingBottom="15dp"
                 android:layout_width="match_parent"
@@ -35,8 +35,9 @@
                 <TextView
                     android:id="@+id/tv_xiaoxi_xiangqing_neirong"
                     style="@style/textview"
-                    android:lineSpacingExtra="8dp"
+                    android:lineSpacingExtra="6dp"
                     android:textColor="#555555"
+                    android:textSize="13dp"
                     tools:text="阿斯兰的咖啡阿斯兰的咖啡机拉斯达克警阿斯兰的咖啡机拉斯达克警阿斯兰的咖啡机拉斯达克警阿斯兰的咖啡机拉斯达克警阿斯兰的咖啡机拉斯达克警阿斯兰的咖啡机拉斯达克警阿斯兰的咖啡机拉斯达克警阿斯兰的咖啡机拉斯达克警阿斯兰的咖啡机拉斯达克警阿斯兰的咖啡机拉斯达克警阿斯兰的咖啡机拉斯达克警阿斯兰的咖啡机拉斯达克警阿斯兰的咖啡机拉斯达克警阿斯兰的咖啡机拉斯达克警阿斯兰的咖啡机拉斯达克警机拉斯达克警"
                     />
                 <TextView
@@ -48,7 +49,6 @@
                     tools:text="2134123"
                     android:gravity="right"
                     android:layout_marginTop="30dp"
-                    android:layout_marginRight="25dp"
                     />
             </LinearLayout>
 
