@@ -99,12 +99,35 @@ public class Data_personinfo_query extends ParentServerData {
     public double wallet_remain;
     public String base_nickname;
     public int base_country;
-    public int base_auth_bank;
     public String base_autograph;
-    public int base_auth_phone;
     public String base_phone;
     public String base_headImage;
+
+
+
     public int base_auth_thirdpwd;//是否已经设置资金密码，0－未设置，1－已设置
+    public int base_auth_bank;//是否已经设置银行卡
+
+    /**
+     * 是否设置银行卡
+     * @return
+     */
+    public boolean hasBank(){
+        return base_auth_bank==1;
+    }
+
+    /***
+     * 是否填写资金密码
+     * @return
+     */
+    public boolean hasMoneyPwd(){
+        return base_auth_thirdpwd==1;
+    }
+
+    public int base_auth_phone;
+
+
+
 
     public int base_grade;
     public int base_type;

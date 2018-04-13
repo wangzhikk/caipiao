@@ -46,7 +46,7 @@ public class YinHangKaBindFragment extends ParentFragment {
     public void initData() {
         titleTool.setTitle("银行卡");
 
-        if(Data_login_validate.getData_login_validate().getUserInfo().base_auth_bank==1){//已经绑定银行卡
+        if(Data_login_validate.getData_login_validate().getUserInfo().hasBank()){//已经绑定银行卡
             vg_yinhangka_name.setVisibility(View.GONE);
         }else {
             vg_yinhangka_name.setVisibility(View.VISIBLE);
@@ -168,7 +168,7 @@ public class YinHangKaBindFragment extends ParentFragment {
 
     @Override
     public void go() {
-        if(Data_login_validate.getData_login_validate().getUserInfo().base_auth_thirdpwd==0){//没有设置资金密码， 不让进
+        if(!Data_login_validate.getData_login_validate().getUserInfo().hasMoneyPwd()){//没有设置资金密码， 不让进
             CommonTool.showToast("请先设置资金密码!");
             //new XiuGaiZiJinMimaFragment().go();
             return;

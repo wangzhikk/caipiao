@@ -39,7 +39,7 @@ public class Data_bank_replace extends ParentServerData {
 
         HttpUiCallBack<Data_bank_replace> httpUiCallBackLast=httpUiCallBack;
         String method="bank/replace";
-        if(Data_login_validate.getData_login_validate().getUserInfo().base_auth_bank==1){//已经绑定银行卡
+        if(Data_login_validate.getData_login_validate().getUserInfo().hasBank()){//已经绑定银行卡
             method="bank/replace";
         }else {
             method="bank/binding";

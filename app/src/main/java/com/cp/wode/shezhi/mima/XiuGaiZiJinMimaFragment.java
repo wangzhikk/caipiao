@@ -39,7 +39,7 @@ public class XiuGaiZiJinMimaFragment extends ParentFragment {
     public void initData() {
         UiTool.setSoftInputModeSpan(getActivity());
 
-        if(Data_login_validate.getData_login_validate().getUserInfo().base_auth_thirdpwd==0){
+        if(!Data_login_validate.getData_login_validate().getUserInfo().hasMoneyPwd()){
             titleTool.setTitle("设置资金密码");
             vg_zijin_mima.setVisibility(View.GONE);
         }else {
