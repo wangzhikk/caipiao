@@ -3,6 +3,8 @@ package com.cp;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.cp.cp.Data_login_validate;
+
 import utils.tjyutils.common.PreLoad;
 import utils.tjyutils.parent.ParentActivity;
 
@@ -12,6 +14,12 @@ public class StartActivity extends ParentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_home);
+
+        if(!Data_login_validate.isLoginOrGo()){
+            finish();
+            return;
+        }
+
         /***
          * 如果程序从后台 切换到前台就不要这个界面了
          */

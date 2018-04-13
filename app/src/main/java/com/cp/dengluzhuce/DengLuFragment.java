@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.cp.MainActivity;
 import com.cp.R;
 import com.cp.cp.Data_login_validate;
 import com.cp.wode.shezhi.mima.ZhaoHuiMimaFragment;
@@ -70,7 +71,11 @@ public class DengLuFragment extends ParentFragment {
                         hideWaitingDialog();
                         CommonTool.showToast(data.msg);
                         if(data.isDataOk()){
-                            getActivityWz().finish();
+                            if(MainActivity.currMainActivity!=null){
+                                getActivityWz().finish();
+                            }else {
+                                MainActivity.go();
+                            }
                         }
                     }
                 });

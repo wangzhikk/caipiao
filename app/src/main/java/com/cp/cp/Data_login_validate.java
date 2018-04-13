@@ -66,7 +66,7 @@ public class Data_login_validate extends ParentServerData {
     }
 
     public static boolean isLoginOrGo() {
-        if(data_login_validate!=null&& StringTool.notEmpty(data_login_validate.token)){//登录成功了
+        if(getData_login_validate()!=null&& StringTool.notEmpty(data_login_validate.token)){//登录成功了
            return true;
         }else {
             new DengLuFragment().go();

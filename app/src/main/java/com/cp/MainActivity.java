@@ -202,6 +202,12 @@ public class MainActivity extends ParentActivity {
     }
 
     @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        currMainActivity=null;
+    }
+
+    @Override
     public void onBackPressed() {
         UiTool.backToQuit("再按一次退出程序");
     }
@@ -233,5 +239,6 @@ public class MainActivity extends ParentActivity {
     public static void go() {
         Intent intent = new Intent(AppTool.getApplication(), MainActivity.class);
         AppTool.currActivity.startActivity(intent);
+        AppTool.currActivity.finish();
     }
 }
