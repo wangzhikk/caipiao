@@ -143,7 +143,7 @@ public class MsgData {
                 }else if(state==3){// 停止下注，封盘
                     msg=getLanSeTv("【"+issue+"期】")+"已封盘，下注结果以系统开奖为标准，如有异议，请及时联系客服";
                 }else if(state==4){//当天开奖停止
-                    msg=getLanSeTv("【"+issue+"期】")+"今日开奖已结束";
+                    msg="当前时间不能进行游戏，本游戏销售时间为"+attach.timeRange+"，谢谢您的支持";
                 }
             }else if(isTouZhuMsg()){
                // int icon= Data_login_validate.getData_login_validate().uuid.equals(uuid)?R.drawable.icon_bet_stopwatch_white:R.drawable.icon_bet_stopwatch_black;
@@ -161,6 +161,7 @@ public class MsgData {
             public long timestamp;//最近开奖的时间戳
             public String issue;//最近开奖的期号
             public String num;//最近开奖的号码
+            public String timeRange;//游戏未开始 要显示的 开始时间
         }
         public static class Content {
             public int grade;
