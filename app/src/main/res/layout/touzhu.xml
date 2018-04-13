@@ -15,7 +15,9 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent" android:orientation="vertical">
-            <LinearLayout android:layout_marginBottom="2dp"
+            <LinearLayout
+                android:id="@+id/vg_touzhu_qishu" android:visibility="gone"
+                android:layout_marginBottom="2dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:orientation="horizontal">
                 <TextView style="@style/textview"  android:text="距离" />

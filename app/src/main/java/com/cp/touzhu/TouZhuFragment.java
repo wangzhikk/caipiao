@@ -71,6 +71,7 @@ public class TouZhuFragment extends ParentFragment {
     View btn_touzhu, btn_touzhu_lishi, vg_touzhu_yue;
     TextView tv_touzhu_dangqian_qi, tv_touzhu_daojishi;
 
+    View vg_touzhu_qishu;
     @Override
     public int initContentViewId() {
         return R.layout.touzhu;
@@ -244,6 +245,7 @@ public class TouZhuFragment extends ParentFragment {
                 public boolean handMsgRecive(MsgData msgData) {
                     boolean showMsg = true;
                     if (msgData.msgDetailData.isZhuangTaiMsg()) {//上边状态显示
+                        vg_touzhu_qishu.setVisibility(View.VISIBLE);
                         if (msgData.msgDetailData.state == 0) {//开奖结果
                             initLiShiDialog();
                         } else if (msgData.msgDetailData.state == 1) {//可以开始投注了
@@ -267,6 +269,7 @@ public class TouZhuFragment extends ParentFragment {
                             setTextView(tv_touzhu_dangqian_qi, "" + msgData.msgDetailData.issue);
                             countDown = -3;
                             setTextView(tv_touzhu_daojishi, "已停售");
+                            vg_touzhu_qishu.setVisibility(View.GONE);
                         } else if (msgData.msgDetailData.state == 5) {//兑奖了， 刷新余额
                             refreshYuE();
                             showMsg = false;//不添加UI
