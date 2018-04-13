@@ -5,6 +5,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.cp.R;
+import com.cp.cp.Data_login_validate;
+import com.cp.wode.Data_personinfo_query;
 import com.cp.wode.qianbao.yinhangka.Data_bank_query;
 
 import utils.tjyutils.common.Common;
@@ -125,4 +127,12 @@ public class TiXianFragment extends ParentFragment {
     }
 
 
+    @Override
+    public void go() {
+        if(Data_personinfo_query.checkMoneyPwdAndGo()){
+            if(Data_personinfo_query.checkBankAndGo()){
+                super.go();
+            }
+        }
+    }
 }

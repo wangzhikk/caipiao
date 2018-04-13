@@ -5,6 +5,7 @@ import java.util.List;
 import utils.tjyutils.http.HttpToolAx;
 import utils.tjyutils.parent.ParentServerData;
 import utils.wzutils.common.CommonTool;
+import utils.wzutils.common.LogTool;
 import utils.wzutils.http.HttpUiCallBack;
 
 /**
@@ -57,8 +58,7 @@ public class Data_index_query extends ParentServerData {
         public long ads_time;
         public int ads_type ;//banner类型：0－只有广告图片，1－超链接，2－抽奖，3－…
         public void onClick() {
-
-            CommonTool.showToast(ads_images);
+            LogTool.s(ads_images);
         }
     }
 

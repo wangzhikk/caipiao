@@ -165,14 +165,11 @@ public class YinHangKaBindFragment extends ParentFragment {
 
     }
 
-
     @Override
     public void go() {
-        if(!Data_login_validate.getData_login_validate().getUserInfo().hasMoneyPwd()){//没有设置资金密码， 不让进
-            CommonTool.showToast("请先设置资金密码!");
-            //new XiuGaiZiJinMimaFragment().go();
-            return;
+        if(Data_personinfo_query.checkMoneyPwdAndGo()){
+                super.go();
         }
-        super.go();
     }
+
 }

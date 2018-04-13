@@ -3,9 +3,12 @@ package com.cp.wode;
 import com.cp.R;
 import com.cp.cp.Data_login_validate;
 import com.cp.im.IMTool;
+import com.cp.wode.qianbao.yinhangka.YinHangKaBindFragment;
+import com.cp.wode.shezhi.mima.XiuGaiZiJinMimaFragment;
 
 import utils.tjyutils.http.HttpToolAx;
 import utils.tjyutils.parent.ParentServerData;
+import utils.wzutils.common.CommonTool;
 import utils.wzutils.common.LogTool;
 import utils.wzutils.http.HttpUiCallBack;
 
@@ -83,6 +86,7 @@ public class Data_personinfo_query extends ParentServerData {
     }
 
 
+
     /**
      * code : 16
      * wallet_remain : 100410.0
@@ -122,6 +126,25 @@ public class Data_personinfo_query extends ParentServerData {
      */
     public boolean hasMoneyPwd(){
         return base_auth_thirdpwd==1;
+    }
+
+    public static boolean checkMoneyPwdAndGo(){
+        if(Data_login_validate.getData_login_validate().getUserInfo().hasMoneyPwd()){
+            return true;
+        }else {
+            CommonTool.showToast("请先设置资金密码!");
+            new XiuGaiZiJinMimaFragment().go();
+            return false;
+        }
+    }
+    public static boolean checkBankAndGo(){
+        if(Data_login_validate.getData_login_validate().getUserInfo().hasBank()){
+            return true;
+        }else {
+            CommonTool.showToast("请先绑定银行卡!");
+            new YinHangKaBindFragment().go();
+            return false;
+        }
     }
 
     public int base_auth_phone;

@@ -10,6 +10,7 @@ import com.cp.wode.Data_personinfo_query;
 
 import utils.tjyutils.parent.ParentFragment;
 import utils.wzutils.common.BroadcastReceiverTool;
+import utils.wzutils.common.CommonTool;
 import utils.wzutils.common.StringTool;
 import utils.wzutils.http.HttpUiCallBack;
 import utils.wzutils.parent.WzViewOnclickListener;
@@ -109,4 +110,10 @@ public class YinHangKaGuanLiFragment extends ParentFragment {
         });
     }
 
+    @Override
+    public void go() {
+        if(Data_personinfo_query.checkMoneyPwdAndGo()){
+            super.go();
+        }
+    }
 }
