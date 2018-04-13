@@ -76,14 +76,22 @@ public class XiaoXiAllFragment extends ParentFragment{
                 wzRefresh.stopRefresh(null);
                 if(data.isDataOkAndToast()){
 
-                    setTextView(tv_xiaoxi_xitong_last,data.notice.latest);
-                    setCount(tv_xiaoxi_xitong_count,data.notice.notRead);
+                    if(data.notice!=null){
+                        setTextView(tv_xiaoxi_xitong_last,data.notice.latest);
+                        setCount(tv_xiaoxi_xitong_count,data.notice.notRead);
+                    }
 
-                    setTextView(tv_xiaoxi_daili_last,data.agent.latest);
-                    setCount(tv_xiaoxi_daili_count,data.agent.notRead);
+                    if(data.agent!=null){
+                        setTextView(tv_xiaoxi_daili_last,data.agent.latest);
+                        setCount(tv_xiaoxi_daili_count,data.agent.notRead);
+                    }
 
-                    setTextView(tv_xiaoxi_wode_last,data.message.latest);
-                    setCount(tv_xiaoxi_wode_count,data.message.notRead);
+                    if(data.message!=null){
+                        setTextView(tv_xiaoxi_wode_last,data.message.latest);
+                        setCount(tv_xiaoxi_wode_count,data.message.notRead);
+                    }
+
+
 
 
                 }
