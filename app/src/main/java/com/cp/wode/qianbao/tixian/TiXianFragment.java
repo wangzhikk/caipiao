@@ -61,7 +61,7 @@ public class TiXianFragment extends ParentFragment {
         Data_extract_query.load(new HttpUiCallBack<Data_extract_query>() {
             @Override
             public void onSuccess(Data_extract_query data) {
-                if(data.isDataOkAndToast()){
+                if(data.isDataOkAndToast()||data.code==187){
                     String tishi=getResources().getString(R.string.tixian_tixing,data.freeTimes,data.timesRemain,data.feeRate*100f+"%");
                     HtmlTool.setHtmlText(tv_tixian_tishi,tishi);
 
