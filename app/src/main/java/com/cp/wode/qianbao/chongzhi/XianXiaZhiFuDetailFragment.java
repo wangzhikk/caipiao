@@ -79,9 +79,9 @@ public class XianXiaZhiFuDetailFragment extends ParentFragment {
     }
     public void initAlipay(){
         tv_chongzhi_xianxia_server_bank.setVisibility(View.GONE);
-        setTextView(tv_chongzhi_xianxia_server_user,"收款户名："+offlineBean.recharge_name);
+        setTextView(tv_chongzhi_xianxia_server_user,"收款户名："+offlineBean.getRecharge_name());
         setTextView(tv_chongzhi_xianxia_server_account,"收款账号："+offlineBean.recharge_account);
-        setTextView(tv_chongzhi_xianxia_server_fanwei,"充值范围："+"最低"+offlineBean.recharge_min+"元，最高"+offlineBean.recharge_max+"元");
+        setTextView(tv_chongzhi_xianxia_server_fanwei,"充值范围："+"最低"+offlineBean.recharge_min+"元,最高"+offlineBean.recharge_max+"元");
 
 
         setParentGone(et_chongzhi_xianxia_bank);
@@ -90,7 +90,7 @@ public class XianXiaZhiFuDetailFragment extends ParentFragment {
         setTextView(lb_chongzhi_xianxia_account,"支付账号");
         et_chongzhi_xianxia_account.setHint("请填写您此次转账使用的支付账号");
         setTextView(lb_chongzhi_xianxia_amount,"存款金额");
-        et_chongzhi_xianxia_amount.setHint("请填写您转账的金额("+offlineBean.recharge_min+"～"+offlineBean.recharge_max+")");
+        et_chongzhi_xianxia_amount.setHint("请填写您转账的金额");
         LunBoTool.initAds(parent,R.id.adsContainer,R.id.vg_viewpager_btn,R.layout.include_lunbo_dot_huise_touming,R.id.cb_dot,-1, LunBoTool.LunBoData.initData(R.drawable.alipay_1,R.drawable.alipay_2,R.drawable.alipay_3));
 
     }
@@ -101,7 +101,7 @@ public class XianXiaZhiFuDetailFragment extends ParentFragment {
         tv_chongzhi_xianxia_server_bank.setVisibility(View.GONE);
         setParentGone(tv_chongzhi_xianxia_server_user);
         setParentGone(tv_chongzhi_xianxia_server_account);
-        setTextView(tv_chongzhi_xianxia_server_fanwei,"充值范围："+"最低"+offlineBean.recharge_min+"元，最高"+offlineBean.recharge_max+"元");
+        setTextView(tv_chongzhi_xianxia_server_fanwei,"充值范围："+"最低"+offlineBean.recharge_min+"元,最高"+offlineBean.recharge_max+"元");
 
         setParentGone(et_chongzhi_xianxia_bank);
         setTextView(lb_chongzhi_xianxia_name,"户名");
@@ -109,14 +109,14 @@ public class XianXiaZhiFuDetailFragment extends ParentFragment {
         setTextView(lb_chongzhi_xianxia_account,"支付账号");
         et_chongzhi_xianxia_account.setHint("请填写您此次转账使用的支付账号");
         setTextView(lb_chongzhi_xianxia_amount,"存款金额");
-        et_chongzhi_xianxia_amount.setHint("请填写您转账的金额("+offlineBean.recharge_min+"～"+offlineBean.recharge_max+")");
+        et_chongzhi_xianxia_amount.setHint("请填写您转账的金额");
         LunBoTool.initAds(parent,R.id.adsContainer,R.id.vg_viewpager_btn,R.layout.include_lunbo_dot_huise_touming,R.id.cb_dot,-1, LunBoTool.LunBoData.initData(offlineBean.recharge_account));
     }
     public void initBank(){
         setTextView(tv_chongzhi_xianxia_server_bank,"银行："+offlineBean.recharge_bankname);
-        setTextView(tv_chongzhi_xianxia_server_user,"收款人："+offlineBean.recharge_name);
+        setTextView(tv_chongzhi_xianxia_server_user,"收款人："+offlineBean.getRecharge_name());
         setTextView(tv_chongzhi_xianxia_server_account,"账号："+offlineBean.recharge_account);
-        setTextView(tv_chongzhi_xianxia_server_fanwei,"充值范围："+"最低"+offlineBean.recharge_min+"元，最高"+offlineBean.recharge_max+"元");
+        setTextView(tv_chongzhi_xianxia_server_fanwei,"充值范围："+"最低"+offlineBean.recharge_min+"元,最高"+offlineBean.recharge_max+"元");
 
         setTextView(lb_chongzhi_xianxia_bank,"银行名称");
         et_chongzhi_xianxia_bank.setHint("请填写您汇款时使用银行卡所属银行");
@@ -129,7 +129,7 @@ public class XianXiaZhiFuDetailFragment extends ParentFragment {
         et_chongzhi_xianxia_account.setHint("请填写您汇款时使用的银行卡账号");
 
         setTextView(lb_chongzhi_xianxia_amount,"存款金额");
-        et_chongzhi_xianxia_amount.setHint("请填写您转账的金额("+offlineBean.recharge_min+"～"+offlineBean.recharge_max+")");
+        et_chongzhi_xianxia_amount.setHint("请填写您转账的金额");
 
         vg_chongzhi_xianxia_buzou.setVisibility(View.GONE);
     }
@@ -186,7 +186,7 @@ public class XianXiaZhiFuDetailFragment extends ParentFragment {
 
         double amountDouble=Double.valueOf(amount);
         if(amountDouble<offlineBean.recharge_min||amountDouble>offlineBean.recharge_max+0.99){
-            CommonTool.showToast(et_chongzhi_xianxia_amount.getHint());
+            CommonTool.showToast(tv_chongzhi_xianxia_server_fanwei.getText());
             return;
         }
 

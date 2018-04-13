@@ -5,6 +5,7 @@ import java.util.List;
 
 import utils.tjyutils.http.HttpToolAx;
 import utils.tjyutils.parent.ParentServerData;
+import utils.wzutils.common.StringTool;
 import utils.wzutils.http.HttpUiCallBack;
 
 /**
@@ -61,6 +62,11 @@ public class Data_recharge_query extends ParentServerData {
          */
 
         public String recharge_type;
+
+        public String getRecharge_name() {
+            return StringTool.isEmpty(recharge_name)?"-":recharge_name;
+        }
+
         public String recharge_name;
         public String recharge_bankname;
         public String recharge_account;
