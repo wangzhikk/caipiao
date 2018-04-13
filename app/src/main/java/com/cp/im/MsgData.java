@@ -45,7 +45,7 @@ public class MsgData {
         long preTimeStamp=0;
         for(MsgData msgData:msgDataList){
             msgData.msgDetailData.showTimeStamp="";
-            if(Math.abs(msgData.msgDetailData.timestamp-preTimeStamp)>10*1000){//大于一分钟就显示
+            if(Math.abs(msgData.msgDetailData.timestamp-preTimeStamp)>60*1000){//大于一分钟就显示
                 if(msgData.msgDetailData.isTouZhuMsg()||msgData.msgDetailData.isChatMsg()||msgData.msgDetailData.isServiceError()){//这些才显示
                     msgData.msgDetailData.showTimeStamp=TimeTool.getTimeStrLongAndShort(msgData.msgDetailData.timestamp);
                     preTimeStamp=msgData.msgDetailData.timestamp;
