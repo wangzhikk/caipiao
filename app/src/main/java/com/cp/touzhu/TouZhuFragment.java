@@ -35,6 +35,7 @@ import net.openmob.mobileimsdk.android.core.LocalUDPDataSender;
 import java.util.ArrayList;
 import java.util.List;
 
+import utils.tjyutils.common.AnimTool;
 import utils.tjyutils.common.Common;
 import utils.tjyutils.common.WebFragment;
 import utils.tjyutils.http.HttpConfigAx;
@@ -394,7 +395,8 @@ public class TouZhuFragment extends ParentFragment {
         if (lastIndex > -1) recycleView.smoothScrollToPosition(lastIndex);
     }
 
-
+    TextView tv_touzhu_yue;
+    double oldMoney;
     /**
      * 刷新余额
      */
@@ -404,7 +406,13 @@ public class TouZhuFragment extends ParentFragment {
             public void onSuccess(Data_wallet_remain data) {
                 hideWaitingDialog();
                 if (data.isDataOkAndToast()) {
-                    setTextView(parent, R.id.tv_touzhu_yue, "" + Common.getPriceYB(data.remain));
+                    if(oldMoney==data.remain||StringTool.isEmpty(tv_touzhu_yue.getText().toString())){
+                        setTextView(parent, R.id.tv_touzhu_yue, "" + Common.getPriceYB(data.remain));
+                    } else {
+                        AnimTool.startAnim((ViewGroup) parent, tv_touzhu_yue,oldMoney,data.remain);
+                    }
+                    oldMoney=data.remain;
+
                 }
             }
         });
