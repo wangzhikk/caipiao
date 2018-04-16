@@ -45,10 +45,10 @@
 
                 </RelativeLayout>
                 <RelativeLayout android:layout_margin="25dp"
-                    android:background="@drawable/zhuanpan_rule"
+                    android:background="@drawable/rule_zhuanpan"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="15dp"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
                     <TextView style="@style/textview" android:textColor="@color/white"
