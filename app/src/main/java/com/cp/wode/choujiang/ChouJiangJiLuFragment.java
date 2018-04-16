@@ -9,6 +9,7 @@ import com.cp.cp.Data_login_validate;
 
 import java.util.List;
 
+import utils.tjyutils.common.Common;
 import utils.tjyutils.parent.ParentFragment;
 import utils.wzutils.common.LogTool;
 import utils.wzutils.common.StringTool;
@@ -104,7 +105,7 @@ public class ChouJiangJiLuFragment extends ParentFragment implements WzRefreshLa
                 }
                 setTextView(itemView,R.id.tv_choujiang_jilu_name,bean.base_nickname);
                 setTextView(itemView,R.id.tv_choujiang_jilu_time,bean.luck_time);
-                setTextView(itemView,R.id.tv_choujiang_jilu_amount,"+"+bean.luck_amount);
+                setTextView(itemView,R.id.tv_choujiang_jilu_amount,"喜中"+ Common.getPriceYB(bean.luck_amount));
             }
         });
     }

@@ -33,7 +33,7 @@
                 <TextView
                     android:id="@+id/tv_choujiang_jilu_time"
                     style="@style/textview_small"
-                    android:textColor="@color/tv_h4"
+                    android:textColor="@color/tv_h2"
 
                     android:text="2018-10-23 15:58:14" />
 
@@ -43,9 +43,10 @@
                 android:layout_alignParentRight="true" android:layout_centerVertical="true" android:gravity="center_vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:orientation="horizontal">
+                <!--<TextView style="@style/textview" android:text="喜中 " />-->
                 <utils.wzutils.ui.textview.BoldTextView
                     android:id="@+id/tv_choujiang_jilu_amount"
-                    style="@style/textview" android:textSize="20dp" android:text="8.99"
+                    style="@style/textview" android:textSize="18dp" android:text="8.99"
                     android:textColor="@color/tv_hongse"
                     />
 

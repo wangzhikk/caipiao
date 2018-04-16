@@ -35,7 +35,9 @@ public class TitleTool implements Serializable {
             }
         });
     }
-
+    public void hideBack() {
+        if(title_back_img!=null)title_back_img.setVisibility(View.GONE);
+    }
     public void setTitle(String title) {
         UiTool.setTextView(title_title_tv, title);
     }
@@ -81,4 +83,6 @@ public class TitleTool implements Serializable {
         }
 
     }
+
+
 }

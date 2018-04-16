@@ -37,6 +37,7 @@ public class XiaoXiAllFragment extends ParentFragment{
     @Override
     public void initData() {
         titleTool.setTitle("消息");
+        titleTool.hideBack();
 
         wzRefresh.setOnRefreshListener(new OnRefreshListener() {
             @Override
