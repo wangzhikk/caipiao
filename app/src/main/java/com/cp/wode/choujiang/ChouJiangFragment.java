@@ -37,7 +37,7 @@ public class ChouJiangFragment extends ParentFragment {
         titleTool.setTitle("幸运大转盘");
         zhuanPan.setResId(R.drawable.zhuanpan_img,R.drawable.zhuanpan_btn);
 
-        titleTool.setTitleRightTv("抽奖记录", new WzViewOnclickListener() {
+        titleTool.setTitleRightTv("抽奖喜报", new WzViewOnclickListener() {
             @Override
             public void onClickWz(View v) {
                 new ChouJiangJiLuFragment().go();
@@ -56,11 +56,9 @@ public class ChouJiangFragment extends ParentFragment {
                         }
                     }
                 });
-                showWaitingDialog("");
                 Data_luck_draw.load(new HttpUiCallBack<Data_luck_draw>() {
                     @Override
                     public void onSuccess(Data_luck_draw data) {
-                        hideWaitingDialog();
                         if(data.isDataOkAndToast()){
                             startZhuanPan(data.grade,data.amount);
                         }

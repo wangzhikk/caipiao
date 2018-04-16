@@ -9,15 +9,14 @@
 
 
 
-        <LinearLayout
-            android:gravity="center"
-            android:layout_width="match_parent" android:layout_marginLeft="3dp" android:layout_marginRight="3dp"
+        <LinearLayout android:gravity="center_vertical"
+            android:layout_width="match_parent"
             android:layout_height="match_parent" android:orientation="horizontal">
-            <TextView android:id="@+id/tv_shouye_gundong_name" style="@style/textview_small" android:textColor="@color/tv_lanse_name" android:text="范蓝蓝" android:layout_marginRight="3dp"/>
-            <TextView android:id="@+id/tv_shouye_gundong_des" style="@style/textview_small"  android:text="1秒前投注了1秒前投注了前投注了北京28北京28 5000代币"
+            <TextView android:id="@+id/tv_shouye_gundong_name" style="@style/textview_small" android:textColor="@color/tv_lanse_name" android:text="范蓝蓝" android:layout_marginLeft="10dp"/>
+            <TextView android:id="@+id/tv_shouye_gundong_des" style="@style/textview_small"  android:text="1秒前投注了1秒前投注了前投注了北京28北京28 5000代币" android:layout_weight="1" android:gravity="center"
                 android:textColor="@color/tv_h1" />
 
-            <utils.wzutils.ui.textview.BoldTextView android:id="@+id/tv_shouye_gundong_type" style="@style/textview" android:textColor="@color/tv_h1" android:text="大双" android:layout_marginLeft="3dp"   />
+            <utils.wzutils.ui.textview.BoldTextView android:id="@+id/tv_shouye_gundong_jine" style="@style/textview" android:textColor="@color/tv_hongse" tools:text="100" android:layout_marginRight="10dp"   />
         </LinearLayout>
 
 </RelativeLayout>

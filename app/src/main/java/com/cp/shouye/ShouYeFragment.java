@@ -151,9 +151,9 @@ public class ShouYeFragment extends ParentFragment {
     }
     public void initGunDongItem(View view, Data_index_dynamic.DynamicBean dynamicBean){
         setTextView(view,R.id.tv_shouye_gundong_name,dynamicBean.nickname);
-        String des= TimeTool.getAgoTime(dynamicBean.timestamp)+"投注了"+dynamicBean.lottery+" "+ Common.getPriceYB(dynamicBean.amount);
+        String des= TimeTool.getAgoTime(dynamicBean.timestamp)+" 投注了"+dynamicBean.lottery;
         setTextView(view,R.id.tv_shouye_gundong_des,des);
-        setTextView(view,R.id.tv_shouye_gundong_type,dynamicBean.bettingType);
+        setTextView(view,R.id.tv_shouye_gundong_jine, Common.getPriceYB(dynamicBean.amount));
     }
 
 
@@ -182,7 +182,7 @@ public class ShouYeFragment extends ParentFragment {
      * 用户已赚多少哪里
      */
     public void initYiZhuan(Data_index_query data_index_query){
-        setTextView(parent,R.id.shouye_yizhuan_tv ,""+data_index_query.totalProfit);
+        setTextView(parent,R.id.shouye_yizhuan_tv ,Common.getPriceYB(data_index_query.totalProfit));
         setTextView(parent,R.id.shouye_touzhu_tv ,""+data_index_query.totalUser);
         setTextView(parent,R.id.shouye_shenglv_tv ,""+data_index_query.profitRate);
 

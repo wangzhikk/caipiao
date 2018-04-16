@@ -93,7 +93,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" android:orientation="horizontal">
                             <TextView style="@style/textview_small" android:gravity="center"
-                                android:text="用户数量" android:textColor="@color/tv_h3"
+                                android:text="在线人数" android:textColor="@color/tv_h3"
                                 android:drawableLeft="@drawable/icon_index_touzhu"
                                 android:drawablePadding="20dp"
                                 android:layout_marginRight="10dp"

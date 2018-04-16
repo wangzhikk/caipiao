@@ -35,7 +35,7 @@ public class ChouJiangJiLuFragment extends ParentFragment implements WzRefreshLa
 
     @Override
     public void initData() {
-        titleTool.setTitle("抽奖记录");
+        titleTool.setTitle("抽奖喜报");
 
         commonButtonTool=new CommonButtonTool();
         commonButtonTool.addCommonBtns(rb_choujiang_wode,rb_choujiang_quanbu);
