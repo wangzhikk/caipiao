@@ -10,6 +10,7 @@ import com.cp.KeFu.KeFuFragment;
 import java.io.Serializable;
 
 import utils.wzutils.common.LogTool;
+import utils.wzutils.common.StringTool;
 import utils.wzutils.common.UiTool;
 import utils.wzutils.common.ViewTool;
 import utils.wzutils.parent.WzViewOnclickListener;
@@ -75,6 +76,11 @@ public class TitleTool implements Serializable {
     public void setTitleRightTv(String text,WzViewOnclickListener onclickListener){
         try {
            if(title_right_tv!=null){
+               if(StringTool.isEmpty(text)){
+                   title_right_tv.setVisibility(View.GONE);
+                   return;
+               }
+               title_right_tv.setVisibility(View.VISIBLE);
                UiTool.setTextView(title_right_tv,text);
                title_right_tv.setOnClickListener(onclickListener);
            }

@@ -55,6 +55,7 @@ public class YinHangKaGuanLiFragment extends ParentFragment {
                 if(data.code==182){//没有绑定银行卡
                     vg_no_yinghangka_parent.setVisibility(View.VISIBLE);
                     vg_yinghangka_parent.setVisibility(View.GONE);
+                    initRightTitle("");
                 }else  if(data.isDataOkAndToast()){
                     initView(data);
                 }
