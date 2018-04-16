@@ -1,5 +1,6 @@
 package com.cp.wode.shezhi.mima;
 
+import android.content.DialogInterface;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -7,6 +8,8 @@ import android.widget.TextView;
 import com.cp.R;
 import com.cp.cp.Data_login_validate;
 import com.cp.cp.Data_phonecaptcha_send;
+import com.cp.wode.shezhi.phone.PhoneBindFragment;
+import com.cp.wode.shezhi.phone.PhoneChangeFragment;
 
 import utils.tjyutils.parent.ParentFragment;
 import utils.wzutils.common.CommonTool;
@@ -15,6 +18,7 @@ import utils.wzutils.common.UiTool;
 import utils.wzutils.http.HttpUiCallBack;
 import utils.wzutils.parent.WzViewOnclickListener;
 import utils.wzutils.ui.daojishi.DaoJiShiSimple;
+import utils.wzutils.ui.dialog.DialogTool;
 
 /**
  * Created by kk on 2017/3/23.
@@ -91,9 +95,19 @@ public class XiuGaiZiJinMimaFragment extends ParentFragment {
                     @Override
                     public void onSuccess(Data_thirdpassword_reset data) {
                         hideWaitingDialog();
-                        CommonTool.showToast(data.msg);
+
                         if(data.isDataOk()){
+                            CommonTool.showToast(data.msg);
                             getActivityWz().finish();
+                        }else if(data.code==163){//未绑定手机号码
+                            DialogTool.initNormalQueDingDialog("", "您需要先绑定手机号码,是否前往绑定?", "立即绑定", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    new PhoneBindFragment().go();
+                                }
+                            },"").show();
+                        }else {
+                            CommonTool.showToast(data.msg);
                         }
                     }
                 });

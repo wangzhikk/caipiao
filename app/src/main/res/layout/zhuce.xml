@@ -42,13 +42,13 @@
             <EditText
                 android:id="@+id/et_zhuce_pwd"
                 style="@style/tv_denglu_input"
-                android:drawableLeft="@drawable/icon_login_username"
+                android:drawableLeft="@drawable/icon_login_password"
                 android:hint="密码为6-16位字母或数字"
                 android:inputType="textPassword" />
             <EditText
                 android:id="@+id/et_zhuce_pwd2"
                 style="@style/tv_denglu_input"
-                android:drawableLeft="@drawable/icon_login_username"
+                android:drawableLeft="@drawable/icon_login_password"
                 android:hint="确认密码6-16位字母或数字"
                 android:inputType="textPassword" />
 

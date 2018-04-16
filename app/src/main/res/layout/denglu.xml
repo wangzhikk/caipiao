@@ -41,7 +41,7 @@
         <EditText
             android:id="@+id/et_login_pwd"
             style="@style/tv_denglu_input"
-            android:drawableLeft="@drawable/icon_login_username"
+            android:drawableLeft="@drawable/icon_login_password"
             android:hint="请输入密码"
             android:inputType="textPassword"
             />
