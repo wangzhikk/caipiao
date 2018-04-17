@@ -1,6 +1,8 @@
 package com.cp.im;
 
 
+import android.view.View;
+
 import com.cp.R;
 import com.cp.cp.Data_login_validate;
 import com.cp.shouye.Data_room_queryGame;
@@ -15,6 +17,7 @@ import utils.tjyutils.common.TitleTool;
 import utils.wzutils.JsonTool;
 import utils.wzutils.common.LogTool;
 import utils.wzutils.common.TimeTool;
+import utils.wzutils.common.UiTool;
 
 public class MsgData {
     public MsgData(String fingerPrintOfProtocal, String userid, String dataContent, int typeu) {
@@ -129,7 +132,7 @@ public class MsgData {
             return "<font color='#4491FE'>"+text+"</font>";
         }
 
-        public String getZhuangTaiMsg(Data_room_queryGame.InfoBean.RoomLevelsBean roomsBean){
+        public String getZhuangTaiMsg(View itemView,Data_room_queryGame.InfoBean.RoomLevelsBean roomsBean){
             String msg="";
             if(isZhuangTaiMsg()){
                 msg="";
@@ -137,7 +140,9 @@ public class MsgData {
                     msg=getLanSeTv("【"+attach.issue+"期】")+"["+ TimeTool.getShortTimeStrWithOutSecond(attach.timestamp)+"]开奖结果：<br>"+ Data_cqssc_top10.CQSSCBean.getShowStr("",attach.num);
                 }else if(state==1){// 可以开始下注
                     msg=getLanSeTv("【"+issue+"期】")+"单注"+roomsBean.bettingMin+"起，"+roomsBean.bettingMax+"封顶，总注"+roomsBean.bettingLimit+"封顶";
-                    msg+="<br/>★★现在可以开始下注★★";
+                    UiTool.setTextView(itemView,R.id.im_vg_center2,"★★现在可以开始下注★★");
+                    itemView.findViewById(R.id.im_vg_center2).setVisibility(View.VISIBLE);
+                    //msg+="<br/>★★现在可以开始下注★★";
                 }else if(state==2){// 距封盘剩下60秒时，提醒下注
                     msg=getLanSeTv("【"+issue+"期】")+"距封盘还有60秒,请抓紧时间下注";
                 }else if(state==3){// 停止下注，封盘
