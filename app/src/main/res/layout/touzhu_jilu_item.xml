@@ -15,7 +15,7 @@
         android:paddingLeft="8dp"
         android:paddingRight="8dp"
         android:paddingBottom="8dp"
-        android:layout_height="185dp" android:orientation="vertical">
+        android:layout_height="170dp" android:orientation="vertical">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -34,14 +34,20 @@
         <TextView android:id="@+id/tv_touzhu_jilu_item_touzhu_type" style="@style/textview_small" tools:text="投注类型：5 1 1 6 5 (和:11)"    android:layout_marginBottom="2dp"/>
         <TextView android:id="@+id/tv_touzhu_jilu_item_touzhu_jine" style="@style/textview_small" tools:text="投注金额：5 1 1 6 5 (和:11)"    android:layout_marginBottom="2dp"/>
         <TextView android:id="@+id/tv_touzhu_jilu_item_zhongjiang_jine" style="@style/textview_small" tools:text="中奖金额：5 1 1 6 5 (和:11)"    android:layout_marginBottom="2dp"/>
-        <TextView android:id="@+id/tv_touzhu_jilu_item_dingdanhao" style="@style/textview_small" tools:text="订单编号： "    android:layout_marginBottom="2dp"/>
-        <TextView
-            android:id="@+id/tv_touzhu_jilu_time"
-            style="@style/textview_small" android:text="2018-07-24 09:37:43"
-            android:gravity="right"
-            android:textColor="@color/tv_h2"
+
+        <LinearLayout
             android:layout_width="match_parent"
-            />
+            android:layout_height="wrap_content" android:orientation="horizontal">
+            <TextView android:id="@+id/tv_touzhu_jilu_item_dingdanhao" style="@style/textview_small" tools:text="订单编号： "    android:layout_marginBottom="2dp"/>
+            <TextView
+                android:id="@+id/tv_touzhu_jilu_time"
+                style="@style/textview_small" android:text="2018-07-24 09:37:43"
+                android:gravity="right"
+                android:textColor="@color/tv_h2"
+                android:layout_width="match_parent"
+                />
+        </LinearLayout>
+
     </LinearLayout>
 
     <ImageView
