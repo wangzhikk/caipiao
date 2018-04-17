@@ -13,8 +13,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" android:orientation="horizontal">
             <TextView android:id="@+id/tv_shouye_gundong_name" style="@style/textview_small" android:textColor="@color/tv_lanse_name" android:text="范蓝蓝" android:layout_marginLeft="10dp"/>
-            <TextView android:id="@+id/tv_shouye_gundong_des" style="@style/textview_small"  android:text="1秒前投注了1秒前投注了前投注了北京28北京28 5000代币" android:layout_weight="1" android:gravity="center"
-                android:textColor="@color/tv_h1" />
+            <TextView android:id="@+id/tv_shouye_gundong_des" style="@style/textview_small"  tools:text="1秒前投注了1秒前投注了前投注了北京28秒前投注了1秒前投注了前投注了北京28北京28 50北京28 5000代币" android:layout_weight="1" android:gravity="center"
+                android:textColor="@color/tv_h1" android:singleLine="true"/>
 
             <utils.wzutils.ui.textview.BoldTextView android:id="@+id/tv_shouye_gundong_jine" style="@style/textview" android:textColor="@color/tv_hongse" tools:text="100" android:layout_marginRight="10dp"   />
         </LinearLayout>

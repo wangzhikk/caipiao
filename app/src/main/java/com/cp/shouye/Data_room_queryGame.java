@@ -172,7 +172,7 @@ public class Data_room_queryGame extends ParentServerData {
             public int bg;
 
             public void goPeiLv() {
-                ShuoMingFragment.byData(new ShuoMingFragment.ShuoMingData("说明",odds)).go();
+                ShuoMingFragment.byData(new ShuoMingFragment.ShuoMingData("房间说明",odds)).go();
             }
             public Data_room_queryGame getGameData(){
                 Data_room_queryGame gameData=getLocalByGame(game);
