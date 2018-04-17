@@ -25,9 +25,11 @@ import utils.tjyutils.http.HttpConfigAx;
 import utils.tjyutils.parent.ParentFragment;
 import utils.wzutils.AppTool;
 import utils.wzutils.common.BroadcastReceiverTool;
+import utils.wzutils.common.CommonTool;
 import utils.wzutils.common.LayoutInflaterTool;
 import utils.wzutils.common.TestData;
 import utils.wzutils.common.TimeTool;
+import utils.wzutils.common.UiTool;
 import utils.wzutils.http.HttpUiCallBack;
 import utils.wzutils.parent.WzViewOnclickListener;
 import utils.wzutils.ui.WzSimpleRecycleView;
@@ -234,16 +236,15 @@ public class ShouYeFragment extends ParentFragment {
                 View shouye_wanfa_shuoming=itemView.findViewById(R.id.shouye_wanfa_shuoming);
                 Data_room_queryGame.YouXiEnum youXiEnum= Data_room_queryGame.YouXiEnum.BJ28;
 
+                int margin= CommonTool.dip2px(10);
                 String shuoMingUrl="";
                 if(position==0){
                     loadImage(R.drawable.img_index_bj,itemView,R.id.shouye_wanfa_img);
-                    setTextView(itemView,R.id.shouye_wanfa_name,"北京28");
                     youXiEnum= Data_room_queryGame.YouXiEnum.BJ28;
                     if(data_index_query.isDataOk())shuoMingUrl=HttpConfigAx.getHtmlUrl(data_index_query.games.BJ28.playHtmlSrc);
 
                 }else if(position==1){
                     loadImage(R.drawable.img_index_cq,itemView,R.id.shouye_wanfa_img);
-                    setTextView(itemView,R.id.shouye_wanfa_name,"重庆时时彩");
                     youXiEnum= Data_room_queryGame.YouXiEnum.CQSSC_CX;
                     if(data_index_query.isDataOk())shuoMingUrl=HttpConfigAx.getHtmlUrl(data_index_query.games.CQSSC_CX.playHtmlSrc);
                 }
