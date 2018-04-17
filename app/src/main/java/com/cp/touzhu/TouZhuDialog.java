@@ -179,24 +179,24 @@ public class TouZhuDialog  {
             }
         });
 
-        {//赔率说明
-            View btn_touzhu_peilv = view.findViewById(R.id.btn_touzhu_peilv);
-            btn_touzhu_peilv.setOnClickListener(new WzViewOnclickListener() {
-                @Override
-                public void onClickWz(View v) {
-                    touZhuFragment.roomsBean.goPeiLv();
-                }
-            });
-
-        }
+//        {//赔率说明
+//            View btn_touzhu_peilv = view.findViewById(R.id.btn_touzhu_peilv);
+//            btn_touzhu_peilv.setOnClickListener(new WzViewOnclickListener() {
+//                @Override
+//                public void onClickWz(View v) {
+//                    touZhuFragment.roomsBean.goPeiLv();
+//                }
+//            });
+//
+//        }
         {//最小和双倍
-            TextView tv_touzhu_zuixiao=view.findViewById(R.id.tv_touzhu_zuixiao);
-            tv_touzhu_zuixiao.setOnClickListener(new WzViewOnclickListener() {
-                @Override
-                public void onClickWz(View v) {
-                    et_touzhu.setText(""+ touZhuFragment.roomsBean.bettingMin);
-                }
-            });
+//            TextView tv_touzhu_zuixiao=view.findViewById(R.id.tv_touzhu_zuixiao);
+//            tv_touzhu_zuixiao.setOnClickListener(new WzViewOnclickListener() {
+//                @Override
+//                public void onClickWz(View v) {
+//                    et_touzhu.setText(""+ touZhuFragment.roomsBean.bettingMin);
+//                }
+//            });
             TextView tv_touzhu_shuangbei=view.findViewById(R.id.tv_touzhu_shuangbei);
             tv_touzhu_shuangbei.setOnClickListener(new WzViewOnclickListener() {
                 @Override
