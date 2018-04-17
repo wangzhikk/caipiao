@@ -171,7 +171,15 @@ public class Data_cqssc_top10 extends ParentServerData {
                     sb.append("<font color='#4491FE'>"+result+"</font> ");
                     sb.append(")");
                 }else if(lottery_num.length()==3){
-                    return getShowStr("",lottery_num);
+                    char num0=lottery_num.charAt(0);
+                    char num1=lottery_num.charAt(1);
+                    char num2=lottery_num.charAt(2);
+
+                    sb.append("<font color='#4491FE'>");
+                    sb.append(num0+" +");
+                    sb.append(num1+" +");
+                    sb.append(num2+" =");
+                    sb.append(getResult(lottery_num));
                 }
 
             }else {
