@@ -140,8 +140,14 @@ public class MsgData {
                     msg=getLanSeTv("【"+attach.issue+"期】")+"["+ TimeTool.getShortTimeStrWithOutSecond(attach.timestamp)+"]开奖结果：<br>"+ Data_cqssc_top10.CQSSCBean.getShowStr("",attach.num);
                 }else if(state==1){// 可以开始下注
                     msg=getLanSeTv("【"+issue+"期】")+"单注"+roomsBean.bettingMin+"起，"+roomsBean.bettingMax+"封顶，总注"+roomsBean.bettingLimit+"封顶";
-                    UiTool.setTextView(itemView,R.id.im_vg_center2,"★★现在可以开始下注★★");
-                    itemView.findViewById(R.id.im_vg_center2).setVisibility(View.VISIBLE);
+                    try {
+                        if(itemView!=null){
+                            UiTool.setTextView(itemView,R.id.im_vg_center2,"★★现在可以开始下注★★");
+                            itemView.findViewById(R.id.im_vg_center2).setVisibility(View.VISIBLE);
+                        }
+                    }catch (Exception e){
+                        LogTool.ex(e);
+                    }
                     //msg+="<br/>★★现在可以开始下注★★";
                 }else if(state==2){// 距封盘剩下60秒时，提醒下注
                     msg=getLanSeTv("【"+issue+"期】")+"距封盘还有60秒,请抓紧时间下注";

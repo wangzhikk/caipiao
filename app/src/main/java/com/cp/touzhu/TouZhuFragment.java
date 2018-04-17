@@ -277,7 +277,7 @@ public class TouZhuFragment extends ParentFragment {
                         }
                     }
                     oldMsgData = msgData;
-                    if (showMsg) {
+                    if (showMsg&&StringTool.notEmpty(msgData.msgDetailData.getZhuangTaiMsg(null,roomsBean))) {//有内容的才显示
                         msgDataList.add(msgData);
                         initListView();
                     }
@@ -310,20 +310,28 @@ public class TouZhuFragment extends ParentFragment {
 
                 View im_vg_left = itemView.findViewById(R.id.im_vg_left);
                 View im_vg_right = itemView.findViewById(R.id.im_vg_right);
-                View im_vg_center = itemView.findViewById(R.id.im_vg_center);
-                View im_vg_center2 = itemView.findViewById(R.id.im_vg_center2);
+
+
 
                 im_time_tv.setVisibility(View.GONE);
                 im_vg_left.setVisibility(View.GONE);
                 im_vg_right.setVisibility(View.GONE);
+
+                View im_vg_center = itemView.findViewById(R.id.im_vg_center);
+                View im_vg_center2 = itemView.findViewById(R.id.im_vg_center2);
+                View im_vg_zhuangtai=itemView.findViewById(R.id.im_vg_zhuangtai);
                 im_vg_center.setVisibility(View.GONE);
                 im_vg_center2.setVisibility(View.GONE);
+                im_vg_zhuangtai.setVisibility(View.GONE);
 
 
                 if (msgData.msgDetailData.isZhuangTaiMsg() || msgData.msgDetailData.isXinJinYongHu()) {
+
                     TextView im_vg_center_tv = itemView.findViewById(R.id.im_vg_center);
                     HtmlTool.setHtmlText(im_vg_center_tv, msgData.msgDetailData.getZhuangTaiMsg(itemView,roomsBean));
                     im_vg_center.setVisibility(View.VISIBLE);
+                    im_vg_zhuangtai.setVisibility(View.VISIBLE);
+
                 } else if (msgData.msgDetailData.isTouZhuMsg()) {
 
                     if(StringTool.notEmpty(msgData.msgDetailData.showTimeStamp)){
