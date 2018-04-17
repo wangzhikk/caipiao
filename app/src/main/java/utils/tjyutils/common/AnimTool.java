@@ -34,7 +34,7 @@ public class AnimTool {
         if(add){
              fromY=location[1]- CommonTool.dip2px(50);
              toY=location[1];
-            alphaAnimation=new AlphaAnimation(0,1);
+            alphaAnimation=new AlphaAnimation(1,0);
         }else {
             fromY=location[1];
             toY=fromY- CommonTool.dip2px(50);
