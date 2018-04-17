@@ -81,6 +81,7 @@ public class DialogTool {
         Dialog dialog = new Dialog(AppTool.currActivity);
         try {
             if (dialog != null) {
+                dialog.getWindow().setDimAmount(0.4f);
                 dialog.setContentView(contentView);
                 if (dpJianJu > -1) {
                     setDialogNoBg(dialog);
