@@ -8,10 +8,6 @@
 
 
 
-    <utils.wzutils.ui.WzScrollView
-        android:layout_alignParentBottom="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
         <LinearLayout
             android:id="@+id/vg_parent_dialog_touzhu"
             android:background="@color/bg_lanse"
@@ -134,7 +130,6 @@
             </LinearLayout>
         </LinearLayout>
 
-    </utils.wzutils.ui.WzScrollView>
 
 
 
