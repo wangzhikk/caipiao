@@ -12,6 +12,7 @@ import com.cp.wode.shezhi.phone.PhoneBindFragment;
 import com.cp.wode.shezhi.phone.PhoneChangeFragment;
 
 import utils.tjyutils.parent.ParentFragment;
+import utils.tjyutils.ui.DialogToolTem;
 import utils.wzutils.common.CommonTool;
 import utils.wzutils.common.StringTool;
 import utils.wzutils.common.UiTool;
@@ -100,12 +101,20 @@ public class XiuGaiZiJinMimaFragment extends ParentFragment {
                             CommonTool.showToast(data.msg);
                             getActivityWz().finish();
                         }else if(data.code==163){//未绑定手机号码
-                            DialogTool.initNormalQueDingDialog("", "您需要先绑定手机号码,是否前往绑定?", "立即绑定", new DialogInterface.OnClickListener() {
+//                            DialogTool.initNormalQueDingDialog("", "您需要先绑定手机号码,是否前往绑定?", "立即绑定", new DialogInterface.OnClickListener() {
+//                                @Override
+//                                public void onClick(DialogInterface dialog, int which) {
+//                                    new PhoneBindFragment().go();
+//                                }
+//                            },"").show();
+
+                            DialogToolTem.showIosDialog("温馨提示", "您需要先绑定手机号码", "立即前往绑定", new WzViewOnclickListener() {
                                 @Override
-                                public void onClick(DialogInterface dialog, int which) {
+                                public void onClickWz(View v) {
                                     new PhoneBindFragment().go();
                                 }
-                            },"").show();
+                            });
+
                         }else {
                             CommonTool.showToast(data.msg);
                         }
