@@ -160,7 +160,7 @@ public class MsgData {
                // int icon= Data_login_validate.getData_login_validate().uuid.equals(uuid)?R.drawable.icon_bet_stopwatch_white:R.drawable.icon_bet_stopwatch_black;
 
                 int icon=R.drawable.icon_bet_stopwatch_white;
-                msg="<img src='res:" +icon +"'  > "+issue+"期 投注类型："+betting+" <br>金额："+ Common.getPriceYB(amount);
+                msg="<img src='res:" +icon +"'  > "+issue+"期 投注类型:&emsp;"+betting+" <br>金额："+ Common.getPriceYB(amount);
             }else if(isXinJinYongHu()){
                 msg="欢迎"+" <img src='res:" + Data_personinfo_query.getGradeResImg(content.grade) +"'  > "+getLanSeTv(content.nickname)+" 进入房间";
             }
