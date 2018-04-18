@@ -12,12 +12,14 @@ import com.cp.cp.Data_version;
 import com.cp.shouye.ShouYeFragment;
 import com.cp.wode.Data_personinfo_query;
 import com.cp.wode.WoDeFragment;
+import com.cp.xiaoxi.Data_message_summary;
 import com.cp.xiaoxi.XiaoXiAllFragment;
 import com.cp.xiaoxi.XiaoXiListFragment;
 
 import utils.tjyutils.parent.ParentActivity;
 import utils.tjyutils.parent.ParentFragment;
 import utils.wzutils.AppTool;
+import utils.wzutils.common.BroadcastReceiverTool;
 import utils.wzutils.common.LogTool;
 import utils.wzutils.common.StringTool;
 import utils.wzutils.common.UiTool;
@@ -44,6 +46,18 @@ public class MainActivity extends ParentActivity {
         onNewIntent(getIntent());
         Data_personinfo_query.load(null);
         checkVersion();
+
+        bindXiaoXi();
+    }
+    public void bindXiaoXi(){
+
+        BroadcastReceiverTool.bindAction(this, new BroadcastReceiverTool.BroadCastWork() {
+            @Override
+            public void run() {
+                showBottomMsg(rb_xiaoxi,""+Data_message_summary.xiaoxi_num);
+            }
+        },Data_message_summary.action_xiaoxi_change);
+        Data_message_summary.load(null);
     }
     public void checkVersion(){
         Data_version.load(new HttpUiCallBack<Data_version>() {
@@ -116,7 +130,6 @@ public class MainActivity extends ParentActivity {
                      if(Data_login_validate.isLoginOrGo()){
                          currPage = R.id.rb_xiaoxi;
                          setFragment(xiaoXiFragment);
-                         showBottomMsg(rb_xiaoxi,"");
                      }else {
                          compoundButton.setChecked(!compoundButton.isChecked());
                      }
@@ -149,8 +162,8 @@ public class MainActivity extends ParentActivity {
      */
     public void showBottomMsg(View v, String count){
         TextView tv_shouye_msg= (TextView) v.findViewById(R.id.tv_shouye_msg);
-        if(StringTool.notEmpty(count)){
-            //  UiTool.setTextView(tv_shouye_msg,""+count);
+        if(StringTool.notEmpty(count)&&!"0".equals(count)){
+            UiTool.setTextView(tv_shouye_msg,""+count);
             tv_shouye_msg.setVisibility(View.VISIBLE);
         }else {
             tv_shouye_msg.setVisibility(View.INVISIBLE);
@@ -220,21 +233,6 @@ public class MainActivity extends ParentActivity {
         AppTool.currActivity.startActivity(intent);
     }
 
-    /***
-     * 设置有新的消息
-     */
-    public static void setHasNewMsg() {
-        try {
-            if(currMainActivity!=null){
-                if(!(currMainActivity.currentFragment instanceof WoDeFragment)){
-                    currMainActivity. showBottomMsg(currMainActivity.rb_xiaoxi,"New");
-                }
-            }
-        }catch (Exception e){
-            LogTool.ex(e);
-        }
-
-    }
 
     public static void go() {
         Intent intent = new Intent(AppTool.getApplication(), MainActivity.class);
