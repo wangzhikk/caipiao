@@ -27,6 +27,7 @@ public class Data_index_query extends ParentServerData {
     public int totalUser;
     public int profitRate;
     public List<BannersBean> banners;
+    public List<PopMessagesBean> popMessages;
     /**
      * games : {"BJ28":{"playHtmlSrc":"bj28wf"},"CQSSC_CX":{"playHtmlSrc":"cqssccxwf"}}
      */
@@ -74,4 +75,10 @@ public class Data_index_query extends ParentServerData {
             public String playHtmlSrc="cqssccxwf";
         }
     }
+    public static class PopMessagesBean{
+        public String id;
+        public String message_title;
+        public String message_content;
+    }
+
 }

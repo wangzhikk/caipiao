@@ -8,39 +8,57 @@
 
 
     <LinearLayout
-        android:layout_centerInParent="true"
-        android:background="@drawable/tank_tips"
-        android:paddingLeft="20dp"
-        android:paddingRight="15dp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginRight="70dp"
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="vertical">
 
-        <utils.wzutils.ui.textview.BoldTextView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            style="@style/textview" android:textSize="@dimen/tv_larage17"
-            android:layout_marginTop="5dp"
-            android:text="提示"
-            />
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:background="@drawable/tank_tips"
+            android:paddingLeft="20dp"
+            android:paddingRight="15dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <utils.wzutils.ui.textview.BoldTextView
+                android:id="@+id/tv_shouye_tishi_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:gravity="center"
+                style="@style/textview" android:textSize="@dimen/tv_larage17"
+                android:text="提示"
+                />
 
 
-        <TextView style="@style/textview" android:textColor="@color/tv_h2"
-            android:lineSpacingExtra="5dp"
-            android:text="您好，该时间段暂未提供相关服务，请在10:00:00-凌晨2:00:00尝试操作，干些您的支持！"
-            android:layout_marginBottom="30dp"
-            />
-        <TextView style="@style/textview" android:textColor="@color/tv_h2"
-            android:layout_width="match_parent"
-            android:gravity="right"
-            android:text="爱乐客服"
-            android:layout_marginBottom="30dp"
-            />
+            <TextView style="@style/textview"
+                android:id="@+id/tv_shouye_tishi_content"
+                android:textColor="@color/tv_h2"
+                android:lineSpacingExtra="5dp"
+                android:text="您好，该时间段暂未提供相关服务，请在10:00:00-凌晨2:00:00尝试操作，干些您的支持！"
+                android:layout_marginBottom="40dp"
+                />
+
+            <TextView style="@style/textview_large"
+                android:id="@+id/tv_shouye_tishi_next" android:visibility="gone" tools:visibility="visible"
+                android:background="@drawable/drawable_yuanjiao_hongse"
+                android:textColor="@color/white"
+                android:layout_height="40dp"
+                android:layout_width="match_parent" android:gravity="center"
+                android:text="下一条"
+                android:layout_marginBottom="20dp"
+                />
+        </LinearLayout>
+
+        <View android:layout_width="50dp" android:layout_height="50dp" android:background="@drawable/icon_login_close" android:layout_gravity="center_horizontal"
+
+            android:id="@+id/btn_shouye_tishi_close"
+            ></View>
+
     </LinearLayout>
-
 
 
 </RelativeLayout>

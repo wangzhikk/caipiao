@@ -3,6 +3,7 @@ package com.cp.shouye;
 import android.app.Dialog;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.ViewFlipper;
 
 
@@ -176,9 +177,52 @@ public class ShouYeFragment extends ParentFragment {
                     initYiZhuan(data);
                     initLunBo(data.banners);
                     initListView();
+                    showTiShiDialog();
                 }
             }
         });
+    }
+
+    static boolean showTishi=true;
+    public void showTiShiDialog(){
+        if(!showTishi)return;
+        if(data_index_query==null||!data_index_query.isDataOk())return;
+        if(data_index_query.popMessages!=null&&data_index_query.popMessages.size()>0){
+
+            View view=LayoutInflaterTool.getInflater(2,R.layout.dialog_tishi).inflate();
+            initTiShiDialog(view,data_index_query.popMessages,0);
+
+            final Dialog dialog=DialogTool.initNormalDialog(view,0);
+            dialog.show();
+            view.findViewById(R.id.btn_shouye_tishi_close).setOnClickListener(new WzViewOnclickListener() {
+                @Override
+                public void onClickWz(View v) {
+                    dialog.dismiss();
+                }
+            });
+            showTishi=false;
+        }
+    }
+    public void initTiShiDialog(final View view, final List<Data_index_query.PopMessagesBean> popMessages, final int index){
+        TextView tv_shouye_tishi_next=view.findViewById(R.id.tv_shouye_tishi_next);
+        tv_shouye_tishi_next.setVisibility(View.GONE);
+        if(index>=popMessages.size()){
+            return;
+        }
+
+        if(popMessages.size()>index+1){//有下一条
+            tv_shouye_tishi_next.setVisibility(View.VISIBLE);
+            tv_shouye_tishi_next.setOnClickListener(new WzViewOnclickListener() {
+                @Override
+                public void onClickWz(View v) {
+                    initTiShiDialog(view,popMessages,index+1);
+                }
+            });
+        }
+        Data_index_query.PopMessagesBean popMessagesBean=popMessages.get(index);
+        setTextView(view,R.id.tv_shouye_tishi_title,popMessagesBean.message_title);
+        setTextView(view,R.id.tv_shouye_tishi_content,popMessagesBean.message_content);
+
     }
 
     /**
