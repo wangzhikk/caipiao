@@ -7,6 +7,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.support.v7.app.AlertDialog;
@@ -446,7 +448,14 @@ public class UiTool {
         }
         return new RelativeLayout(AppTool.currActivity);
     }
-
+    public static Rect getTextWidthHeight(String text,int textSize){
+        text=StringTool.getNotNullText(text);
+        Paint paint = new Paint();
+        paint.setTextSize(textSize);
+        Rect rect = new Rect();
+        paint.getTextBounds(text, 0, text.length(), rect);
+        return rect;
+    }
     /***
      * 获取状态栏高度
      * @return

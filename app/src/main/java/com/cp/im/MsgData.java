@@ -1,6 +1,7 @@
 package com.cp.im;
 
 
+import android.graphics.Rect;
 import android.view.View;
 
 import com.cp.R;
@@ -160,7 +161,21 @@ public class MsgData {
                // int icon= Data_login_validate.getData_login_validate().uuid.equals(uuid)?R.drawable.icon_bet_stopwatch_white:R.drawable.icon_bet_stopwatch_black;
 
                 int icon=R.drawable.icon_bet_stopwatch_white;
-                msg="<img src='res:" +icon +"'  > "+issue+"期 投注类型:&emsp;&emsp;"+betting+" <br>金额："+ Common.getPriceYB(amount);
+
+
+                //下面是为了等长显示
+                int max=200;
+                Rect rect=UiTool.getTextWidthHeight(betting,max/2);
+                int num=(max-rect.right+30)/50;
+                String tem="";
+                while (num>0){
+                    tem+="&ensp;";
+                    num--;
+                }
+                String bettingStr=tem+betting;
+
+
+                msg="<img src='res:" +icon +"'  > "+issue+"期&emsp;投注类型:&emsp;"+bettingStr+" <br>金额："+ Common.getPriceYB(amount);
             }else if(isXinJinYongHu()){
                 msg="欢迎"+" <img src='res:" + Data_personinfo_query.getGradeResImg(content.grade) +"'  > "+getLanSeTv(content.nickname)+" 进入房间";
             }
