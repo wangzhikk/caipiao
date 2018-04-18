@@ -120,7 +120,7 @@
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:layout_marginRight="5dp"
-            android:maxWidth="205dp"
+            android:maxWidth="230dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:orientation="vertical">
             <TextView
@@ -129,14 +129,14 @@
                 tools:text="欢迎张三进入房间"
                 android:gravity="center"
                 android:layout_gravity="center"
-                android:maxWidth="205dp"
+                android:maxWidth="230dp"
                 />
 
             <TextView android:visibility="gone"
                 android:id="@+id/im_vg_center2"
                 style="@style/textview"
                 tools:text="欢迎张三进入房间"
-                android:maxWidth="205dp"
+                android:maxWidth="230dp"
                 android:gravity="center"
                 android:layout_gravity="center"
 
