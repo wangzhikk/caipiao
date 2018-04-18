@@ -73,20 +73,33 @@ public class TouZhuFragment extends ParentFragment {
     TextView tv_touzhu_dangqian_qi, tv_touzhu_daojishi;
 
     View vg_touzhu_qishu;
+
     @Override
     public int initContentViewId() {
         return R.layout.touzhu;
     }
-
+    boolean init=false;
     @Override
     public void initData() {
         roomsBean = (Data_room_queryGame.InfoBean.RoomLevelsBean) getArgument("roomsBean", new Data_room_queryGame.InfoBean.RoomLevelsBean());
-        dataRoomQueryGame = roomsBean.getGameData();
         roomListBean = (Data_room_queryGame.InfoBean.RoomLevelsBean.RoomListBean) getArgument("roomListBean", new Data_room_queryGame.InfoBean.RoomLevelsBean.RoomListBean());
-
-
         titleTool.setTitle(Data_room_queryGame.YouXiEnum.valueOf(roomsBean.game).name + " " + roomListBean.name);
+        dataRoomQueryGame = roomsBean.getGameData();
 
+        Data_room_queryGame.load(Data_room_queryGame.YouXiEnum.valueOf(roomsBean.game), new HttpUiCallBack<Data_room_queryGame>() {
+            @Override
+            public void onSuccess(Data_room_queryGame data) {
+                dataRoomQueryGame = roomsBean.getGameData();
+
+                initView();
+            }
+        });
+
+    }
+
+    public void initView() {
+        if(init)return;
+        init=true;
         titleTool.setTitleRight(R.drawable.icon_bet_add, new WzViewOnclickListener() {
             @Override
             public void onClickWz(View v) {
@@ -134,9 +147,7 @@ public class TouZhuFragment extends ParentFragment {
 
         titleTool.showService();
         init();
-
     }
-
 
 
     /***
@@ -146,7 +157,7 @@ public class TouZhuFragment extends ParentFragment {
     @Override
     public boolean onBackPressed() {
         IMTool.getIntance().removeMsgListener(msgHandlerListener);
-        IMTool.getIntance().sendMsg(MsgDataSend.getEXITROOMMsg(),"0");
+        IMTool.getIntance().sendMsg(MsgDataSend.getEXITROOMMsg(), "0");
         return super.onBackPressed();
     }
 
@@ -277,7 +288,7 @@ public class TouZhuFragment extends ParentFragment {
                         }
                     }
                     oldMsgData = msgData;
-                    if (showMsg&&StringTool.notEmpty(msgData.msgDetailData.getZhuangTaiMsg(null,roomsBean))) {//有内容的才显示
+                    if (showMsg && StringTool.notEmpty(msgData.msgDetailData.getZhuangTaiMsg(null, roomsBean))) {//有内容的才显示
                         msgDataList.add(msgData);
                         initListView();
                     }
@@ -289,10 +300,10 @@ public class TouZhuFragment extends ParentFragment {
             BroadcastReceiverTool.bindAction(getActivity(), new BroadcastReceiverTool.BroadCastWork() {
                 @Override
                 public void run() {
-                    IMTool.getIntance().sendMsg(MsgDataSend.getIntoRoomMsg(roomListBean.no),"0");
+                    IMTool.getIntance().sendMsg(MsgDataSend.getIntoRoomMsg(roomListBean.no), "0");
                 }
-            },IMTool.action_login_im_success);
-            IMTool.getIntance().sendMsg(MsgDataSend.getIntoRoomMsg(roomListBean.no),"0");
+            }, IMTool.action_login_im_success);
+            IMTool.getIntance().sendMsg(MsgDataSend.getIntoRoomMsg(roomListBean.no), "0");
         }
     }
 
@@ -312,14 +323,13 @@ public class TouZhuFragment extends ParentFragment {
                 View im_vg_right = itemView.findViewById(R.id.im_vg_right);
 
 
-
                 im_time_tv.setVisibility(View.GONE);
                 im_vg_left.setVisibility(View.GONE);
                 im_vg_right.setVisibility(View.GONE);
 
                 View im_vg_center = itemView.findViewById(R.id.im_vg_center);
                 View im_vg_center2 = itemView.findViewById(R.id.im_vg_center2);
-                View im_vg_zhuangtai=itemView.findViewById(R.id.im_vg_zhuangtai);
+                View im_vg_zhuangtai = itemView.findViewById(R.id.im_vg_zhuangtai);
                 im_vg_center.setVisibility(View.GONE);
                 im_vg_center2.setVisibility(View.GONE);
                 im_vg_zhuangtai.setVisibility(View.GONE);
@@ -328,16 +338,16 @@ public class TouZhuFragment extends ParentFragment {
                 if (msgData.msgDetailData.isZhuangTaiMsg() || msgData.msgDetailData.isXinJinYongHu()) {
 
                     TextView im_vg_center_tv = itemView.findViewById(R.id.im_vg_center);
-                    HtmlTool.setHtmlText(im_vg_center_tv, msgData.msgDetailData.getZhuangTaiMsg(itemView,roomsBean));
+                    HtmlTool.setHtmlText(im_vg_center_tv, msgData.msgDetailData.getZhuangTaiMsg(itemView, roomsBean));
                     im_vg_center.setVisibility(View.VISIBLE);
                     im_vg_zhuangtai.setVisibility(View.VISIBLE);
 
                 } else if (msgData.msgDetailData.isTouZhuMsg()) {
 
-                    if(StringTool.notEmpty(msgData.msgDetailData.showTimeStamp)){
+                    if (StringTool.notEmpty(msgData.msgDetailData.showTimeStamp)) {
                         im_time_tv.setVisibility(View.VISIBLE);
                         UiTool.setTextView(im_time_tv, msgData.msgDetailData.showTimeStamp);
-                    }else {
+                    } else {
                         im_time_tv.setVisibility(View.GONE);
                     }
 
@@ -396,7 +406,7 @@ public class TouZhuFragment extends ParentFragment {
                     setTextView(nick, msgData.msgDetailData.nickname);
                     loadImage(msgData.msgDetailData.headImage, itemView, idTouXiang);
                     TextView im_left_content_tv = itemView.findViewById(idContent);
-                    HtmlTool.setHtmlText(im_left_content_tv, msgData.msgDetailData.getZhuangTaiMsg(itemView,roomsBean));
+                    HtmlTool.setHtmlText(im_left_content_tv, msgData.msgDetailData.getZhuangTaiMsg(itemView, roomsBean));
                 }
 
             }
@@ -407,6 +417,7 @@ public class TouZhuFragment extends ParentFragment {
 
     TextView tv_touzhu_yue;
     double oldMoney;
+
     /**
      * 刷新余额
      */
@@ -416,12 +427,12 @@ public class TouZhuFragment extends ParentFragment {
             public void onSuccess(Data_wallet_remain data) {
                 hideWaitingDialog();
                 if (data.isDataOkAndToast()) {
-                    if(oldMoney==data.remain||StringTool.isEmpty(tv_touzhu_yue.getText().toString())){
+                    if (oldMoney == data.remain || StringTool.isEmpty(tv_touzhu_yue.getText().toString())) {
                         setTextView(parent, R.id.tv_touzhu_yue, "" + Common.getPriceYB(data.remain));
                     } else {
-                        AnimTool.startAnim((ViewGroup) parent, tv_touzhu_yue,oldMoney,data.remain);
+                        AnimTool.startAnim((ViewGroup) parent, tv_touzhu_yue, oldMoney, data.remain);
                     }
-                    oldMoney=data.remain;
+                    oldMoney = data.remain;
 
                 }
             }
