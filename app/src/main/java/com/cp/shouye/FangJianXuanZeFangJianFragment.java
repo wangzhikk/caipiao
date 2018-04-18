@@ -5,11 +5,13 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 
 import com.cp.R;
+import com.cp.cp.Data_room_queryUser;
 import com.cp.cp.Data_wallet_remain;
 import com.cp.touzhu.TouZhuFragment;
 
 import utils.tjyutils.parent.ParentFragment;
 import utils.wzutils.common.TestData;
+import utils.wzutils.http.HttpUiCallBack;
 import utils.wzutils.parent.WzViewOnclickListener;
 import utils.wzutils.ui.WzSimpleRecycleView;
 
@@ -31,6 +33,31 @@ public class FangJianXuanZeFangJianFragment extends ParentFragment {
         titleTool.setTitle("房间列表");
         titleTool.showService();
         initListView();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        loadData();
+    }
+
+    public void loadData(){
+        Data_room_queryUser.load(roomsBean.game, ""+roomsBean.level, new HttpUiCallBack<Data_room_queryUser>() {
+            @Override
+            public void onSuccess(Data_room_queryUser data) {
+                if(data.isDataOkAndToast()){
+                    for(Data_room_queryGame.InfoBean.RoomLevelsBean.RoomListBean roomListBeanRoom:roomsBean.roomList){
+                        for(Data_room_queryGame.InfoBean.RoomLevelsBean.RoomListBean roomListBeanNumber:data.roomList){
+                            if(roomListBeanRoom.no.equals(roomListBeanNumber.no)){
+                                roomListBeanRoom.total=roomListBeanNumber.total;
+                                break;
+                            }
+                        }
+                    }
+                    initListView();
+                }
+            }
+        });
     }
 
     @Override

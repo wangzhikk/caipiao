@@ -49,13 +49,13 @@ public class XiaoXiAllFragment extends ParentFragment{
         loadData();
 
 
-        if(Data_login_validate.getData_login_validate().getUserInfo().base_type>0){
-            vg_xiaoxi_daili.setVisibility(View.VISIBLE);
-            line_xiaoxi_daili.setVisibility(View.VISIBLE);
-        }else {
-            vg_xiaoxi_daili.setVisibility(View.GONE);
-            line_xiaoxi_daili.setVisibility(View.GONE);
-        }
+//        if(Data_login_validate.getData_login_validate().getUserInfo().base_type>0){
+//            vg_xiaoxi_daili.setVisibility(View.VISIBLE);
+//            line_xiaoxi_daili.setVisibility(View.VISIBLE);
+//        }else {
+//            vg_xiaoxi_daili.setVisibility(View.GONE);
+//            line_xiaoxi_daili.setVisibility(View.GONE);
+//        }
 
         BroadcastReceiverTool.bindAction(getActivity(), new BroadcastReceiverTool.BroadCastWork() {
             @Override

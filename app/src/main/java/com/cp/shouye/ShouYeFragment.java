@@ -153,9 +153,10 @@ public class ShouYeFragment extends ParentFragment {
     }
     public void initGunDongItem(View view, Data_index_dynamic.DynamicBean dynamicBean){
         setTextView(view,R.id.tv_shouye_gundong_name,dynamicBean.nickname);
-        String des= TimeTool.getAgoTime(dynamicBean.timestamp)+" 投注了"+dynamicBean.lottery;
-        setTextView(view,R.id.tv_shouye_gundong_des,des);
+        setTextView(view,R.id.tv_shouye_gundong_time,TimeTool.getAgoTime(dynamicBean.timestamp));
+        setTextView(view,R.id.tv_shouye_gundong_des,"投注了"+dynamicBean.lottery);
         setTextView(view,R.id.tv_shouye_gundong_jine, Common.getPriceYB(dynamicBean.amount));
+        setTextView(view,R.id.tv_shouye_gundong_type,dynamicBean.bettingType);
     }
 
 
