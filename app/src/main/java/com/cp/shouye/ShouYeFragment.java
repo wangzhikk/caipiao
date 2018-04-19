@@ -205,7 +205,7 @@ public class ShouYeFragment extends ParentFragment {
     }
     public void initTiShiDialog(final View view, final List<Data_index_query.PopMessagesBean> popMessages, final int index){
         TextView tv_shouye_tishi_next=view.findViewById(R.id.tv_shouye_tishi_next);
-      //  tv_shouye_tishi_next.setVisibility(View.GONE);
+        tv_shouye_tishi_next.setVisibility(View.GONE);
         if(index>=popMessages.size()){
             return;
         }
