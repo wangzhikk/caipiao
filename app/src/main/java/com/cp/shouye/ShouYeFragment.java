@@ -192,7 +192,7 @@ public class ShouYeFragment extends ParentFragment {
             View view=LayoutInflaterTool.getInflater(2,R.layout.dialog_tishi).inflate();
             initTiShiDialog(view,data_index_query.popMessages,0);
 
-            final Dialog dialog=DialogTool.initNormalDialog(view,0);
+            final Dialog dialog=DialogTool.initNormalDialog(view,60);
             dialog.show();
             view.findViewById(R.id.btn_shouye_tishi_close).setOnClickListener(new WzViewOnclickListener() {
                 @Override

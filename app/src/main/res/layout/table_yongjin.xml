@@ -19,7 +19,7 @@
         </TableRow>
 
         <TableRow>
-            <TextView style="@style/table_item" android:text="普通会员" android:textColor="@color/tv_h3" />
+            <TextView style="@style/table_item" android:text="普通代理" android:textColor="@color/tv_h3" />
             <TextView style="@style/table_item" android:text="0-10000" android:textColor="@color/tv_h3"  android:layout_weight="1.5" />
             <TextView style="@style/table_item" android:text="1%" android:textColor="@color/tv_h3" />
         </TableRow>

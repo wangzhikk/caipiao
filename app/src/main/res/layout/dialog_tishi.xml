@@ -13,11 +13,9 @@
         android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="235dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:layout_marginLeft="70dp"
-            android:layout_marginRight="70dp"
             android:orientation="vertical">
 
             <utils.wzutils.ui.textview.BoldTextView
@@ -49,6 +47,7 @@
                     android:id="@+id/tv_shouye_tishi_content"
                     style="@style/textview"
                     android:lineSpacingExtra="5dp"
+                    android:minHeight="150dp"
                     android:text="您好，该时间段暂未提供相关服务，请在10:00:00-凌晨2:00:00尝试操作，干些您的支持！"
                     android:textColor="@color/tv_h2" />
 

@@ -22,7 +22,7 @@
                 <TextView style="@style/textview_large" android:text="代理说明：" android:layout_marginBottom="5dp"/>
 
                 <TextView style="@style/textview_small"
-                    android:text="说明：当天投注满10注的账号才计入团队投注总流水，根据团队投注总流水按佣金比例进行佣金结算，每天凌晨3点结算前一天佣金"  android:layout_marginBottom="10dp"
+                    android:text="说明：根据当天团队投注总流水，按您的佣金比例与团队成员的佣金比例的差额进行佣金结算，每天凌晨3点结算前一天佣金。如果团队成员的代理级别等于或高于您的代理级别，则该成员以下的流水不计算佣金。"  android:layout_marginBottom="10dp"
                     android:textColor="#ff999999"
                     android:textSize="13dp"
                     />
