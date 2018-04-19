@@ -40,7 +40,7 @@
                         android:layout_width="0dp" android:layout_weight="1"
                         android:layout_height="50dp" android:orientation="vertical">
                         <TextView style="@style/textview_large" android:text="系统消息" />
-                        <TextView android:id="@+id/tv_xiaoxi_xitong_last" style="@style/textview" tools:text="系统消息" android:textColor="@color/tv_h3" android:layout_marginTop="5dp" />
+                        <TextView android:id="@+id/tv_xiaoxi_xitong_last" android:singleLine="true" style="@style/textview" tools:text="系统消息" android:textColor="@color/tv_h3" android:layout_marginTop="5dp" />
                     </LinearLayout>
                     <ImageView android:layout_marginRight="10dp"
                         android:layout_width="wrap_content"
@@ -73,7 +73,7 @@
                         android:layout_width="0dp" android:layout_weight="1"
                         android:layout_height="50dp" android:orientation="vertical">
                         <TextView style="@style/textview_large" android:text="代理消息" />
-                        <TextView  android:id="@+id/tv_xiaoxi_daili_last"  style="@style/textview" tools:text="系统消息" android:textColor="@color/tv_h3" android:layout_marginTop="5dp" />
+                        <TextView  android:id="@+id/tv_xiaoxi_daili_last"   android:singleLine="true" style="@style/textview" tools:text="系统消息" android:textColor="@color/tv_h3" android:layout_marginTop="5dp" />
                     </LinearLayout>
                     <ImageView android:layout_marginRight="10dp"
                         android:layout_width="wrap_content"
@@ -103,7 +103,7 @@
                         android:layout_width="0dp" android:layout_weight="1"
                         android:layout_height="50dp" android:orientation="vertical">
                         <TextView style="@style/textview_large" android:text="我的消息" />
-                        <TextView   android:id="@+id/tv_xiaoxi_wode_last"  style="@style/textview" tools:text="系统消息" android:textColor="@color/tv_h3" android:layout_marginTop="5dp" />
+                        <TextView   android:id="@+id/tv_xiaoxi_wode_last"  android:singleLine="true" style="@style/textview" tools:text="系统消息" android:textColor="@color/tv_h3" android:layout_marginTop="5dp" />
                     </LinearLayout>
                     <ImageView android:layout_marginRight="10dp"
                         android:layout_width="wrap_content"
