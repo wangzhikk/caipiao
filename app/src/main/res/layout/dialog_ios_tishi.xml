@@ -12,9 +12,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" android:orientation="vertical">
         <utils.wzutils.ui.textview.BoldTextView android:id="@+id/tv_ios_dialog_title" style="@style/textview_large"  android:text="温馨提示" android:layout_marginTop="15dp" android:layout_marginBottom="5dp"/>
-        <TextView style="@style/textview" android:textSize="13dp"  android:id="@+id/tv_ios_dialog_message"  android:text="您需要先绑定手机号码" android:layout_marginBottom="15dp" />
+        <TextView style="@style/textview" android:textSize="13dp"  android:id="@+id/tv_ios_dialog_message"  android:text="您需要先绑定手机号码" android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            />
         <View style="@style/line_h"></View>
-        <TextView style="@style/textview_large" android:id="@+id/tv_ios_dialog_queding" android:text="立即前往绑定"   android:textColor="@color/tv_lanse_name" android:gravity="center" android:layout_height="40dp" />
+        <TextView style="@style/textview_large" android:id="@+id/tv_ios_dialog_queding" android:text="立即前往绑定"
+            android:layout_width="match_parent"
+            android:textColor="@color/tv_lanse_name" android:gravity="center" android:layout_height="40dp" />
    </LinearLayout>
 
 

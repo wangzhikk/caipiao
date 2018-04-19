@@ -75,7 +75,7 @@ public class WoDeFenXiangFragment extends ParentFragment implements WzRefreshLay
                 TextView tv_share_item_name=itemView.findViewById(R.id.tv_share_item_name);
 
                 setTextView(itemView,R.id.tv_share_item_name,shareListBean.base_username);
-                setTextView(itemView,R.id.tv_share_item_time,"加入时间： "+shareListBean.base_register_time);
+                setTextView(itemView,R.id.tv_share_item_time,shareListBean.base_register_time);
                 UiTool.setCompoundDrawables(getActivity(),tv_share_item_name,Data_personinfo_query.getGradeResImg(shareListBean.base_grade),0,0,0);
             }
         });

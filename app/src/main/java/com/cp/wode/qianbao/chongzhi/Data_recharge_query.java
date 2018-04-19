@@ -56,6 +56,7 @@ public class Data_recharge_query extends ParentServerData {
         public double max;
         public String name;
         public int type;
+        public String desc;
     }
     public static class OfflineBean implements Serializable{
         /**

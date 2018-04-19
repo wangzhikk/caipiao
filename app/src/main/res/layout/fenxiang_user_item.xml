@@ -26,10 +26,12 @@
 
         <LinearLayout android:layout_gravity="center_vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:orientation="vertical">
-            <utils.wzutils.ui.textview.BoldTextView android:id="@+id/tv_share_item_name" style="@style/textview_large"  android:text="萧源zhdjkhf" android:textColor="#ff222222" android:textSize="15dp" android:drawableLeft="@drawable/icon_bet_member_01" android:drawablePadding="3dp" />
+            android:layout_height="wrap_content" android:orientation="horizontal">
+            <utils.wzutils.ui.textview.BoldTextView android:id="@+id/tv_share_item_name" style="@style/textview_large"  android:text="萧源zhdjkhf"
+                android:layout_weight="1"
+                android:textColor="#ff222222" android:textSize="15dp" android:drawableLeft="@drawable/icon_bet_member_01" android:drawablePadding="3dp" />
 
-            <TextView android:id="@+id/tv_share_item_time" style="@style/textview_small" android:text="加入时间： 2017-08-22 07:04:52" android:textColor="@color/tv_h3" android:layout_marginTop="10dp"/>
+            <TextView android:id="@+id/tv_share_item_time" style="@style/textview_small" android:text="2017-08-22 07:04:52" android:textColor="@color/tv_h3" android:layout_marginRight="10dp" />
         </LinearLayout>
 
     </LinearLayout>

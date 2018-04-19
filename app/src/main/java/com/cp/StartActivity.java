@@ -33,7 +33,7 @@ public class StartActivity extends ParentActivity {
             public void run() {
                 MainActivity.go();
             }
-        },2000);
+        },1000);
         PreLoad.preLoad();
 
     }

@@ -2,6 +2,7 @@ package utils.wzutils.common;
 
 import android.app.Activity;
 import android.app.ActivityManager;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
@@ -88,6 +89,29 @@ public class CommonTool {
             return true;
         } catch (PackageManager.NameNotFoundException e) {
             return false;
+        }
+    }
+
+    /***
+     * 跳转指定App
+     * @param packageName
+     */
+    public static void goApp(String packageName){
+        /**
+         * QQ包名：com.tencent.mobileqq
+
+         微信包名：com.tencent.mm
+         */
+
+        Intent intent = AppTool.getApplication().getPackageManager().getLaunchIntentForPackage(packageName);
+// 这里如果intent为空，就说名没有安装要跳转的应用嘛
+        if (intent != null) {
+            // 这里跟Activity传递参数一样的嘛，不要担心怎么传递参数，还有接收参数也是跟Activity和Activity传参数一样
+//            intent.putExtra("birthday", "1983-7-13");
+            AppTool.currActivity.startActivity(intent);
+        } else {
+            // 没有安装要跳转的app应用，提醒一下
+            CommonTool.showToast("本机未安装此应用");
         }
     }
 

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@color/bg_sheng" >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical">
+            <include layout="@layout/title"></include>
+
+
+            <utils.wzutils.ui.WzScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:orientation="vertical">
+                <TextView style="@style/textview_large" android:text="支付信息：" android:layout_height="40dp" android:gravity="center_vertical" android:layout_marginLeft="10dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    >
+                    <TextView android:id="@+id/tv_zhifu_saoma_dingdan" style="@style/textview_large" tools:text="订单号: C20180419284529556" android:textColor="@color/tv_h2"   />
+                    <TextView  android:id="@+id/tv_zhifu_saoma_jine" style="@style/textview_large" tools:text="充值金额: 500元" android:textColor="@color/tv_h2"  android:layout_marginTop="5dp" android:layout_marginBottom="20dp" />
+                    <ImageView
+                        android:id="@+id/imgv_zhifu_xianshang_erweima"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:layout_gravity="center_horizontal"
+                        tools:src="@drawable/img_index_bj"
+                        android:scaleType="centerCrop"
+                        android:background="@color/tv_hongse"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="match_parent" android:layout_marginTop="20dp"
+                    android:layout_height="40dp" android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/btn_chongzhi_shangyibu"
+                        style="@style/textview_large" android:text="上一步" android:background="@drawable/drawable_yuanjiao_hongse" android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_width="0dp"
+                        android:textColor="@color/white"
+                        />
+
+                    <TextView
+                        android:id="@+id/btn_chongzhi_lijichongzhi"
+                        style="@style/textview_large" android:text="立即充值" android:background="@drawable/drawable_yuanjiao_hongse" android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_width="0dp"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/btn_chongzhi_woyizhifu"
+                        style="@style/textview_large" android:text="我已支付" android:background="@drawable/drawable_yuanjiao_hongse" android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_width="0dp"
+                        android:textColor="@color/white"
+                        />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/textview_small"
+                    android:layout_marginBottom="20dp"
+                    android:lineSpacingExtra="8dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="@string/chongzhi_saoma"
+                    android:textColor="@color/tv_h2" />
+
+            </LinearLayout>
+
+
+            </utils.wzutils.ui.WzScrollView>
+
+
+        </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

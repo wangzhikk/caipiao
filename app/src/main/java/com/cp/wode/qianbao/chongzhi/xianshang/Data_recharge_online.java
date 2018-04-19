@@ -19,12 +19,23 @@ public class Data_recharge_online extends ParentServerData {
 
     public String serial;
     public String url;
+    public String amount;
 
-    public static void load(String amount, String type, final HttpUiCallBack<Data_recharge_online> httpUiCallBack){
+    public static void load(final String amount, String type, final HttpUiCallBack<Data_recharge_online> httpUiCallBack){
         HttpToolAx.urlBase("recharge/online")
                 .addQueryParams("amount",amount)
                 .addQueryParams("type",type)
-                .send(Data_recharge_online.class, httpUiCallBack);
+                .send(Data_recharge_online.class, new HttpUiCallBack<Data_recharge_online>() {
+                    @Override
+                    public void onSuccess(Data_recharge_online data) {
+                        if(data.isDataOkWithOutCheckLogin()){
+                            data.amount=amount;
+                        }
+                        if(httpUiCallBack!=null){
+                            httpUiCallBack.onSuccess(data);
+                        }
+                    }
+                });
     }
 
 

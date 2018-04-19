@@ -37,6 +37,7 @@ public class XianShangZhiFuFragment extends ParentFragment {
         titleTool.setTitle("线上支付");
 
         setTextView(parent,R.id.tv_tixian_tishi,onLineBean.name);
+        setTextView(parent,R.id.tv_tixian_tishi,onLineBean.desc);
         loadData();
     }
     public void loadData(){
@@ -71,7 +72,7 @@ public class XianShangZhiFuFragment extends ParentFragment {
                         if(data.isDataOkAndToast()){
 
                             if(onLineBean.type==11){
-
+                                XianShangZhiFuSaoMaFragment.byData(data).go();
                             }else {
                                 Intent intent = new Intent();
                                 intent.setAction(Intent.ACTION_VIEW);
