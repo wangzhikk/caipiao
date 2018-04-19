@@ -17,7 +17,7 @@ import utils.wzutils.parent.WzParentFragment;
 import utils.wzutils.parent.WzViewOnclickListener;
 
 /**
- * Created by wz on 2017/5/24.
+ * abc on 2017/5/24.
  */
 
 public abstract class ParentFragment extends WzParentFragment {

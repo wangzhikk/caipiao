@@ -13,7 +13,7 @@ import android.util.AttributeSet;
 import android.view.View;
 
 /**
- * Created by wz on 2017/4/6.
+ * abc on 2017/4/6.
  */
 
 public class WzProgressCircle extends View {

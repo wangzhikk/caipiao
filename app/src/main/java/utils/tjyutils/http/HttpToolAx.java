@@ -14,7 +14,7 @@ import utils.wzutils.http.HttpUiCallBack;
 import utils.wzutils.json.JsonDataParent;
 
 /**
- * Created by wz on 2016/5/12.
+ * abc on 2016/5/12.
  */
 public class HttpToolAx extends HttpRequest {
     /**

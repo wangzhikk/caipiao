@@ -6,7 +6,7 @@ import android.util.AttributeSet;
 import android.widget.EditText;
 
 /**
- * Created by wz on 2017/11/16.
+ * abc on 2017/11/16.
  */
 
 public class BoldEditTextView extends EditText {

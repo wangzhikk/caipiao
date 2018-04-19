@@ -31,7 +31,7 @@ import utils.wzutils.common.LogTool;
 import utils.wzutils.ui.textview.HtmlTool;
 
 /**
- * Created by wz on 2018/2/6.
+ * abc on 2018/2/6.
  */
 
 public class IMTool {

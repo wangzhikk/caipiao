@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import utils.wzutils.common.LogTool;
 
 /**
- * Created by wz on 2017/3/24.
+ * abc on 2017/3/24.
  */
 
 public class RecyclerViewTool {

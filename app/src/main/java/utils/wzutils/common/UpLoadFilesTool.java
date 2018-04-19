@@ -10,7 +10,7 @@ import utils.wzutils.AppTool;
 import utils.wzutils.common.thread.ThreadTool;
 
 /**
- * Created by wz on 2017/6/9.
+ * abc on 2017/6/9.
  */
 public class UpLoadFilesTool {
     /***

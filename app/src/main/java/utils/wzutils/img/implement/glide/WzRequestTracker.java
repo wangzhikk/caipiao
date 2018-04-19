@@ -16,7 +16,7 @@ import java.util.WeakHashMap;
 import utils.wzutils.common.SafeTool;
 
 /**
- * Created by wz on 2017/12/22.
+ * abc on 2017/12/22.
  */
 @Deprecated
 public class WzRequestTracker extends RequestTracker{

@@ -3,7 +3,7 @@ package utils.wzutils.common;
 import java.util.List;
 
 /**
- * Created by wz on 2017/8/14.
+ * abc on 2017/8/14.
  */
 
 public class CollectionsTool {

@@ -18,7 +18,7 @@ import static android.graphics.Color.BLACK;
 import static android.graphics.Color.WHITE;
 
 /**
- * Created by wz on 2017/10/26.
+ * abc on 2017/10/26.
  */
 
 public class QrCodeTool {

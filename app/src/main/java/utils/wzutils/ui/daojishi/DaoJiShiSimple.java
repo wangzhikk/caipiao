@@ -12,7 +12,7 @@ import utils.wzutils.parent.WzParentActivity;
 import utils.wzutils.parent.WzViewOnclickListener;
 
 /**
- * Created by wz on 2017/6/6.
+ * abc on 2017/6/6.
  *
   new DaoJiShiSimple().initDaoJiShiWithPhoneCheck(group, 0, et_shouji_shoujihao, tv_huoqu_yanzhengma, tv_huoqu_yanzhengma, "", new DaoJiShiSimple.OnHuoQuYanZhengMa() {
 @Override

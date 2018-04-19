@@ -22,7 +22,7 @@ import utils.wzutils.json.JsonDataParent;
 import utils.wzutils.ui.dialog.DialogTool;
 
 /**
- * Created by wz on 2016/5/13.
+ * abc on 2016/5/13.
  */
 public class ParentServerData extends JsonDataParent {
     static Map<String, String> dialogMap = new HashMap<>();

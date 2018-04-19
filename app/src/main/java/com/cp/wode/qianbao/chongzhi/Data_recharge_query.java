@@ -9,13 +9,14 @@ import utils.wzutils.common.StringTool;
 import utils.wzutils.http.HttpUiCallBack;
 
 /**
- * Created by wz on 2018/2/24.
+ * abc on 2018/2/24.
  * 登录接口
  */
 
 public class Data_recharge_query extends ParentServerData {
 
     public List<OfflineBean> offline;
+    public List<OnLineBean> online;
     public String time;
     public static void load( final HttpUiCallBack<Data_recharge_query> httpUiCallBack){
         HttpToolAx.urlBase("recharge/query")
@@ -49,8 +50,13 @@ public class Data_recharge_query extends ParentServerData {
         return new OfflineBean();
     }
 
-
-
+    public static class OnLineBean implements Serializable{
+        public String image;
+        public double min;
+        public double max;
+        public String name;
+        public int type;
+    }
     public static class OfflineBean implements Serializable{
         /**
          * recharge_type : Bank

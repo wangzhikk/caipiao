@@ -11,7 +11,7 @@ import static com.yanzhenjie.fragment.NoFragment.RESULT_CANCELED;
 import static com.yanzhenjie.fragment.NoFragment.RESULT_OK;
 
 /**
- * Created by wz on 2017/5/25.
+ * abc on 2017/5/25.
  *
  *
  *     compile 'com.yanzhenjie:album:1.0.7'

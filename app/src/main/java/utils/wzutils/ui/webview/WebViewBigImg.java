@@ -18,7 +18,7 @@ import utils.wzutils.common.StringTool;
 import utils.wzutils.ui.bigimage.PicViewActivity;
 
 /**
- * Created by wz on 2016/12/13.
+ * abc on 2016/12/13.
  * 注意  这个方法 用了  setWebChromeClient, 所以外面不要用了。。。。
  */
 public class WebViewBigImg extends WebView {

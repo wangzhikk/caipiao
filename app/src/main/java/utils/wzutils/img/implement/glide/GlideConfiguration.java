@@ -21,7 +21,7 @@ import java.util.Set;
 import utils.wzutils.common.LogTool;
 
 /**
- * Created by wz on 2017/4/19.
+ * abc on 2017/4/19.
  */
 @GlideModule
 public class GlideConfiguration extends AppGlideModule {

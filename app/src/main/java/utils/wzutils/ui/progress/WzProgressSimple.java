@@ -11,7 +11,7 @@ import android.util.AttributeSet;
 import utils.wzutils.common.CommonTool;
 
 /**
- * Created by wz on 2017/7/21.
+ * abc on 2017/7/21.
  */
 
 public class WzProgressSimple extends android.support.v7.widget.AppCompatImageView {

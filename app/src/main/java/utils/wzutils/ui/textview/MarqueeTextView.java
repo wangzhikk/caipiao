@@ -6,7 +6,7 @@ import android.text.TextUtils;
 import android.util.AttributeSet;
 
 /**
- * Created by wz on 2017/11/16.
+ * abc on 2017/11/16.
  */
 
 public class MarqueeTextView extends android.support.v7.widget.AppCompatTextView {

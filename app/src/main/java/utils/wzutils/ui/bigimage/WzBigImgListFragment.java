@@ -19,7 +19,7 @@ import utils.wzutils.parent.WzParentFragment;
 import utils.wzutils.ui.lunbo.LunBoTool;
 
 /**
- * Created by wz on 2017/9/15.
+ * abc on 2017/9/15.
  *
  * WzBigImgListFragment.init(R.layout.include_lunbo_container,R.id.adsContainer,R.id.vg_viewpager_btn,R.layout.include_lunbo_dot_kuang,R.id.cb_dot);
  * 同轮播的初始化

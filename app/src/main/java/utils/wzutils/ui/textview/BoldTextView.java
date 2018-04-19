@@ -5,7 +5,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 
 /**
- * Created by wz on 2017/11/16.
+ * abc on 2017/11/16.
  */
 
 public class BoldTextView extends android.support.v7.widget.AppCompatTextView {

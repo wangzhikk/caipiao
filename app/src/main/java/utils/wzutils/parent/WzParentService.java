@@ -12,7 +12,7 @@ import utils.wzutils.AppTool;
 import utils.wzutils.common.LogTool;
 
 /**
- * Created by wz on 2018/2/2.
+ * abc on 2018/2/2.
  */
 
 public class WzParentService extends Service {

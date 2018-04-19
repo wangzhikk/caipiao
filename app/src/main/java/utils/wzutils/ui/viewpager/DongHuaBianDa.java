@@ -7,7 +7,7 @@ import utils.wzutils.common.CommonTool;
 import utils.wzutils.common.LogTool;
 
 /**
- * Created by wz on 2017/9/8.
+ * abc on 2017/9/8.
  */
 
 public class DongHuaBianDa implements ViewPager.PageTransformer {

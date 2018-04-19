@@ -8,7 +8,7 @@ import utils.wzutils.AppTool;
 import utils.wzutils.ui.WzSimpleRecycleView;
 
 /**
- * Created by wz on 2018/2/24.
+ * abc on 2018/2/24.
  */
 
 public class App extends Application {

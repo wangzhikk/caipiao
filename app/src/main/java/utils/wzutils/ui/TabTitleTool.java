@@ -21,7 +21,7 @@ import utils.wzutils.parent.WzParentFragment;
 import utils.wzutils.parent.WzViewOnclickListener;
 
 /**
- * Created by wz on 2017/5/27.
+ * abc on 2017/5/27.
  * 用于tab类型的title
  * <p>
  * <p>

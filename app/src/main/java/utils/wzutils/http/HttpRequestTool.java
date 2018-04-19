@@ -6,7 +6,7 @@ import java.lang.reflect.Field;
 import utils.wzutils.common.LogTool;
 
 /**
- * Created by wz on 2017/8/29.
+ * abc on 2017/8/29.
  */
 
 public class HttpRequestTool {

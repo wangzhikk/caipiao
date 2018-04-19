@@ -4,7 +4,7 @@ import android.support.v4.view.ViewPager;
 import android.view.View;
 
 /**
- * Created by wz on 2017/9/8.
+ * abc on 2017/9/8.
  */
 
 public class DongHuaFanGun implements ViewPager.PageTransformer {

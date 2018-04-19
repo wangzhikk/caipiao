@@ -8,7 +8,7 @@ import java.util.List;
 import utils.wzutils.parent.WzViewOnclickListener;
 
 /**
- * Created by wz on 2017/11/22.
+ * abc on 2017/11/22.
  */
 
 public class BigImgTool {

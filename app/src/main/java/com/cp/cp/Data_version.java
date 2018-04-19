@@ -6,7 +6,7 @@ import utils.wzutils.http.HttpUiCallBack;
 import utils.wzutils.update.Version;
 
 /**
- * Created by wz on 2018/2/24.
+ * abc on 2018/2/24.
  */
 
 public class Data_version extends ParentServerData {

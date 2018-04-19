@@ -8,7 +8,7 @@ import android.view.SurfaceView;
 import android.view.View;
 
 /**
- * Created by wz on 2017/6/29.
+ * abc on 2017/6/29.
  */
 
 public class MediaRecoderTool {
