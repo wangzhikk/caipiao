@@ -3,14 +3,13 @@ package com.cp.wode.qianbao.chongzhi;
 import android.view.View;
 
 import com.cp.R;
+import com.cp.wode.qianbao.chongzhi.xianshang.XianShangZhiFuFragment;
 import com.cp.wode.qianbao.tixian.TiXianFragment;
 
 import utils.tjyutils.parent.ParentFragment;
-import utils.wzutils.common.TestData;
 import utils.wzutils.http.HttpUiCallBack;
 import utils.wzutils.parent.WzViewOnclickListener;
 import utils.wzutils.ui.WzSimpleRecycleView;
-import utils.wzutils.ui.pullrefresh.WzRefreshLayout;
 
 /**
  * Created by kk on 2017/3/23.
@@ -63,7 +62,7 @@ public class ChongZhiFragment extends ParentFragment {
                                     loadImage(onLineBean.image,itemView,R.id.imgv_chongzhi_item);
                                     setTextView(itemView,R.id.tv_chongzhi_item_name,onLineBean.name);
                                     setTextView(itemView,R.id.tv_chongzhi_item_des,onLineBean.name);
-                                    bindFragmentBtn(itemView,XianShangZhiFuFragment.byData(onLineBean));
+                                    bindFragmentBtn(itemView, XianShangZhiFuFragment.byData(onLineBean));
                                 }
                             });
 
