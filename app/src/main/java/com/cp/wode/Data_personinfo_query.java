@@ -63,7 +63,7 @@ public class Data_personinfo_query extends ParentServerData {
             R.drawable.icon_agency_diamond,
     };
     static String [] typeStrs=new String[]{
-            "普通用户",
+            "普通代理",
             "白银代理",
             "黄金代理",
             "钻石代理",
