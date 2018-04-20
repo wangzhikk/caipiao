@@ -1,5 +1,6 @@
 package com.cp.wode.qianbao.chongzhi;
 
+import android.graphics.Color;
 import android.view.View;
 import android.widget.TextView;
 
@@ -50,23 +51,22 @@ public class ChongZhiJiLuFragment extends ParentFragment implements WzRefreshLay
         });
     }
     public void initListView(final List<Data_recharge_record.PagingListBean.ChongZhiListBean> allDatas){
-        recycleView.setData(allDatas, R.layout.zhangbian_jilu_item, new WzSimpleRecycleView.WzRecycleAdapter() {
+        recycleView.setData(allDatas, R.layout.chongzhi_jilu_item, new WzSimpleRecycleView.WzRecycleAdapter() {
             @Override
             public void initData(int position, int type, View itemView) {
                 super.initData(position, type, itemView);
                 Data_recharge_record.PagingListBean.ChongZhiListBean chongZhiListBean=allDatas.get(position);
 
                 TextView tv_jilu_name=itemView.findViewById(R.id.tv_jilu_name);
-                if(chongZhiListBean.recharge_state==1){
-                    UiTool.setTextColor(tv_jilu_name,R.color.tv_h1);
-                }else if(chongZhiListBean.recharge_state==0){
-                    UiTool.setTextColor(tv_jilu_name,R.color.tv_hongse);
-                }else if(chongZhiListBean.recharge_state==-1){
-                    UiTool.setTextColor(tv_jilu_name,R.color.tv_hongse);
-                }
+
+                int color=Color.parseColor(chongZhiListBean.getStateStrColor());
+                tv_jilu_name.setTextColor(color);
+
                 setTextView(tv_jilu_name,chongZhiListBean.getStateStr());
                 setTextView(itemView,R.id.tv_jilu_time,""+chongZhiListBean.recharge_time);
                 setTextView(itemView,R.id.tv_jilu_money, Common.getPriceYB(chongZhiListBean.recharge_amount));
+
+                setTextView(itemView,R.id.tv_jilu_type,chongZhiListBean.recharge_channel);
 
                 bindFragmentBtn(itemView,JiaoYiXiangQingFragment.byData(chongZhiListBean));
 

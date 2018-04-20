@@ -94,6 +94,8 @@ public class JiaoYiXiangQingFragment extends ParentFragment {
         list.add(new JiaoYiXiangQingFragment.JiaoYiData("充值金额", Common.getPriceYB(chongZhiListBean.recharge_amount)));
         list.add(new JiaoYiXiangQingFragment.JiaoYiData("充值状态",""+chongZhiListBean.getStateStr()));
         list.add(new JiaoYiXiangQingFragment.JiaoYiData("充值时间",""+chongZhiListBean.recharge_time));
+        list.add(new JiaoYiXiangQingFragment.JiaoYiData("充值通道",""+chongZhiListBean.recharge_channel));
+
         return new JiaoYiXiangQingFragment().setList(list);
     }
     public static ParentFragment byData(Data_wallet_record.PagingListBean.QianBaoListBean qianBaoListBean){

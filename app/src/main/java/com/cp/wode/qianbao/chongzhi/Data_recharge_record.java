@@ -57,11 +57,25 @@ public class Data_recharge_record extends ParentServerData {
                 if(recharge_state==1){
                     return "充值成功";
                 }else if(recharge_state==0){
-                    return "未处理";
+                    if("线上充值".equals(recharge_channel)){
+                        return "待支付";
+                    }else if("线下充值".equals(recharge_channel)){
+                        return "待审核";
+                    }
                 }else if(recharge_state==-1){
                     return "充值失败";
                 }
                 return "未处理";
+            }
+            public String getStateStrColor() {
+                if(recharge_state==1){
+                    return "#26BC3F";
+                }else if(recharge_state==0){
+                    return "#F09237";
+                }else if(recharge_state==-1){
+                    return "#F03744";
+                }
+                return "#F03744";
             }
         }
     }
