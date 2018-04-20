@@ -7,6 +7,7 @@ import com.cp.wode.qianbao.chongzhi.xianshang.XianShangZhiFuFragment;
 import com.cp.wode.qianbao.tixian.TiXianFragment;
 
 import utils.tjyutils.parent.ParentFragment;
+import utils.wzutils.common.MathTool;
 import utils.wzutils.http.HttpUiCallBack;
 import utils.wzutils.parent.WzViewOnclickListener;
 import utils.wzutils.ui.WzSimpleRecycleView;
@@ -61,7 +62,7 @@ public class ChongZhiFragment extends ParentFragment {
                                     Data_recharge_query.OnLineBean onLineBean=data.online.get(position);
                                     loadImage(onLineBean.image,itemView,R.id.imgv_chongzhi_item);
                                     setTextView(itemView,R.id.tv_chongzhi_item_name,onLineBean.name);
-                                    setTextView(itemView,R.id.tv_chongzhi_item_des,onLineBean.name);
+                                    setTextView(itemView,R.id.tv_chongzhi_item_des,"最低"+ MathTool.getNoDotNumStr(onLineBean.min)+"元起,最高"+MathTool.getNoDotNumStr(onLineBean.max)+"元封顶");
                                     bindFragmentBtn(itemView, XianShangZhiFuFragment.byData(onLineBean));
                                 }
                             });

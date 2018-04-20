@@ -89,7 +89,7 @@ public class XianShangZhiFuSaoMaFragment extends ParentFragment {
         btn_chongzhi_shangyibu.setOnClickListener(new WzViewOnclickListener() {
             @Override
             public void onClickWz(View v) {
-                onBackPressed();
+                getActivity().finish();
             }
         });
         btn_chongzhi_lijichongzhi.setOnClickListener(new WzViewOnclickListener() {

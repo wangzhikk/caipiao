@@ -13,7 +13,7 @@
                 android:src="@drawable/icon_recharge_card"  android:layout_marginLeft="18dp" android:layout_marginRight="8dp" />
             <LinearLayout android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
                 <TextView android:id="@+id/tv_chongzhi_item_name" style="@style/textview_large" android:text="银行卡转账" android:layout_marginBottom="2dp"/>
-                <TextView android:visibility="gone"  android:id="@+id/tv_chongzhi_item_des" style="@style/textview_small" android:text="最低100元起充值,支持大额转账"  android:textColor="@color/tv_h3"  />
+                <TextView   android:id="@+id/tv_chongzhi_item_des" style="@style/textview_small" android:text="最低100元起充值,支持大额转账"  android:textColor="@color/tv_h3"  />
             </LinearLayout>
         </LinearLayout>
         <ImageView  style="@style/img_right" android:layout_marginRight="10dp"/>
