@@ -117,7 +117,7 @@
             android:layout_height="wrap_content" android:orientation="vertical">
 
 
-            <TextView style="@style/textview_large" android:text="●  兑换只能绑定一张银行卡" android:textColor="@color/tv_h2" android:layout_marginBottom="15dp"/>
+            <TextView style="@style/textview_large" android:text="●  只能绑定一张储蓄卡" android:textColor="@color/tv_h2" android:layout_marginBottom="15dp"/>
             <TextView style="@style/textview_large" android:text="●  银行卡绑定后只能使用该卡提现" android:textColor="@color/tv_h2"/>
 
         </LinearLayout>

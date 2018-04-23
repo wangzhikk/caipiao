@@ -32,7 +32,7 @@ public class YinHangKaGuanLiFragment extends ParentFragment {
     @Override
     public void initData() {
         titleTool.setTitle("银行卡管理");
-        initRightTitle("绑定银行卡");
+        initRightTitle("绑定银行卡","");
         loadData();
         BroadcastReceiverTool.bindAction(getActivity(), new BroadcastReceiverTool.BroadCastWork() {
             @Override
@@ -55,18 +55,18 @@ public class YinHangKaGuanLiFragment extends ParentFragment {
                 if(data.code==182){//没有绑定银行卡
                     vg_no_yinghangka_parent.setVisibility(View.VISIBLE);
                     vg_yinghangka_parent.setVisibility(View.GONE);
-                    initRightTitle("");
+                    initRightTitle("","");
                 }else  if(data.isDataOkAndToast()){
                     initView(data);
                 }
             }
         });
     }
-    public void initRightTitle(String text){
+    public void initRightTitle(String text, final String userName){
         titleTool.setTitleRightTv(text, new WzViewOnclickListener() {
             @Override
             public void onClickWz(View v) {
-                new YinHangKaBindFragment().go();
+                YinHangKaBindFragment.byData(userName).go();
             }
         });
     }
@@ -74,7 +74,7 @@ public class YinHangKaGuanLiFragment extends ParentFragment {
         if(data==null|!data.isDataOk())return;
 
         if(StringTool.notEmpty(data.base_bank_account)){
-            initRightTitle("重新绑定");
+            initRightTitle("重新绑定",data.base_name);
             vg_no_yinghangka_parent.setVisibility(View.GONE);
             vg_yinghangka_parent.setVisibility(View.VISIBLE);
             setTextView(tv_yinghangka,data.base_bank_name);

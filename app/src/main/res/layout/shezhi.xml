@@ -12,8 +12,8 @@
         android:layout_height="match_parent" android:orientation="vertical">
         <include layout="@layout/title"></include>
 
-        <TextView  android:id="@+id/btn_shezhi_yinhangka_bind" style="@style/btn_shezhi_item"  android:text="绑定银行卡"  />
-        <View style="@style/line_h"></View>
+        <!--<TextView  android:id="@+id/btn_shezhi_yinhangka_bind" style="@style/btn_shezhi_item"  android:text="绑定银行卡"  />-->
+        <!--<View style="@style/line_h"></View>-->
 
         <TextView android:id="@+id/btn_shezhi_xiugai_denglu_mima" style="@style/btn_shezhi_item"  android:text="修改密码"  />
         <View style="@style/line_h"></View>

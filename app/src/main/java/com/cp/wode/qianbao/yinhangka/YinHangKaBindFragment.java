@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -46,10 +47,14 @@ public class YinHangKaBindFragment extends ParentFragment {
     public void initData() {
         titleTool.setTitle("银行卡");
 
+        String userName=""+getArgument("userName","");
         if(Data_login_validate.getData_login_validate().getUserInfo().hasBank()){//已经绑定银行卡
-            vg_yinhangka_name.setVisibility(View.GONE);
+            tv_yinhangka_bind_username.setEnabled(false);
+            setTextView(tv_yinhangka_bind_username,userName);
+            //vg_yinhangka_name.setVisibility(View.GONE);
         }else {
-            vg_yinhangka_name.setVisibility(View.VISIBLE);
+            tv_yinhangka_bind_username.setEnabled(true);
+//            vg_yinhangka_name.setVisibility(View.VISIBLE);
         }
 
     }
@@ -170,6 +175,13 @@ public class YinHangKaBindFragment extends ParentFragment {
         if(Data_personinfo_query.checkMoneyPwdAndGo()){
                 super.go();
         }
+    }
+    public static ParentFragment byData(String userName){
+        ParentFragment parentFragment=new YinHangKaBindFragment();
+        Bundle bundle=new Bundle();
+        bundle.putString("userName",userName);
+        parentFragment.setArguments(bundle);
+        return parentFragment;
     }
 
 }

@@ -28,7 +28,7 @@ import utils.wzutils.ui.dialog.DialogTool;
 public class SheZhiFragment extends ParentFragment {
     View btn_login_out;
     TextView btn_qingchu_huancun;
-    View btn_shezhi_xiugai_denglu_mima,btn_shezhi_xiugai_zijin_mima,btn_shezhi_bind_phone,btn_shezhi_yinhangka_bind;
+    View btn_shezhi_xiugai_denglu_mima,btn_shezhi_xiugai_zijin_mima,btn_shezhi_bind_phone;
     @Override
     public int initContentViewId() {
         return R.layout.shezhi;
@@ -47,7 +47,7 @@ public class SheZhiFragment extends ParentFragment {
     }
     @Override
     public void initListener() {
-        bindFragmentBtn(btn_shezhi_yinhangka_bind,new YinHangKaBindFragment());
+       // bindFragmentBtn(btn_shezhi_yinhangka_bind,new YinHangKaBindFragment());
         bindFragmentBtn(btn_shezhi_xiugai_zijin_mima,new XiuGaiZiJinMimaFragment());
         bindFragmentBtn(btn_shezhi_xiugai_denglu_mima,new XiuGaiMimaFragment());
         bindFragmentBtn(btn_shezhi_bind_phone,new PhoneBindFragment());
