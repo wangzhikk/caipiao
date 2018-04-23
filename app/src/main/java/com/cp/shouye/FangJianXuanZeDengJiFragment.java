@@ -96,9 +96,11 @@ public class FangJianXuanZeDengJiFragment extends ParentFragment {
             public void onClickWz(View v) {
 
                 showWaitingDialog("");
+                parent.setEnabled(false);
                 Data_wallet_remain.load(new HttpUiCallBack<Data_wallet_remain>() {
                     @Override
                     public void onSuccess(Data_wallet_remain data) {
+                        parent.setEnabled(true);
                         hideWaitingDialog();
                         if(data.isDataOkAndToast()){
                             if(data.remain>=level1Rooms.condition){ //进入限制判断
