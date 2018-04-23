@@ -13,6 +13,7 @@
 
         <include layout="@layout/title"></include>
         <include layout="@layout/include_choose_time_type"></include>
+        <View style="@style/line_h_jiange"></View>
         <utils.wzutils.ui.pullrefresh.WzRefreshLayout
             android:id="@+id/wzRefreshLayout"
             android:layout_width="match_parent"
