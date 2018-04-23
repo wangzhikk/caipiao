@@ -36,7 +36,7 @@ public class FangJianXuanZeDengJiFragment extends ParentFragment {
         loadData();
     }
 
-
+    Data_wallet_remain data_wallet_remain;
     public void loadData(){
         Data_room_queryGame.load(youxi, new HttpUiCallBack<Data_room_queryGame>() {
             @Override
@@ -46,7 +46,19 @@ public class FangJianXuanZeDengJiFragment extends ParentFragment {
                 }
             }
         });
+    }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        Data_wallet_remain.load(new HttpUiCallBack<Data_wallet_remain>() {
+            @Override
+            public void onSuccess(Data_wallet_remain data) {
+                if(data.isDataOkAndToast()){
+                    data_wallet_remain=data;
+                }
+            }
+        });
     }
 
     public void initListView(final Data_room_queryGame data){
@@ -95,31 +107,35 @@ public class FangJianXuanZeDengJiFragment extends ParentFragment {
             @Override
             public void onClickWz(View v) {
 
-                showWaitingDialog("");
-                parent.setEnabled(false);
-                Data_wallet_remain.load(new HttpUiCallBack<Data_wallet_remain>() {
-                    @Override
-                    public void onSuccess(Data_wallet_remain data) {
-                        parent.setEnabled(true);
-                        hideWaitingDialog();
-                        if(data.isDataOkAndToast()){
-                            if(data.remain>=level1Rooms.condition){ //进入限制判断
-                                FangJianXuanZeFangJianFragment.byData(level1Rooms).go();
-                            }else {
-                                CommonTool.showToast("您的账户余额不足"+level1Rooms.condition+"，请充值");
-                            }
-
+                if(data_wallet_remain==null){
+                    showWaitingDialog("");
+                    Data_wallet_remain.load(new HttpUiCallBack<Data_wallet_remain>() {
+                        @Override
+                        public void onSuccess(Data_wallet_remain data) {
+                            hideWaitingDialog();
+                            goRoom(data,level1Rooms);
                         }
+                    });
+                }else {
+                    goRoom(data_wallet_remain,level1Rooms);
+                }
 
-                    }
-                });
 
             }
         });
 
     }
 
+    public void goRoom(Data_wallet_remain data,final Data_room_queryGame.InfoBean.RoomLevelsBean level1Rooms){
+        if(data.isDataOkAndToast()){
+            if(data.remain>=level1Rooms.condition){ //进入限制判断
+                FangJianXuanZeFangJianFragment.byData(level1Rooms).go();
+            }else {
+                CommonTool.showToast("您的账户余额不足"+level1Rooms.condition+"，请充值");
+            }
 
+        }
+    }
 
 
     @Override

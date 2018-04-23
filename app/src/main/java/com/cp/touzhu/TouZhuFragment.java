@@ -211,7 +211,7 @@ public class TouZhuFragment extends ParentFragment {
     TextView tv_yue_lb;
     View tv_touzhu_lishi_item, img_touzhu_lishi_xiala;
 
-    int countDown; //-2 封盘中；  -3已停售；
+    int countDown=-999; //-2 封盘中；  -3已停售；
     public String currIssue;
 
     String getCountDownStr() {
@@ -229,21 +229,24 @@ public class TouZhuFragment extends ParentFragment {
     List<MsgData> msgDataList = new ArrayList<>();
     IMTool.MsgHandlerListener msgHandlerListener;
 
+    public void refreshCountDown(){
+            if (countDown > -1) {
+                String daojishi = getCountDownStr();
+                countDown--;
+                setTextView(tv_touzhu_daojishi, daojishi);
+            }
+    }
     public void init() {
         {//登录房间
-            tv_touzhu_daojishi.postDelayed(new Runnable() {
+            tv_touzhu_daojishi.post(new Runnable() {
                 @Override
                 public void run() {
-                    String daojishi = getCountDownStr();
                     if (!isDetached()) {
-                        if (countDown > -1) {
-                            countDown--;
-                            setTextView(tv_touzhu_daojishi, daojishi);
-                        }
+                        refreshCountDown();
                         tv_touzhu_daojishi.postDelayed(this, 1000);
                     }
                 }
-            }, 1000);
+            });
             IMTool.getIntance().removeMsgListener(msgHandlerListener);
             msgHandlerListener = new IMTool.MsgHandlerListener() {
                 @Override
@@ -263,6 +266,7 @@ public class TouZhuFragment extends ParentFragment {
                         } else if (msgData.msgDetailData.state == 1) {//可以开始投注了
                             setTextView(tv_touzhu_dangqian_qi, "" + msgData.msgDetailData.issue);
                             countDown = msgData.msgDetailData.countDown;
+                            refreshCountDown();
                             currIssue = msgData.msgDetailData.issue;
 
                             if (oldMsgData != null) {
