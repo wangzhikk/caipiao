@@ -50,6 +50,8 @@
                 <TextView android:id="@+id/tv_wode_tixian_jilu" style="@style/tv_qianbao_item" android:text="提现记录"  android:drawableLeft="@drawable/icon_wallet_txjl" />
                 <View style="@style/line_h"></View>
 
+                <TextView android:id="@+id/tv_wode_zhangbian_jilu" style="@style/tv_qianbao_item" android:text="账变记录"  android:drawableLeft="@drawable/icon_wallet_zbjl" />
+                <View style="@style/line_h"></View>
             </LinearLayout>
 
         </LinearLayout>

@@ -28,7 +28,7 @@ import utils.wzutils.http.HttpUiCallBack;
 
 public class WoDeFragment extends ParentFragment {
 
-    TextView btn_wode_touzhu_jilu,btn_wode_zhangbian_jilu;
+    TextView btn_wode_touzhu_jilu;
     View btn_wode_qianbao,btn_wode_huishui,btn_wode_shezhi,btn_wode_guanyu,btn_wode_shouyi,btn_wode_fenxiang;
     ImageView img_wode_touxiang;
     View btn_shezhi_nicheng;
@@ -88,7 +88,7 @@ public class WoDeFragment extends ParentFragment {
 
         bindFragmentBtn( btn_wode_fenxiang,new FenXiangFragment());
         bindFragmentBtn(btn_wode_touzhu_jilu,new TouZhuJiLuFragment());
-        bindFragmentBtn(btn_wode_zhangbian_jilu,new ZhangBianJiLuFragment());
+        //bindFragmentBtn(btn_wode_zhangbian_jilu,new ZhangBianJiLuFragment());
         bindFragmentBtn(btn_wode_qianbao,new WoDeQianBaoFragment());
         bindFragmentBtn(btn_wode_huishui,new WoDeHuiShuiFragment());
         bindFragmentBtn(btn_wode_shezhi,new SheZhiFragment());

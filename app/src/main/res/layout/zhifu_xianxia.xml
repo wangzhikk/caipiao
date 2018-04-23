@@ -123,7 +123,7 @@
                 <TextView style="@style/textview_small"
                     android:lineSpacingExtra="5dp"
                     android:layout_marginTop="10dp"
-                    android:text="＊请勿存入整数金额(样例 1000.32 元，500.88元)，以免延误 财务查收。 \n＊转账完成后请保留单据作为核对证明。 \n＊请确实填写转账金额与时间。 \n＊每笔转账请提交一次。"  android:textColor="@color/tv_h3"
+                    android:text="＊请勿存入整数金额(样例 1000.32 元，500.88元)，以免延误 财务查收。 \n＊转账完成后请保留单据作为核对证明。 \n＊请准确填写转账金额。 \n＊每笔转账请提交一次。"  android:textColor="@color/tv_h3"
                     />
                 <TextView android:id="@+id/btn_chongzhi_xianxia" style="@style/btn_queding_chang" android:text="提交"/>
             </LinearLayout>

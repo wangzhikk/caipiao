@@ -20,7 +20,7 @@ import utils.wzutils.http.HttpUiCallBack;
 
 public class WoDeQianBaoFragment extends ParentFragment {
 
-    View tv_wode_yinhangka,tv_wode_chongzhi_jilu,tv_wode_tixian_jilu,tv_wode_tixian,tv_wode_chongzhi;
+    View tv_wode_yinhangka,tv_wode_chongzhi_jilu,tv_wode_tixian_jilu,tv_wode_tixian,tv_wode_chongzhi,tv_wode_zhangbian_jilu;
     TextView tv_qianbao_yue;
     @Override
     public int initContentViewId() {
@@ -55,6 +55,7 @@ public class WoDeQianBaoFragment extends ParentFragment {
         bindFragmentBtn(tv_wode_yinhangka,new YinHangKaGuanLiFragment());
         bindFragmentBtn(tv_wode_chongzhi_jilu,new ChongZhiJiLuFragment());
         bindFragmentBtn( tv_wode_tixian_jilu,new TiXianJiLuFragment());
+        bindFragmentBtn( tv_wode_zhangbian_jilu,new ZhangBianJiLuFragment());
 
     }
 

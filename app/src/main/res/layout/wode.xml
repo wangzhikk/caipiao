@@ -84,7 +84,7 @@
                 <TextView android:id="@+id/btn_wode_huishui" android:visibility="gone" style="@style/tv_wode_item" android:text="我的回水" android:drawableLeft="@drawable/icon_mine_huishui"/>
                 <TextView android:id="@+id/btn_wode_fenxiang" style="@style/tv_wode_item" android:text="代理中心"  android:drawableLeft="@drawable/icon_mine_share"/>
                 <TextView android:id="@+id/btn_wode_touzhu_jilu" style="@style/tv_wode_item" android:text="投注记录" android:drawableLeft="@drawable/icon_mine_game" />
-                <TextView  android:id="@+id/btn_wode_zhangbian_jilu" style="@style/tv_wode_item" android:text="帐变纪录"  android:drawableLeft="@drawable/icon_mine_record" />
+                <!--<TextView  android:id="@+id/btn_wode_zhangbian_jilu" style="@style/tv_wode_item" android:text="帐变纪录"  android:drawableLeft="@drawable/icon_mine_record" />-->
                 <TextView  android:id="@+id/btn_wode_shouyi" android:visibility="gone" style="@style/tv_wode_item" android:text="我的收益"  android:drawableLeft="@drawable/icon_mine_shouyi" />
                 <TextView android:id="@+id/btn_wode_shezhi" style="@style/tv_wode_item" android:text="设置"  android:drawableLeft="@drawable/icon_mine_set" />
                 <TextView  android:id="@+id/btn_wode_guanyu" style="@style/tv_wode_item" android:text="关于"  android:drawableLeft="@drawable/icon_mine_about" />

@@ -16,7 +16,7 @@
 
 
 
-            <LinearLayout android:background="@color/white" android:paddingBottom="20dp"
+            <LinearLayout android:background="@color/white" android:paddingBottom="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" android:orientation="vertical">
 
@@ -58,15 +58,20 @@
                     
                     
 
-                    
-                    <TextView style="@style/textview_small" android:text="＊通过以上链接或扫描二维码注册的用户即为您的推荐；" android:textColor="@color/tv_h3"/>
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:orientation="horizontal">
-                        <TextView style="@style/textview_small" android:text="您的分享ID为:" android:textColor="@color/tv_h3"/>
-                        <TextView android:id="@+id/tv_fenxiang_id"  style="@style/textview_small" tools:text="46678" android:textColor="@color/tv_hongse"/>
+                    <LinearLayout android:layout_marginLeft="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:orientation="vertical">
+                        <TextView style="@style/textview_small" android:text="＊通过以上链接或扫描二维码注册的用户即为您的推荐；" android:textColor="@color/tv_h3"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:orientation="horizontal">
+                            <TextView style="@style/textview_small" android:text="＊您的分享ID为:" android:textColor="@color/tv_h3"/>
+                            <TextView android:id="@+id/tv_fenxiang_id"  style="@style/textview_small" tools:text="46678" android:textColor="@color/tv_hongse"/>
+                        </LinearLayout>
+                        <TextView style="@style/textview_small" android:text="＊用户注册时填写此介绍人ID，即可成为您的推荐。"  android:textColor="@color/tv_h3"/>
                     </LinearLayout>
-                    <TextView style="@style/textview_small" android:text="用户注册时填写此介绍人ID，即可成为您的推荐。"  android:textColor="@color/tv_h3"/>
+                    
+
 
                 </LinearLayout>
 

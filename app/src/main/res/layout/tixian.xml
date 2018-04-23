@@ -51,7 +51,7 @@
                             android:layout_height="wrap_content" android:orientation="horizontal">
                             <TextView style="@style/textview" android:text="提现金额（可提现金额"/>
                             <TextView android:id="@+id/tv_tixian_yue" style="@style/textview" tools:text="8895.67" android:textColor="@color/tv_hongse"/>
-                            <TextView style="@style/textview" android:text="元）"/>
+                            <TextView style="@style/textview" android:text="元宝）"/>
 
 
                         </LinearLayout>
