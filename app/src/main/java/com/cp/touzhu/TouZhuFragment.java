@@ -309,7 +309,7 @@ public class TouZhuFragment extends ParentFragment {
 
     public void initListView() {
         recycleView.setDividerNormal(10);
-        MsgData.initShowTimeStamp(msgDataList);
+        //MsgData.initShowTimeStamp(msgDataList);
         recycleView.setData(msgDataList, R.layout.im_item, new WzSimpleRecycleView.WzRecycleAdapter() {
             @Override
             public void initData(int position, int type, View itemView) {
@@ -344,12 +344,15 @@ public class TouZhuFragment extends ParentFragment {
 
                 } else if (msgData.msgDetailData.isTouZhuMsg()) {
 
-                    if (StringTool.notEmpty(msgData.msgDetailData.showTimeStamp)) {
-                        im_time_tv.setVisibility(View.VISIBLE);
-                        UiTool.setTextView(im_time_tv, msgData.msgDetailData.showTimeStamp);
-                    } else {
-                        im_time_tv.setVisibility(View.GONE);
-                    }
+                    im_time_tv.setVisibility(View.VISIBLE);
+                    UiTool.setTextView(im_time_tv, TimeTool.getShortTimeStr(msgData.msgDetailData.timestamp));
+
+//                    if (StringTool.notEmpty(msgData.msgDetailData.showTimeStamp)) {
+//                        im_time_tv.setVisibility(View.VISIBLE);
+//                        UiTool.setTextView(im_time_tv, msgData.msgDetailData.showTimeStamp);
+//                    } else {
+//                        im_time_tv.setVisibility(View.GONE);
+//                    }
 
 
                     int idTouXiang = 0;
