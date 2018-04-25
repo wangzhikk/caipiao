@@ -82,7 +82,7 @@ public class MsgData {
 
         public int state=-1;//状态，1－可以开始下注，3－停止下注，封盘
         public int countDown;//倒计时秒数
-
+        public int isShow=1;//是否显示 ，
 
 
 

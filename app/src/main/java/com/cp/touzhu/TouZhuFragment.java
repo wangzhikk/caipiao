@@ -254,11 +254,9 @@ public class TouZhuFragment extends ParentFragment {
                     return false;
                 }
 
-                MsgData oldMsgData;
 
                 @Override
                 public boolean handMsgRecive(MsgData msgData) {
-                    boolean showMsg = true;
                     if (msgData.msgDetailData.isZhuangTaiMsg()) {//上边状态显示
                         vg_touzhu_qishu.setVisibility(View.VISIBLE);
                         if (msgData.msgDetailData.state == 0) {//开奖结果
@@ -269,13 +267,7 @@ public class TouZhuFragment extends ParentFragment {
                             refreshCountDown();
                             currIssue = msgData.msgDetailData.issue;
 
-                            if (oldMsgData != null) {
-                                if (oldMsgData.msgDetailData.state == msgData.msgDetailData.state
-                                        && oldMsgData.msgDetailData.issue == oldMsgData.msgDetailData.issue
-                                        ) {//同一期 发送了两次， 不显示ui 了
-                                    showMsg = false;
-                                }
-                            }
+
 
                         } else if (msgData.msgDetailData.state == 3) {//封盘中
                             setTextView(tv_touzhu_dangqian_qi, "" + msgData.msgDetailData.issue);
@@ -288,15 +280,14 @@ public class TouZhuFragment extends ParentFragment {
                             vg_touzhu_qishu.setVisibility(View.GONE);
                         } else if (msgData.msgDetailData.state == 5) {//兑奖了， 刷新余额
                             refreshYuE();
-                            showMsg = false;//不添加UI
                         }
                     }
-                    oldMsgData = msgData;
-                    if (showMsg && StringTool.notEmpty(msgData.msgDetailData.getZhuangTaiMsg(null, roomsBean))) {//有内容的才显示
-                        msgDataList.add(msgData);
-                        initListView();
+                    if(msgData.msgDetailData.isShow==1){
+                        if (StringTool.notEmpty(msgData.msgDetailData.getZhuangTaiMsg(null, roomsBean))) {//有内容的才显示
+                            msgDataList.add(msgData);
+                            initListView();
+                        }
                     }
-
                     return false;
                 }
             };
