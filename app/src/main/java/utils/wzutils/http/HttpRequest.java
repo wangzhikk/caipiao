@@ -30,6 +30,7 @@ public class HttpRequest {
     private boolean cancelFast = true; // 是否可以被立即停止, true: 为请求创建新的线程, 取消时请求线程被立即中断.
     private boolean useCache = false;//是否启用缓存
     private RequestMethod requestMethod = RequestMethod.GET;
+    public static Map<String, Object> queryDefaultMap = new TreeMap<String, Object>();//默认参数
     private Map<String, Object> queryMap = new TreeMap<String, Object>();
     private Map<String, String> headerMap = new TreeMap<String, String>();
     private String bodyCountent = "";//发送内容就是一个字符串
@@ -76,8 +77,14 @@ public class HttpRequest {
      * @return
      */
     public HttpRequest addQueryParams(String queryKey, Object queryValue) {
-        if (queryValue != null && !StringTool.isEmpty("" + queryValue))
+        if (queryValue != null && !StringTool.isEmpty("" + queryValue)){
             this.queryMap.put(queryKey, queryValue);
+        }else {
+            Object defaultObj=queryDefaultMap.get(queryKey);
+            if (defaultObj != null && !StringTool.isEmpty("" + defaultObj)){
+                this.queryMap.put(queryKey, defaultObj);
+            }
+        }
         return this;
     }
 
