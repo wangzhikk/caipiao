@@ -65,18 +65,28 @@ public class ZouShiTu_cqssc_Fragment extends ParentFragment implements WzRefresh
 
 
                 TextView tv_zoushi_xiao=itemView.findViewById(R.id.tv_zoushi_xiao);
+                TextView tv_zoushi_zhong=itemView.findViewById(R.id.tv_zoushi_zhong);
                 TextView tv_zoushi_da=itemView.findViewById(R.id.tv_zoushi_da);
+
+
                 TextView tv_zoushi_dan=itemView.findViewById(R.id.tv_zoushi_dan);
                 TextView tv_zoushi_shuang=itemView.findViewById(R.id.tv_zoushi_shuang);
 
-                tv_zoushi_xiao.setVisibility(result<10?View.VISIBLE:View.INVISIBLE);
-               // tv_zoushi_zhong.setVisibility(result>6&&result<12?View.VISIBLE:View.INVISIBLE);
+                TextView tv_zoushi_jida=itemView.findViewById(R.id.tv_zoushi_jida);
+                TextView tv_zoushi_jixiao=itemView.findViewById(R.id.tv_zoushi_jixiao);
+
+
+
+
+                tv_zoushi_xiao.setVisibility(result<9?View.VISIBLE:View.INVISIBLE);
+                tv_zoushi_zhong.setVisibility(result>6&&result<12?View.VISIBLE:View.INVISIBLE);
                 tv_zoushi_da.setVisibility(result>9?View.VISIBLE:View.INVISIBLE);
 
                 tv_zoushi_dan.setVisibility(result%2!=0?View.VISIBLE:View.INVISIBLE);
                 tv_zoushi_shuang.setVisibility(result%2==0?View.VISIBLE:View.INVISIBLE);
 
-
+                tv_zoushi_jida.setVisibility(result>15?View.VISIBLE:View.INVISIBLE);
+                tv_zoushi_jixiao.setVisibility(result<3?View.VISIBLE:View.INVISIBLE);
 
             }
         });

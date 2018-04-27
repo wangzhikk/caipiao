@@ -19,9 +19,12 @@
             <TextView style="@style/tv_zoushi_item" android:text="期号"   android:layout_weight="3"  />
             <TextView style="@style/tv_zoushi_item" android:text="值"  />
             <TextView style="@style/tv_zoushi_item" android:text="小"  />
+            <TextView style="@style/tv_zoushi_item" android:text="中"  />
             <TextView style="@style/tv_zoushi_item" android:text="大"  />
             <TextView style="@style/tv_zoushi_item" android:text="单"  />
             <TextView style="@style/tv_zoushi_item" android:text="双"  />
+            <TextView style="@style/tv_zoushi_item" android:text="极大"  />
+            <TextView style="@style/tv_zoushi_item" android:text="极小"  />
         </LinearLayout>
 
 

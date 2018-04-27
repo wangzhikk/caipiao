@@ -13,13 +13,34 @@
             <View style="@style/line_v" android:background="@color/white" android:layout_marginTop="5dp" android:layout_marginBottom="5dp"></View>
             <TextView android:id="@+id/tv_zoushi_num" style="@style/tv_zoushi_item" android:text="9"  android:textColor="@color/tv_lanse_name" />
             <View style="@style/line_v" android:background="@color/white" android:layout_marginTop="5dp" android:layout_marginBottom="5dp"></View>
+
+
             <TextView android:id="@+id/tv_zoushi_xiao" style="@style/tv_zoushi_item" android:text="小"  android:background="@color/bg_lanse"/>
             <View style="@style/line_v" android:background="@color/white" android:layout_marginTop="5dp" android:layout_marginBottom="5dp"></View>
+
+            <TextView  android:id="@+id/tv_zoushi_zhong" style="@style/tv_zoushi_item" android:text="中"  android:background="@color/bg_lanse"/>
+            <View style="@style/line_v" android:background="@color/white" android:layout_marginTop="5dp" android:layout_marginBottom="5dp"></View>
+
             <TextView  android:id="@+id/tv_zoushi_da" style="@style/tv_zoushi_item" android:text="大"  android:background="@color/bg_lanse"/>
             <View style="@style/line_v" android:background="@color/white" android:layout_marginTop="5dp" android:layout_marginBottom="5dp"></View>
+
+
+
+
             <TextView  android:id="@+id/tv_zoushi_dan" style="@style/tv_zoushi_item" android:text="单"  android:background="@color/bg_lanse_qian"/>
             <View style="@style/line_v" android:background="@color/white" android:layout_marginTop="5dp" android:layout_marginBottom="5dp"></View>
             <TextView  android:id="@+id/tv_zoushi_shuang" style="@style/tv_zoushi_item" android:text="双"  android:background="@color/bg_lanse_qian"/>
+
+
+
+
+            <View style="@style/line_v" android:background="@color/white" android:layout_marginTop="5dp" android:layout_marginBottom="5dp"></View>
+            <TextView  android:id="@+id/tv_zoushi_jida" style="@style/tv_zoushi_item" android:text="极大"  android:background="@color/bg_zise"/>
+
+            <View style="@style/line_v" android:background="@color/white" android:layout_marginTop="5dp" android:layout_marginBottom="5dp"></View>
+            <TextView  android:id="@+id/tv_zoushi_jixiao" style="@style/tv_zoushi_item" android:text="极小"  android:background="@color/bg_zise"/>
+
+
         </LinearLayout>
 
 </RelativeLayout>

@@ -152,7 +152,7 @@ public class TouZhuDialog  {
 
 
         });
-        viewPagerTouZhu.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+        ViewPager.OnPageChangeListener pageChangeListene=new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
@@ -177,7 +177,9 @@ public class TouZhuDialog  {
             public void onPageScrollStateChanged(int state) {
 
             }
-        });
+        };
+        viewPagerTouZhu.addOnPageChangeListener(pageChangeListene);
+        pageChangeListene.onPageSelected(0);
 
 //        {//赔率说明
 //            View btn_touzhu_peilv = view.findViewById(R.id.btn_touzhu_peilv);

@@ -110,17 +110,20 @@ public class Data_cqssc_top10 extends ParentServerData {
             int result=getResult(lottery_num);
             if(lottery_num.length()==5){
                 resultStr+=result+",";
-                if(result<10){
+                if(result<9){
                     resultStr+="小,";
-                }else {
+                }
+                if(result>9){
                     resultStr+="大,";
                 }
-//                if(result>9){
-//                    resultStr+="大,";
-//                }
-//                if(result>6&&result<12){
-//                    resultStr+="中,";
-//                }
+                if(result>6&&result<12){
+                    resultStr+="中,";
+                }
+
+
+
+
+
 
 
                 if(result%2==0){
