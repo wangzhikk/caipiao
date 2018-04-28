@@ -227,7 +227,9 @@ public class TimeTool {
      *
      * @return
      */
-    public static Date getTodayDateBegin() {
+    public static Date
+
+    getTodayDateBegin() {
         Calendar calendar = Calendar.getInstance();
         return getDateBegin(calendar);
     }
@@ -383,7 +385,14 @@ public class TimeTool {
         Calendar calendar = Calendar.getInstance();
         return new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(calendar.getTime());
     }
-
+    /***
+     * 获取当前日期
+     * @return
+     */
+    public static String getNowDate() {
+        Calendar calendar = Calendar.getInstance();
+        return new SimpleDateFormat("yyyy-MM-dd").format(calendar.getTime());
+    }
     private static final long ONE_MINUTE = 60*1000;
     private static final long ONE_HOUR = 60*ONE_MINUTE;
     private static final long ONE_DAY = 24*ONE_HOUR;

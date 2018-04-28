@@ -163,10 +163,13 @@ public class TouZhuFragment extends ParentFragment {
 
 
     public void showYingDao() {
-        if (StringTool.notEmpty(MapDB.loadObj("guid" + Data_login_validate.getData_login_validate().uuid, String.class))) {
+        String key="guid" + Data_login_validate.getData_login_validate().uuid;
+        String date=TimeTool.getNowDate();
+        Object o=MapDB.loadObj(key, String.class);
+        if (date.equals(o)) {
             return;
         }
-        MapDB.saveObj("guid" + Data_login_validate.getData_login_validate().uuid, "1");
+        MapDB.saveObj(key, date);
         NewbieGuide.with(this)
                 .setLabel("page")//设置引导层标示区分不同引导层，必传！否则报错
                 .setOnGuideChangedListener(new OnGuideChangedListener() {
