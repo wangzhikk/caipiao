@@ -54,7 +54,7 @@ public class Data_personinfo_query extends ParentServerData {
     }
 
     static Integer [] typeResImgs=new Integer[]{
-            0,
+            R.drawable.icon_agency_putong,
             R.drawable.icon_agency_silver,
             R.drawable.icon_agency_golden,
             R.drawable.icon_agency_diamond,
