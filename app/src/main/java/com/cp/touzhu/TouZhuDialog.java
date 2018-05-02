@@ -95,11 +95,11 @@ public class TouZhuDialog  {
                     double amount = Double.valueOf(amountStr);
 
                     if (amount < touZhuFragment.roomsBean.bettingMin) {
-                        CommonTool.showToast("投注金额必须大于" + Common.getPriceYB(touZhuFragment.roomsBean.bettingMin));
+                        CommonTool.showToast("投注金额最低" + Common.getPriceYB(touZhuFragment.roomsBean.bettingMin));
                         return;
                     }
                     if (amount > touZhuFragment.roomsBean.bettingMax) {
-                        CommonTool.showToast("投注金额必须小于" + Common.getPriceYB(touZhuFragment.roomsBean.bettingMax));
+                        CommonTool.showToast("投注金额最高" + Common.getPriceYB(touZhuFragment.roomsBean.bettingMax));
                         return;
                     }
                     Data_room_queryGame.InfoBean.PlayMethodsBean.MethodsBean methodsBean = (Data_room_queryGame.InfoBean.PlayMethodsBean.MethodsBean) ViewTool.getTag(commonButtonTool.getChecked(), select_key);

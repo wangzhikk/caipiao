@@ -90,7 +90,7 @@ public class XianXiaZhiFuDetailFragment extends ParentFragment {
         setTextView(lb_chongzhi_xianxia_account,"支付账号");
         et_chongzhi_xianxia_account.setHint("请填写您此次转账使用的支付账号");
         setTextView(lb_chongzhi_xianxia_amount,"存款金额");
-        et_chongzhi_xianxia_amount.setHint("请填写您转账的金额");
+        et_chongzhi_xianxia_amount.setHint("请填写您此次转账的金额");
         LunBoTool.initAds(parent,R.id.adsContainer,R.id.vg_viewpager_btn,R.layout.include_lunbo_dot_huise_touming,R.id.cb_dot,-1, LunBoTool.LunBoData.initData(R.drawable.alipay_1,R.drawable.alipay_2,R.drawable.alipay_3));
 
     }
@@ -109,7 +109,7 @@ public class XianXiaZhiFuDetailFragment extends ParentFragment {
         setTextView(lb_chongzhi_xianxia_account,"支付账号");
         et_chongzhi_xianxia_account.setHint("请填写您此次转账使用的支付账号");
         setTextView(lb_chongzhi_xianxia_amount,"存款金额");
-        et_chongzhi_xianxia_amount.setHint("请填写您转账的金额");
+        et_chongzhi_xianxia_amount.setHint("请填写您此次转账的金额");
         LunBoTool.initAds(parent,R.id.adsContainer,R.id.vg_viewpager_btn,R.layout.include_lunbo_dot_huise_touming,R.id.cb_dot,-1, LunBoTool.LunBoData.initData(offlineBean.recharge_account));
     }
     public void initBank(){
@@ -129,7 +129,7 @@ public class XianXiaZhiFuDetailFragment extends ParentFragment {
         et_chongzhi_xianxia_account.setHint("请填写您汇款时使用的银行卡账号");
 
         setTextView(lb_chongzhi_xianxia_amount,"存款金额");
-        et_chongzhi_xianxia_amount.setHint("请填写您转账的金额");
+        et_chongzhi_xianxia_amount.setHint("请填写您此次转账的金额");
 
         vg_chongzhi_xianxia_buzou.setVisibility(View.GONE);
     }

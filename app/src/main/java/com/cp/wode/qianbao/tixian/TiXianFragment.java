@@ -101,7 +101,7 @@ public class TiXianFragment extends ParentFragment {
                 String pwd=et_tixian_mima.getText().toString().trim();
 
                 if(StringTool.isEmpty(amount)){
-                    CommonTool.showToast("请输入提现金额");
+                    CommonTool.showToast("请填写提现金额");
                     return;
                 }
 

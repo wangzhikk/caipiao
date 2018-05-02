@@ -78,7 +78,7 @@ public class SheZhiFragment extends ParentFragment {
             public void onClickWz(View v) {
                 ImgTool.clearCache();
                 setTextView(btn_qingchu_huancun,"");
-                CommonTool.showToast("清除缓存成功");
+                CommonTool.showToast("清理完成");
             }
         });
 

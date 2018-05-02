@@ -193,7 +193,7 @@ public class KeFuFragment extends ParentFragment {
             public void onClick(View v) {
                 String text=et_send_msg.getText().toString();
                 if(StringTool.isEmpty(text)){
-                    CommonTool.showToast("消息内容不能为空!");
+                    CommonTool.showToast("请输入消息内容");
                     return;
                 }
                 showWaitingDialog("");
@@ -208,7 +208,7 @@ public class KeFuFragment extends ParentFragment {
                             initListView(KeFuMsgTool.getMsgDataList());
                             et_send_msg.setText("");
                         }else {
-                            CommonTool.showToast("发送消息失败");
+                            CommonTool.showToast("您的消息发送失败，错误码："+code);
                         }
                     }
                 });
