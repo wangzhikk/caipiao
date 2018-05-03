@@ -404,7 +404,9 @@ public class TimeTool {
      */
     public static String getAgoTime(long time){
         long cha=System.currentTimeMillis()-time;
-        if(cha<ONE_MINUTE){
+        if(cha<1000){
+            return "刚刚";
+        }else if(cha<ONE_MINUTE){
             return cha/1000+"秒前";
         }else if(cha<ONE_HOUR){
             return cha/ONE_MINUTE+"分钟前";
