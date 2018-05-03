@@ -116,7 +116,7 @@ public class IMTool {
         ConfigEntity.appKey = "5418023dfd98c579b6001741";
         // 设置服务器ip和服务器端口
         ConfigEntity.serverIP = HttpConfigAx.imIp;
-        ConfigEntity.serverUDPPort = 7901;
+        ConfigEntity.serverUDPPort = HttpConfigAx.imPort;
        // ConfigEntity.serverUDPPort = 80;
         // MobileIMSDK核心IM框架的敏感度模式设置
         ConfigEntity.setSenseMode(ConfigEntity.SenseMode.MODE_3S);

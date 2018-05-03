@@ -14,7 +14,7 @@ import utils.wzutils.json.JsonDataParent;
 public abstract class HttpUiCallBack<T> {
     public abstract void onSuccess(T data);
     public void onError(HttpRequest result) {
-        CommonTool.showToast(getErrorState().getMsg());
+       // CommonTool.showToast(getErrorState().getMsg());
     }
 
     State getErrorState() {

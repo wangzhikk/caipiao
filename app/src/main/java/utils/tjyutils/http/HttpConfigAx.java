@@ -9,12 +9,15 @@ import utils.wzutils.common.StringTool;
  * Created by ishare on 2016/6/30.
  */
 public class HttpConfigAx {
+
     public static void setBaseUrl(String baseUrl) {
         HttpConfigAx.baseUrl = baseUrl;
     }
 
     private static String baseUrl = "";
     public static String imIp="msg.yxwh168.com";
+    public static int imPort=7901;
+
     public static String getBaseUrl() {
         if(App.isDebug){
             if(true)return baseUrl="http://api.yxwh168.com/";//唐总;

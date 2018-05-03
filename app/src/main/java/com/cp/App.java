@@ -2,9 +2,11 @@ package com.cp;
 
 import android.app.Application;
 
+import com.cp.cp.Data_msgserver;
 import com.cp.im.IMTool;
 
 import utils.wzutils.AppTool;
+import utils.wzutils.http.HttpUiCallBack;
 import utils.wzutils.ui.WzSimpleRecycleView;
 
 /**
@@ -19,6 +21,11 @@ public class App extends Application {
         super.onCreate();
         AppTool.init(this,isDebug);
         WzSimpleRecycleView.defaultEmptyResId=R.layout.nodata;
-        IMTool.getIntance().login();//登录消息服务器， 放这里是为了 被销毁后还能重新启动
+        Data_msgserver.load(new HttpUiCallBack<Data_msgserver>() {
+            @Override
+            public void onSuccess(Data_msgserver data) {
+                IMTool.getIntance().login();//登录消息服务器， 放这里是为了 被销毁后还能重新启动
+            }
+        });
     }
 }

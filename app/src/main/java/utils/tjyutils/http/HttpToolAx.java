@@ -43,6 +43,7 @@ public class HttpToolAx extends HttpRequest {
             "personinfo/query",//个人信息
             "index/dynamic",//首页滚动动画
             "wallet/types",//钱包明细  类型
+            "msgserver"//消息服务器
 
     };
 
