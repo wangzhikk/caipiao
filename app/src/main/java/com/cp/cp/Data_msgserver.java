@@ -25,9 +25,15 @@ public class Data_msgserver extends ParentServerData {
                     public void onSuccess(Data_msgserver data) {
                         if(data.isDataOkWithOutCheckLogin()){
                             try {
-                                URL url=new URL(data.msgserver);
-                                HttpConfigAx.imIp=url.getHost();
-                                HttpConfigAx.imPort=url.getPort();
+//                                URL url=new URL(data.msgserver);
+                                String[] tem=data.msgserver.split(":");
+                                if(tem.length==2){
+                                    String ip=tem[0];
+                                    int port=Integer.valueOf(tem[1]);
+                                    HttpConfigAx.imIp=ip;
+                                    HttpConfigAx.imPort=port;
+                                }
+
                             } catch (Exception e) {
                                 LogTool.ex(e);
                             }
