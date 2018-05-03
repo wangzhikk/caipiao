@@ -206,6 +206,7 @@ public class MainActivity extends ParentActivity {
     protected void onResume() {
         super.onResume();
         getCurrFragmentIncludeChild().setOnResume();
+        Data_message_summary.load(null);
     }
 
     @Override

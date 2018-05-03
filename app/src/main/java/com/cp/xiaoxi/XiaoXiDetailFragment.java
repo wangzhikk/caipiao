@@ -40,7 +40,6 @@ public class XiaoXiDetailFragment extends ParentFragment {
             public void onSuccess(Data_message_detail data) {
                 if(data.isDataOkAndToast()){
                     initView(data.detail,false);
-                    XiaoXiAllFragment.refresh();
                 }
             }
         });

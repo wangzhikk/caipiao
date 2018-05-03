@@ -46,16 +46,6 @@ public class XiaoXiAllFragment extends ParentFragment{
             }
         });
         wzRefresh.setEnableLoadMore(false);
-        loadData();
-
-
-//        if(Data_login_validate.getData_login_validate().getUserInfo().base_type>0){
-//            vg_xiaoxi_daili.setVisibility(View.VISIBLE);
-//            line_xiaoxi_daili.setVisibility(View.VISIBLE);
-//        }else {
-//            vg_xiaoxi_daili.setVisibility(View.GONE);
-//            line_xiaoxi_daili.setVisibility(View.GONE);
-//        }
 
         BroadcastReceiverTool.bindAction(getActivity(), new BroadcastReceiverTool.BroadCastWork() {
             @Override
@@ -92,15 +82,18 @@ public class XiaoXiAllFragment extends ParentFragment{
                         setCount(tv_xiaoxi_wode_count,data.message.notRead);
                     }
 
-
-
-
                 }
             }
         });
     }
 
-    public void setCount(TextView textView,int count){
+    @Override
+    public void onResume() {
+        super.onResume();
+        refresh();
+    }
+
+    public void setCount(TextView textView, int count){
         if(count<1)textView.setVisibility(View.INVISIBLE);
         else textView.setVisibility(View.VISIBLE);
 
