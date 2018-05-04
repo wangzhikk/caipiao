@@ -1,7 +1,10 @@
 package com.cp.shouye;
 
+import com.cp.wode.choujiang.ChouJiangFragment;
+
 import java.util.List;
 
+import utils.tjyutils.common.WebFragment;
 import utils.tjyutils.http.HttpToolAx;
 import utils.tjyutils.parent.ParentServerData;
 import utils.wzutils.common.CommonTool;
@@ -60,6 +63,11 @@ public class Data_index_query extends ParentServerData {
         public int ads_type ;//banner类型：0－只有广告图片，1－超链接，2－抽奖，3－…
         public void onClick() {
             LogTool.s(ads_images);
+            if(ads_type==1){
+                WebFragment.byData(ads_links,"").go();
+            }else if(ads_type==2){
+                new ChouJiangFragment().go();
+            }
         }
     }
 

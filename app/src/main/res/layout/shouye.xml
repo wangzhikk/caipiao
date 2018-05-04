@@ -44,7 +44,7 @@
                     <ViewFlipper
                         android:id="@+id/viewFlipper"
                         android:background="@drawable/kk_notice"
-                        android:layout_marginTop="180dp"
+                        android:layout_marginTop="190dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                     </ViewFlipper>
