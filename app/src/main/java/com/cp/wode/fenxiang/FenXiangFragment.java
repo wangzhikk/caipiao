@@ -61,6 +61,7 @@ public class FenXiangFragment extends ParentFragment {
         tabDataList.add(tabData_kaihu);
         tabDataList.add(tabData_shouyi);
         tabDataList.add(tabData_lianjie);
+
         TabTitleTool tabTitleTool=new TabTitleTool(getChildFragmentManager(),vg_tab_fenxiang,viewPager_fenxiang,tabDataList);
         tabTitleTool.click(0);
 
