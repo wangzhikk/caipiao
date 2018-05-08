@@ -81,6 +81,7 @@ public class ShouYeFragment extends ParentFragment {
         initTitle();
 
     }
+
     public void initTitle(){
         btn_shouye_more.setOnClickListener(new WzViewOnclickListener() {
             @Override
@@ -178,9 +179,34 @@ public class ShouYeFragment extends ParentFragment {
                     initLunBo(data.banners);
                     initListView();
                     showTiShiDialog();
+                    initZhuanPanDialog();
                 }
             }
         });
+    }
+    Dialog dialog_zhuanpan;
+    public void initZhuanPanDialog(){
+        if(data_index_query.luck>0&&this.isVisible()){
+            if(dialog_zhuanpan==null){
+                View view=LayoutInflaterTool.getInflater(2,R.layout.dialog_shouye_zhuanpan_tankuang).inflate();
+                dialog_zhuanpan=DialogTool.initNormalDialog(view,0);
+                View btn_tankuang_zhuanpan_close=view.findViewById(R.id.btn_tankuang_zhuanpan_close);
+                btn_tankuang_zhuanpan_close.setOnClickListener(new WzViewOnclickListener() {
+                    @Override
+                    public void onClickWz(View v) {
+                        dialog_zhuanpan.dismiss();
+                    }
+                });
+                view.setOnClickListener(new WzViewOnclickListener() {
+                    @Override
+                    public void onClickWz(View v) {
+                        dialog_zhuanpan.dismiss();
+                        new ChouJiangFragment().go();
+                    }
+                });
+            }
+            dialog_zhuanpan.show();
+        }
     }
 
     static boolean showTishi=true;

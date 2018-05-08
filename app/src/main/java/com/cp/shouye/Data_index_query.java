@@ -25,7 +25,7 @@ public class Data_index_query extends ParentServerData {
      * profitRate : 98
      * banners : [{"id":3,"ads_ab":"index_banner","ads_name":"ads2","ads_images":"images/dd-e-small-img.png","ads_links":"www.baidu.com","ads_time":1502861989000},{"id":1,"ads_ab":"index_banner","ads_name":"ads1","ads_images":"images/dd-e-big-img.jpg","ads_links":"www.baidu.com","ads_time":1502861987000}]
      */
-
+    public int luck;
     public int totalProfit;
     public int totalUser;
     public int profitRate;
