@@ -6,6 +6,7 @@ import android.view.animation.Animation;
 import android.widget.ImageView;
 
 import com.cp.R;
+import com.cp.shouye.Data_index_query;
 
 import utils.tjyutils.parent.ParentFragment;
 import utils.wzutils.common.LayoutInflaterTool;
@@ -60,6 +61,7 @@ public class ChouJiangFragment extends ParentFragment {
                     @Override
                     public void onSuccess(Data_luck_draw data) {
                         if(data.isDataOkAndToast()){
+                            Data_index_query.load(null);//刷新一下首页的转盘数据， 免得后面有缓存
                             startZhuanPan(data.grade,data.amount);
                         }
                     }
