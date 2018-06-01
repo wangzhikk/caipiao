@@ -1,5 +1,6 @@
 package com.cp.touzhu.zoushitu;
 
+import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
@@ -24,19 +25,21 @@ public class ZouShiTu_bj28_Fragment extends ParentFragment implements WzRefreshL
 
     WzRefreshLayout wzRefreshLayout;
     WzSimpleRecycleView recycleView;
+    Data_room_queryGame.YouXiEnum youXiEnum;
     @Override
     public int initContentViewId() {
         return R.layout.zoushitu_bj28_list;
     }
     @Override
     public void initData() {
+         youXiEnum= (Data_room_queryGame.YouXiEnum) getArgument("youXiEnum", Data_room_queryGame.YouXiEnum.BJ28);
         titleTool.setTitle("走势图");
         wzRefreshLayout.bindLoadData(this,pageControl);
     }
     PageControl<Data_cqssc_top10.CQSSCBean> pageControl=new PageControl();
     public void loadData(final int page){
         //initListView(null);
-        Data_cqssc_query.load(Data_room_queryGame.YouXiEnum.BJ28,page, pageControl.getPageSize(), new HttpUiCallBack<Data_cqssc_query>() {
+        Data_cqssc_query.load(youXiEnum,page, pageControl.getPageSize(), new HttpUiCallBack<Data_cqssc_query>() {
             @Override
             public void onSuccess(Data_cqssc_query data) {
                 if(data.isDataOkAndToast()){
@@ -101,4 +104,11 @@ public class ZouShiTu_bj28_Fragment extends ParentFragment implements WzRefreshL
     }
 
 
+    public static ParentFragment byData(Data_room_queryGame.YouXiEnum youXiEnum){
+        Bundle bundle=new Bundle();
+        bundle.putSerializable("youXiEnum",youXiEnum);
+        ZouShiTu_bj28_Fragment zouShiTu_bj28_fragment=new ZouShiTu_bj28_Fragment();
+        zouShiTu_bj28_fragment.setArguments(bundle);
+        return zouShiTu_bj28_fragment;
+    }
 }

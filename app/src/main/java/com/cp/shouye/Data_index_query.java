@@ -75,12 +75,15 @@ public class Data_index_query extends ParentServerData {
     public static class GamesBean {
         public BJ28Bean BJ28=new BJ28Bean();
         public CQSSCCXBean CQSSC_CX=new CQSSCCXBean();
-
+        public  CANADA28Bean CANADA28=new CANADA28Bean();
         public static class BJ28Bean {
             public String playHtmlSrc="bj28wf";
         }
         public static class CQSSCCXBean {
             public String playHtmlSrc="cqssccxwf";
+        }
+        public static class CANADA28Bean {
+            public String playHtmlSrc="canada28wf";
         }
     }
     public static class PopMessagesBean{

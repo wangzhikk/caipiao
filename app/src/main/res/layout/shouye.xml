@@ -147,6 +147,7 @@
                 <View style="@style/line_h_jiange" ></View>
                 <utils.wzutils.ui.WzSimpleRecycleView
                     android:layout_marginLeft="10dp"
+                    android:paddingBottom="10dp"
                     android:id="@+id/recycleView_wanfa"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">

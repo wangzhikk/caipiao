@@ -39,7 +39,7 @@ public class Data_room_queryGame extends ParentServerData {
     public InfoBean info;
 
     public static enum  YouXiEnum implements Serializable{
-        BJ28("北京28","BJ28","bj28"),CQSSC_CX("重庆时时彩创新版","CQSSC_CX","cqssc"),CQSSC_JD("重庆时时彩－经典版","CQSSC_JD","cqssc");
+        BJ28("北京28","BJ28","bj28"),CQSSC_CX("重庆时时彩创新版","CQSSC_CX","cqssc"),CQSSC_JD("重庆时时彩－经典版","CQSSC_JD","cqssc"),CANADA28("加拿大28","CANADA28","canada28");
         public String name;
         public String value;
         public String method;

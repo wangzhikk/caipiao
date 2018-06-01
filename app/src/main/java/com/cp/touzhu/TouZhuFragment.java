@@ -121,8 +121,11 @@ public class TouZhuFragment extends ParentFragment {
                         if (Data_room_queryGame.YouXiEnum.CQSSC_CX.value.equals(roomsBean.game)) {//重庆时时彩
                             new ZouShiTu_cqssc_Fragment().go();
                         } else if (Data_room_queryGame.YouXiEnum.BJ28.value.equals(roomsBean.game)) {//北京28
-                            new ZouShiTu_bj28_Fragment().go();
+                            ZouShiTu_bj28_Fragment.byData(Data_room_queryGame.YouXiEnum.BJ28).go();
+                        } else if (Data_room_queryGame.YouXiEnum.CANADA28.value.equals(roomsBean.game)) {//加拿大28
+                            ZouShiTu_bj28_Fragment.byData(Data_room_queryGame.YouXiEnum.CANADA28).go();
                         }
+
                         dialog.dismiss();
                     }
                 });
@@ -239,6 +242,13 @@ public class TouZhuFragment extends ParentFragment {
                 setTextView(tv_touzhu_daojishi, daojishi);
             }
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        initLiShiDialog();
+    }
+
     public void init() {
         {//登录房间
             tv_touzhu_daojishi.post(new Runnable() {

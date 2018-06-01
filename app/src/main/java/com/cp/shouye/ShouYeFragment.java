@@ -299,9 +299,9 @@ public class ShouYeFragment extends ParentFragment {
     public void initListView(){
 
         recycleView_wanfa.setLayoutManager(new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL));
-        recycleView_wanfa.setData(TestData.getTestStrList(2), R.layout.shouye_wanfa_item, new WzSimpleRecycleView.WzRecycleAdapter() {
+        recycleView_wanfa.setData(TestData.getTestStrList(4), R.layout.shouye_wanfa_item, new WzSimpleRecycleView.WzRecycleAdapter() {
             @Override
-            public void initData(int position, int type, View itemView) {
+            public void initData(final int position, int type, View itemView) {
                 super.initData(position, type, itemView);
 
                 View shouye_wanfa_shuoming=itemView.findViewById(R.id.shouye_wanfa_shuoming);
@@ -315,19 +315,34 @@ public class ShouYeFragment extends ParentFragment {
                     if(data_index_query.isDataOk())shuoMingUrl=HttpConfigAx.getHtmlUrl(data_index_query.games.BJ28.playHtmlSrc);
 
                 }else if(position==1){
+
+                    loadImage(R.drawable.img_index_canada,itemView,R.id.shouye_wanfa_img);
+                    youXiEnum= Data_room_queryGame.YouXiEnum.CANADA28;
+                    if(data_index_query.isDataOk())shuoMingUrl=HttpConfigAx.getHtmlUrl(data_index_query.games.CANADA28.playHtmlSrc);
+                }else if(position==2){
                     loadImage(R.drawable.img_index_cq,itemView,R.id.shouye_wanfa_img);
                     youXiEnum= Data_room_queryGame.YouXiEnum.CQSSC_CX;
                     if(data_index_query.isDataOk())shuoMingUrl=HttpConfigAx.getHtmlUrl(data_index_query.games.CQSSC_CX.playHtmlSrc);
-                }
-                bindFragmentBtn(shouye_wanfa_shuoming,WebFragment.byData(shuoMingUrl,"玩法说明"));
 
-                final Data_room_queryGame.YouXiEnum finalYouXiEnum = youXiEnum;
-                itemView.setOnClickListener(new WzViewOnclickListener() {
-                    @Override
-                    public void onClickWz(View v) {
-                        FangJianXuanZeDengJiFragment.byData(finalYouXiEnum).go();
-                    }
-                });
+                }else if(position==3){
+                    loadImage(R.drawable.img_index_coming,itemView,R.id.shouye_wanfa_img);
+                    youXiEnum= Data_room_queryGame.YouXiEnum.CQSSC_CX;
+                    if(data_index_query.isDataOk())shuoMingUrl=HttpConfigAx.getHtmlUrl(data_index_query.games.CQSSC_CX.playHtmlSrc);
+                }
+
+
+                if(position!=3){
+                    bindFragmentBtn(shouye_wanfa_shuoming,WebFragment.byData(shuoMingUrl,"玩法说明"));
+                    final Data_room_queryGame.YouXiEnum finalYouXiEnum = youXiEnum;
+                    itemView.setOnClickListener(new WzViewOnclickListener() {
+                        @Override
+                        public void onClickWz(View v) {
+                            FangJianXuanZeDengJiFragment.byData(finalYouXiEnum).go();
+                        }
+                    });
+                }
+
+
             }
         });
     }

@@ -12,19 +12,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
 
         android:layout_marginRight="10dp"
         android:gravity="center" >
         <ImageView
             android:id="@+id/shouye_wanfa_img"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/img_index_cq" />
         <TextView
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="130dp"
+            android:layout_marginTop="55dp"
             android:layout_width="70dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignLeft="@+id/shouye_wanfa_img"
             android:padding="5dp"
             android:layout_height="wrap_content"
             tools:background="@color/huanghei"
