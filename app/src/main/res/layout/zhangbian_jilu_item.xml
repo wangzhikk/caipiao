@@ -13,32 +13,46 @@
 
         <RelativeLayout android:paddingLeft="15dp" android:paddingRight="15dp"
             android:layout_width="match_parent"
-            android:layout_height="60dp" android:gravity="center_vertical">
+            android:layout_height="80dp" android:gravity="center_vertical">
             <LinearLayout
                 android:layout_width="match_parent" android:gravity="center_vertical"
                 android:layout_height="match_parent" android:orientation="vertical">
+
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:orientation="horizontal">
+                    android:layout_height="wrap_content" android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:orientation="horizontal">
 
 
-                    <utils.wzutils.ui.textview.BoldTextView android:id="@+id/tv_jilu_name" style="@style/textview_large" android:text="充值记录"
-                        />
+                        <utils.wzutils.ui.textview.BoldTextView android:id="@+id/tv_jilu_name" style="@style/textview_large" android:text="充值记录"
+                            />
+                        <TextView
+                            android:id="@+id/tv_jilu_game_name"
+                            style="@style/textview"
+                            android:layout_marginLeft="3dp"
+                            tools:text="一 游戏名称"
+                            android:textColor="#ff222222"
+                            />
+
+
+                    </LinearLayout>
                     <TextView
                         android:id="@+id/tv_jilu_order_num"
-                        style="@style/textview_small"
-                        android:layout_marginLeft="3dp"
-                        tools:text="一 订单号18050807254587"
-                        android:textColor="#ff222222"
+                        style="@style/textview_small" android:paddingTop="3dp" android:paddingBottom="3dp"
+                        tools:text="订单号18050807254587"
+                        android:textColor="@color/tv_h4"
                         />
                 </LinearLayout>
+
 
 
                 <TextView
                     android:id="@+id/tv_jilu_time"
                     style="@style/textview_small"
                     android:textColor="@color/tv_h4"
-                    android:layout_marginTop="3dp"
                     android:text="2018-10-23 15:58:14" />
 
             </LinearLayout>
