@@ -59,7 +59,7 @@ public class TiXianJiLuFragment extends ParentFragment implements WzRefreshLayou
     }
     PageControl <Data_extract_record.PagingListBean.TiXianListBean> pageControl=new PageControl<>();
     public void initListView(final List<Data_extract_record.PagingListBean.TiXianListBean> allDatas){
-        recycleView.setData(allDatas, R.layout.zhangbian_jilu_item, new WzSimpleRecycleView.WzRecycleAdapter() {
+        recycleView.setData(allDatas, R.layout.tixian_jilu_item, new WzSimpleRecycleView.WzRecycleAdapter() {
             @Override
             public void initData(int position, int type, View itemView) {
                 super.initData(position, type, itemView);
