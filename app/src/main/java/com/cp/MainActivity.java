@@ -200,6 +200,7 @@ public class MainActivity extends ParentActivity {
      * 获取实际显示的 fragment
      */
     public ParentFragment getCurrFragmentIncludeChild(){
+        if(currentFragment==null)return new WoDeFragment();
         return currentFragment;
     }
     @Override
