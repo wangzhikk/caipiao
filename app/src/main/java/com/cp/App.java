@@ -14,7 +14,7 @@ import utils.wzutils.ui.WzSimpleRecycleView;
  */
 
 public class App extends Application {
-    public static boolean isDebug=true;
+    public static boolean isDebug=false;
 
     @Override
     public void onCreate() {

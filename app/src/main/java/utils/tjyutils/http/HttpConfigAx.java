@@ -15,12 +15,12 @@ public class HttpConfigAx {
     }
 
     private static String baseUrl = "";
-    public static String imIp="msg.yxwh168.com";
+    public static String imIp="msg.ile18.club";
     public static int imPort=7901;
 
     public static String getBaseUrl() {
         if(App.isDebug){
-            if(true)return baseUrl="http://api.yxwh168.com/";//唐总;
+            if(true)return baseUrl="https://api.ile18.club/";//唐总;
             String app="/caipiao_api/";
             if(StringTool.isEmpty(baseUrl)){
                 baseUrl="http://192.168.88.54:8080";//唐总
@@ -38,7 +38,7 @@ public class HttpConfigAx {
             }
             return baseUrl+app;
         }else {
-            return "https://api.99tjg.com/";
+            return "https://api.ile18.club/";
         }
 
     }

@@ -38,6 +38,8 @@ public class HttpToolAx extends HttpRequest {
             "room/queryGame",//游戏房间
             "index/query",//首页
             "cqssc/top10",//重庆时时彩最新10期开奖
+            "bj28/top10",//最新10期开奖
+            "canada28/top10",//最新10期开奖
             "bank/querybank",//可用银行
             "share/link",//分享信息
             "personinfo/query",//个人信息

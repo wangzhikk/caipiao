@@ -48,6 +48,7 @@ public class AppTool {
             ImgTool.init(application, 0, 0);
             HttpTool.init(application);
             MapDB.init(isDebugIn);
+            LogTool.debug=isDebugIn;
         }
     }
 
