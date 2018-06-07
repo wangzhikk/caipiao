@@ -11,6 +11,7 @@ import android.util.Log;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 
+import utils.tjyutils.http.HttpConfigAx;
 import utils.wzutils.common.CommonTool;
 import utils.wzutils.common.LogTool;
 import utils.wzutils.db.MapDB;
@@ -46,7 +47,11 @@ public class AppTool {
             initUiHander();
             initRecycleLife();
             ImgTool.init(application, 0, 0);
-            HttpTool.init(application);
+            if(!isDebugIn){
+                HttpTool.init(application, HttpConfigAx.httpsKey);
+            }else {
+                HttpTool.init(application);
+            }
             MapDB.init(isDebugIn);
             LogTool.debug=isDebugIn;
         }
