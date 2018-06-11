@@ -93,7 +93,7 @@ public class MainActivity extends ParentActivity {
     ParentFragment woDeFragment=new WoDeFragment();
 
     void initBottomBtns() {
-        WzViewOnclickListener onclickListenerParent = new WzViewOnclickListener() {
+        WzViewOnclickListener onclickListenerParent = new WzViewOnclickListener(true) {
             @Override
             public void onClickWz(View v) {
                 v.findViewById(R.id.rb_shouye_item).performClick();
@@ -112,7 +112,7 @@ public class MainActivity extends ParentActivity {
     void initBottomBtn(View v) {
         final CompoundButton compoundButton = (CompoundButton) v.findViewById(R.id.rb_shouye_item);
         compoundButton.setTag(v);
-        compoundButton.setOnClickListener(new WzViewOnclickListener() {
+        compoundButton.setOnClickListener(new WzViewOnclickListener(true) {
             @Override
             public void onClickWz(View tem) {
                 View v = (View) tem.getTag();
